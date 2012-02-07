@@ -1,0 +1,3 @@
+[submodule "Master"]
+	path = Master
+	url = https://github.com/TeamMentor/Master
