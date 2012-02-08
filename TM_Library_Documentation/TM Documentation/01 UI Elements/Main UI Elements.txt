@@ -1,0 +1,13 @@
+The main user interface window has five panes: the banner pane at the top, the navigation pane on the left, the filters pane in the middle, the preview pane on the right, and the article list pane on the bottom. The navigation, filters, and preview panes can be hidden by clicking the rectangles in the middle of the respective border-lines. Each pane performs a specific function.
+
+The banner pane provides access to application controls, such as logging in, switching to edit mode, or opening the control panel.
+
+The navigation pane gives an overview of content organized into libraries, folders, and views. Folders and views work differently than file system objects, although there are some similarities. The similarities are mostly in the way they are navigated - folders contain multiple other objects inside them. The difference is that TeamMentor folders contain views, not filesystem objects - the same article may appear in multiple folders and/or views.
+
+The filters pane allows filtering content in the current library/folder/view based on applicable technology, development phase, article type, and subject matter category. Filters can be enabled or disabled by using the corresponding checkboxes.
+
+The preview pane displays the content of the currently selected article in the list. The purpose of the preview pane is to give the user an idea of what's inside while browsing the list to help find the right article. 
+
+The article list pane displays the list of articles in the current library/folder/view in the navigation pane. The list of articles is filtered using the currently selected filters in the filters pane. The article list is the main control of the application. Selecting an article in the list updates the preview pane with the contents of the selected article. Double-clicking on an article opens it in a new window.
+
+The TeamMentor interface is designed to be simple and intuitive. The main task of navigating the content to find specific articles should be familiar to most users, because it is similar to navigating file-system objects.

@@ -1,0 +1,5 @@
+Administrators can manage TeamMentor users and perform various advanced operations via the Control Panel. The Control Panel can be accessed via the "Control Panel" link in the top right corner of the main user interface. The TeamMentor Control Panel is only available to Administrator users. The Control Panel has user management and back-end operations sections.
+
+The user management section consists of the following links: "My Account", "Manage Users", and "Create Multiple Users".
+
+The back-end operations section consists of the following links: "Admin Tasks" and "TeamMentor Web Services".
