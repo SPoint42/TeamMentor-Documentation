@@ -1,0 +1,1 @@
+Select an article from the list in the main window. The article should show up in the preview pane on the right. To open the article in a new window, double-click on it in the list.

@@ -1,0 +1,3 @@
+Switching to edit mode.
+Library editing limitations.
+Articles cannot be dragged from one library to another.

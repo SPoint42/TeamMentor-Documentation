@@ -1,0 +1,4 @@
+The search bar.
+The search results.
+The search behavior.
+The search limitations.

@@ -1,0 +1,20 @@
+TeamMentor is a "portable" application - it can be extracted and executed from virtually any location. To install TeamMentor:
+
+Download the TeamMentor distribution file. TeamMentor installation files are usually distibuted as a Zip archive.
+Extract the Zip file. Extract the Zip file to the location where you want the TM installation
+Install the libraries. 
+Edit the configuration file. Open the "Web Applications\TM_Website\TmConfig.config" file in your favorite text editor. The following configuration options are available:
++ Version. This is the version information used for debugging and technical support purposes. It should probably be left alone.
++ WebSite_Port. The is the port that the web server will be listening on.
++ WebSite_IP. This is the IP of the interface that the server will be listening on.
++ XmlLibrariesPath. This is the path to the library files. This is probably the most important option to edit, because it has to be set correctly for TM to load the library files.
++ Libraries_Disabled.
++ DefaultAdminUserName.
++ DefaultAdminPassword. 
++ LibrariesZipsFolder.
++ ShowContentToAnonymousUsers. This setting
+(Optional) Identify the installed .NET version. 
+(Optional) Edit the batch file.
+Run the batch file.
+Change the administrator password.
+Create user accounts.

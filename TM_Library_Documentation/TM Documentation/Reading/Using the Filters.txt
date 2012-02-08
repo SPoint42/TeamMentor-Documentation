@@ -1,0 +1,4 @@
+The "Technology" filter.
+The "Phase" filter.
+The "Type" filter.
+The "Category" filter.
