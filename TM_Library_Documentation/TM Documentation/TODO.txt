@@ -1,0 +1,14 @@
+What do the following settings in TMConfig.config do, please?
+
++ Libraries_Disabled.
++ LibrariesZipsFolder.
++ WebSite_Port.
++ WebSite_IP.
+
+Can the logo be changed, please? How?
+
+Can the style-sheet be changed, please? How?
+
+Are we doing anything with code customization for this release, please?
+
+Are unit tests shipped with the 3.0 release, please?
