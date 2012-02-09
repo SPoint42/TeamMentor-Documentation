@@ -1,3 +1,5 @@
+Filters allow narrowing down the presented article list to help find the most relevant articles.
+
 The "Technology" filter.
 The "Phase" filter.
 The "Type" filter.

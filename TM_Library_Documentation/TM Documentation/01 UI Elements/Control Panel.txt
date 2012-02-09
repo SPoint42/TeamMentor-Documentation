@@ -1,5 +1,19 @@
-Administrators can manage TeamMentor users and perform various advanced operations via the Control Panel. The Control Panel can be accessed via the "Control Panel" link in the top right corner of the main user interface. The TeamMentor Control Panel is only available to Administrator users. The Control Panel has user management and back-end operations sections.
+Administrators can manage TeamMentor users and perform various administrative operations via the Control Panel. The Control Panel can be accessed via the "Control Panel" link in the top right corner of the main user interface. The TeamMentor Control Panel is only available to Administrator users. The Control Panel has user management and back-end operations sections.
 
-The user management section consists of the following links: "My Account", "Manage Users", and "Create Multiple Users".
+The user management section consists of the following links: "My Account", "Manage Users", and "Create Multiple Users". The "My Account" link opens a window that allows changing the properties of the current user account. The "Manage Users" link opens a page that allows managing all the users of the application. The "Create Multiple Users" link opens a page that allows creating multiple user accounts.
 
-The back-end operations section consists of the following links: "Admin Tasks" and "TeamMentor Web Services".
+The back-end operations section consists of the following links: "Admin Tasks" and "TeamMentor Web Services". The "Admin Tasks" link opens a page that allows performing various administrative operations. The "TeamMentor Web Services" link opens a page that allows interacting with the web services back-end of TeamMentor directly. 
+
+The following administrative operations are available via the "Admin Tasks" page: 
++ Get time - this command gets the current server time.
++ View the configuration file - this command displays the contents of the configuration file.
++ Get library path - this command displays the location of the library files.
++ Set library path - this command allows setting the location of the library files during run-time. This command should not be used, rather the TMConfig.config file should be edited to set the location of the libraries.
++ Get library zips path - this command shows the location of the zip files, which contain the library files. TeamMentor is capable of unpacking zip files and loading libraries from them. However, it is recommended to unzip library files manually and set their location via the TMConfig.config file.
++ Set library zips path - this command allows setting the location of the zip files, which contain the library files, during run-time. TeamMentor is capable of unpacking zip files and loading libraries from them. However, it is recommended to unzip library files manually and set their location via the TMConfig.config file.
++ Get libraries - this command lists the currently available libraries.
++ Reload server cache - this command reloads the server cache, it is useful to make sure that changes to the libraries show up after doing things like changing library paths or installing new libraries.
+
+The web services exposed via the "TeamMentor Web Services" page should not be used during regular operation, but are provided to make modification of TeamMentor code simpler, if that is neccesary. There are far too many functions available via the "TeamMentor Web Services" page to list here.
+
+The TeamMentor Control Panel provides controls for managing users and performing administrative tasks. In addition to the Control Panel, some settings can be changed via the TMConfig.config file in the "Web Application" directory.

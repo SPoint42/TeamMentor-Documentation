@@ -1,1 +1,3 @@
-Select an article from the list in the main window. The article should show up in the preview pane on the right. To open the article in a new window, double-click on it in the list.
+OPENING AN ARTICLE
+
+Articles can be opened from the article list pane. The article list pane is the main TeamMentor user interface component and is located in the bottom center by default. Browsing the navigation pane on the left and using the filters in the middle of the user interface changes the list that is displayed in the article list window. Once the desired article is in sight, it can be previewed by single-clicking on its title. To open the article in a new window, double-click on it in the list.

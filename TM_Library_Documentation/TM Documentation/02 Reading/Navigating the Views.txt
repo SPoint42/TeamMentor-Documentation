@@ -1,1 +1,7 @@
-The folders and views are presented in the tree structure on the left. Folders and views work differently than file system objects, although there are some similarities. The similarities are mostly in the way they are navigated - folders contain multiple other objects inside them. The difference is that TeamMentor folders contain views, not filesystem objects - the same article may appear in multiple folders and/or views.
+BROWSING THE FOLDERS AND VIEWS IN THE NAVIGATION PANE
+
+The simplest way to navigate TeamMentor content is via the aptly named navigation pane on the left. The navigation pane shows a tree representation of the available libraries as folders and views. This tree can be navigated in a manner similar to files and folders, which are familiar to most people. The folders act like folders, and the views act like files. 
+
+Browsing TeamMentor content via the navigation pane is similar to exploring files and folders, but there are some differences. The main difference is that TeamMentor folders contain views, not files - the same article may appear in multiple folders and/or views. In that respect, views are more like files, which contain links to TeamMentor guidance article pages on the Internet.
+
+Articles can be opened via the article list pane. Navigating the folders and views changes the list of articles presented in the article list pane. This list can be further narrowed down by using filters. Once the desired articles have been located, it can be previewed in the preview pane on the right by single-clicking on the article title in the list. To open the article in a new window, double-click on the article title in the list.
