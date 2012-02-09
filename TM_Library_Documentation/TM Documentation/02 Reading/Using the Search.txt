@@ -1,4 +1,5 @@
-The search bar.
-The search results.
-The search behavior.
-The search limitations.
+USING THE SEARCH FUNCTION
+
+The search function allows the user to find articles based on whether their titles or contents include a certain text string. The Search bar is located in the filter pane and acts as a filter based on the article title and article content. The applied search string shows up as a filter on top of the navigation pane, like the other filters. The search is applied to the list of articles displayed in the article list pane in the bottom center of the main user interface based on the currently selected library, folder, or view in the navigation pane on the left.
+
+The search function currently does not support boolean operations or regular expressions.

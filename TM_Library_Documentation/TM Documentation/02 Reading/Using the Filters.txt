@@ -1,6 +1,11 @@
-Filters allow narrowing down the presented article list to help find the most relevant articles.
+USING THE FILTERS
 
-The "Technology" filter.
-The "Phase" filter.
-The "Type" filter.
-The "Category" filter.
+Filters allow narrowing down the presented article list to help find the most relevant articles in the currently selected library, folder, or view in the navigation pane. The filters are located in the filters pane in the center of the main user interface. The currently active filters are displayed on top of the navigation pane on the left. The currently active filters may be cleared by clicking the respective "X" icons. 
+
+The following filters are available:
+The "Technology" filter - the technology filter allows the user to display only the articles that pertain to a specific technology.
+The "Phase" filter - the phase filter allows the user to select only the articles that apply to a specific software development life-cycle phase.
+The "Type" filter - the type filter allows the user to choose what types of articles to display. The most common types are "Checklists" and "Guidelines". "Guidelines" describe how to do something in general terms that should be applicable to most applications, but still specific enough to be implemented. A "Checklist" describes how to test if a specific security measure or control has been implemented correctly and how to implement it correctly. Checklists and guidance usually exist in pairs. Other types of articles include: "Attack", "Code Example", "How To", "Inspection Question", "Principle", and "Q&A" - the names of these article types are self-explainatory.
+The "Category" filter - the category filter allows the user to filter the article list based on the type of security control that is being described. 
+
+The Search bar is located in the filter pane and acts as a filter based on the article title and article content. The applied search string shows up as a filter on top of the navigation pane, like the other filters. 

@@ -1,3 +1,5 @@
+MAIN USER INTERFACE ELEMENTS
+
 The main user interface window has five panes: the banner pane at the top, the navigation pane on the left, the filters pane in the middle, the preview pane on the right, and the article list pane on the bottom. The navigation, filters, and preview panes can be hidden by clicking the rectangles in the middle of the respective border-lines. Each pane performs a specific function.
 
 The banner pane provides access to application controls, such as logging in, switching to edit mode, or opening the control panel.
