@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<guidanceItem id="00000000-0000-0000-0000-0000000693a7" Author="" Category="User Interface" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Using the Control Panel" Topic="" phase="Production" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+  <content>
+&lt;div&gt;Administrators can manage TeamMentor users and perform various administrative operations via the Control Panel. The Control Panel can be accessed via the &amp;quot;Control Panel&amp;quot; link in the top right corner of the main user interface. The TeamMentor Control Panel
+ is only available to Administrator users. The Control Panel has user management and back-end operations sections.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The user management section consists of the following links: &amp;quot;My Account&amp;quot;, &amp;quot;Manage Users&amp;quot;, and &amp;quot;Create Multiple Users&amp;quot;. The &amp;quot;My Account&amp;quot; link opens a window that allows changing the properties of the current user account. The &amp;quot;Manage Users&amp;quot; link opens
+ a page that allows managing all the users of the application. The &amp;quot;Create Multiple Users&amp;quot; link opens a page that allows creating multiple user accounts.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The back-end operations section consists of the following links: &amp;quot;Admin Tasks&amp;quot; and &amp;quot;TeamMentor Web Services&amp;quot;. The &amp;quot;Admin Tasks&amp;quot; link opens a page that allows performing various administrative operations. The &amp;quot;TeamMentor Web Services&amp;quot; link opens a page
+ that allows interacting with the web services back-end of TeamMentor directly.&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The following administrative operations are available via the &amp;quot;Admin Tasks&amp;quot; page:&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;Get time - this command gets the current server time.&lt;/li&gt;&lt;li&gt;View the configuration file - this command displays the contents of the configuration file.&lt;/li&gt;&lt;li&gt;Get library path - this command displays the location of the library files.&lt;/li&gt;&lt;li&gt;Set library path - this command allows setting the location of the library files during run-time. This command should not be used, rather the TMConfig.config file should be edited to set the location of the libraries.&lt;/li&gt;&lt;li&gt;Get library zips path - this command shows the location of the zip files, which contain the library files. TeamMentor is capable of unpacking zip files and loading libraries from them. However, it is recommended to unzip library files manually and set their
+ location via the TMConfig.config file.&lt;/li&gt;&lt;li&gt;Set library zips path - this command allows setting the location of the zip files, which contain the library files, during run-time. TeamMentor is capable of unpacking zip files and loading libraries from them. However, it is recommended to unzip library
+ files manually and set their location via the TMConfig.config file.&lt;/li&gt;&lt;li&gt;Get libraries - this command lists the currently available libraries.&lt;/li&gt;&lt;li&gt;Reload server cache - this command reloads the server cache, it is useful to make sure that changes to the libraries show up after doing things like changing library paths or installing new libraries.&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The web services exposed via the &amp;quot;TeamMentor Web Services&amp;quot; page should not be used during regular operation, but are provided to make modification of TeamMentor code simpler, if that is neccesary. There are far too many functions available via the &amp;quot;TeamMentor
+ Web Services&amp;quot; page to list here.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The TeamMentor Control Panel provides controls for managing users and performing administrative tasks. In addition to the Control Panel, some settings can be changed via the TMConfig.config file in the &amp;quot;Web Application&amp;quot; directory.&lt;/div&gt;
+</content>
+</guidanceItem>
