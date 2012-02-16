@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<guidanceItem id="00000000-0000-0000-0000-000000431dfa" Author="" Category=" Customization" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Todo: questions to answer" Topic="" phase="FAQ - Draft" libraryId="37e411c3-4570-49e8-ad15-42435f929e2f" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+  <content>
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;What do the following settings in TMConfig.config do, please?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; Libraries_Disabled.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; LibrariesZipsFolder.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; WebSite_Port.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; WebSite_IP.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Can the logo be changed, please? How?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Can the style-sheet be changed, please? How?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Are we doing anything with code customization for this release, please?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Are unit tests shipped with the 3.0 release, please?&lt;/font&gt;&lt;/div&gt;
+</content>
+</guidanceItem>

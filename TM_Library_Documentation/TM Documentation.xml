@@ -2,9 +2,14 @@
 <guidanceExplorer xmlns="urn:microsoft:guidanceexplorer">
   <library name="37e411c3-4570-49e8-ad15-42435f929e2f" caption="TM Documentation">
     <libraryStructure>
-      <view caption="drafts" id="8a0d6804-0e6c-400e-b59a-2af21e756abf" creationDate="0001-01-01T00:00:00">
-        <items />
-      </view>
+      <folder caption="Drafts" folderId="7f17fb93-f1b6-4be7-978d-26563935ac06">
+        <view caption="Dinis Drafts" id="1082a26b-a7bc-47dd-aedc-ae54b03ee0bc" creationDate="0001-01-01T00:00:00">
+          <items>
+            <item>00000000-0000-0000-0000-000000431dfa</item>
+            <item>00000000-0000-0000-0000-00000017c916</item>
+          </items>
+        </view>
+      </folder>
     </libraryStructure>
     <items />
   </library>
