@@ -1,6 +1,384 @@
 <?xml version="1.0"?>
 <ArrayOfGuidanceItem_V3>
   <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000001f6f7</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Editing Articles</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Editing</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;Editing content in TeamMentor is done via &amp;quot;Edit Mode&amp;quot;. &amp;quot;Edit Mode&amp;quot; is only available to Editors and Administrators. To access &amp;quot;Edit Mode&amp;quot;, login as either an Administrator or an Editor user and click the &amp;quot;Edit Mode&amp;quot; link in the top right of the main user
+ interface.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Double-clicking on articles in the list while in &amp;quot;Edit Mode&amp;quot; opens articles for editing in a pop-up window. The editing is done via a built-in WYSISWYG html editor. The article list pane works the same way in &amp;quot;Edit Mode&amp;quot; as in regular mode - folders and
+ views can be navigated via the navigation pane on the left; filters and search strings can be used to narrow down the list in the content list pane. The major difference is that double-clicking an article opens it for editing, rather than for viewing.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Each article has the following meta-data: title, technology tag, phase tag, type tag, and category tag. The title is the title that is displayed in the article list. The technology tag reflects what technology the article applies to. The phase tag signifies
+ which phase of the software development life-cycle the article is relevant to. The type tag describes the type of the article. The category tag describes what kind of security control the article is about.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-0000000693a7</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Using the Control Panel</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>User Interface</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;Administrators can manage TeamMentor users and perform various administrative operations via the Control Panel. The Control Panel can be accessed via the &amp;quot;Control Panel&amp;quot; link in the top right corner of the main user interface. The TeamMentor Control Panel
+ is only available to Administrator users. The Control Panel has user management and back-end operations sections.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The user management section consists of the following links: &amp;quot;My Account&amp;quot;, &amp;quot;Manage Users&amp;quot;, and &amp;quot;Create Multiple Users&amp;quot;. The &amp;quot;My Account&amp;quot; link opens a window that allows changing the properties of the current user account. The &amp;quot;Manage Users&amp;quot; link opens
+ a page that allows managing all the users of the application. The &amp;quot;Create Multiple Users&amp;quot; link opens a page that allows creating multiple user accounts.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The back-end operations section consists of the following links: &amp;quot;Admin Tasks&amp;quot; and &amp;quot;TeamMentor Web Services&amp;quot;. The &amp;quot;Admin Tasks&amp;quot; link opens a page that allows performing various administrative operations. The &amp;quot;TeamMentor Web Services&amp;quot; link opens a page
+ that allows interacting with the web services back-end of TeamMentor directly.&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The following administrative operations are available via the &amp;quot;Admin Tasks&amp;quot; page:&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;Get time - this command gets the current server time.&lt;/li&gt;&lt;li&gt;View the configuration file - this command displays the contents of the configuration file.&lt;/li&gt;&lt;li&gt;Get library path - this command displays the location of the library files.&lt;/li&gt;&lt;li&gt;Set library path - this command allows setting the location of the library files during run-time. This command should not be used, rather the TMConfig.config file should be edited to set the location of the libraries.&lt;/li&gt;&lt;li&gt;Get library zips path - this command shows the location of the zip files, which contain the library files. TeamMentor is capable of unpacking zip files and loading libraries from them. However, it is recommended to unzip library files manually and set their
+ location via the TMConfig.config file.&lt;/li&gt;&lt;li&gt;Set library zips path - this command allows setting the location of the zip files, which contain the library files, during run-time. TeamMentor is capable of unpacking zip files and loading libraries from them. However, it is recommended to unzip library
+ files manually and set their location via the TMConfig.config file.&lt;/li&gt;&lt;li&gt;Get libraries - this command lists the currently available libraries.&lt;/li&gt;&lt;li&gt;Reload server cache - this command reloads the server cache, it is useful to make sure that changes to the libraries show up after doing things like changing library paths or installing new libraries.&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The web services exposed via the &amp;quot;TeamMentor Web Services&amp;quot; page should not be used during regular operation, but are provided to make modification of TeamMentor code simpler, if that is neccesary. There are far too many functions available via the &amp;quot;TeamMentor
+ Web Services&amp;quot; page to list here.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The TeamMentor Control Panel provides controls for managing users and performing administrative tasks. In addition to the Control Panel, some settings can be changed via the TMConfig.config file in the &amp;quot;Web Application&amp;quot; directory.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000008578b</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Signing Up for Regular Accounts</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>User Interface</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>Users can create new TeamMentor accounts via the &amp;quot;Sign Up&amp;quot; window. The TeamMentor &amp;quot;Sign Up&amp;quot; window can be accessed via the &amp;quot;Sign Up&amp;quot; link in the top right corner of the main user interface. The window has input fields for the username, the password, the
+ e-mail address, the first name, and the last name; the first three are mandatory to create an account. Clicking the &amp;quot;Sign Up&amp;quot; button submits the entered information. If the submitted information is valid, a new account is created and can be used to access
+ the application.</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000018204d</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Using the Search Function</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Reading</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;The search function allows the user to find articles based on whether their titles or contents include a certain text string. The Search bar is located in the filter pane and acts as a filter based on the article title and article content. The applied
+ search string shows up as a filter on top of the navigation pane, like the other filters. The search is applied to the list of articles displayed in the article list pane in the bottom center of the main user interface based on the currently selected library,
+ folder, or view in the navigation pane on the left.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The search function currently does not support Boolean operations or regular expressions.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-0000001a9296</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Using the Filters</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Reading</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;Filters allow narrowing down the presented article list to help find the most relevant articles in the currently selected library, folder, or view in the navigation pane. The filters are located in the filters pane in the center of the main user interface.
+ The currently active filters are displayed on top of the navigation pane on the left. The currently active filters may be cleared by clicking the respective &amp;quot;X&amp;quot; icons.&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The following filters are available:&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;The &amp;quot;Technology&amp;quot; filter - the technology filter allows the user to display only the articles that pertain to a specific technology.&lt;/li&gt;&lt;li&gt;The &amp;quot;Phase&amp;quot; filter - the phase filter allows the user to select only the articles that apply to a specific software development life-cycle phase.&lt;/li&gt;&lt;li&gt;The &amp;quot;Type&amp;quot; filter - the type filter allows the user to choose what types of articles to display. The most common types are &amp;quot;Checklists&amp;quot; and &amp;quot;Guidelines&amp;quot;. &amp;quot;Guidelines&amp;quot; describe how to do something in general terms that should be applicable to most applications,
+ but still specific enough to be implemented. A &amp;quot;Checklist&amp;quot; describes how to test if a specific security measure or control has been implemented correctly and how to implement it correctly. Checklists and guidance usually exist in pairs. Other types of articles
+ include: &amp;quot;Attack&amp;quot;, &amp;quot;Code Example&amp;quot;, &amp;quot;How To&amp;quot;, &amp;quot;Inspection Question&amp;quot;, &amp;quot;Principle&amp;quot;, and &amp;quot;Q&amp;amp;A&amp;quot; - the names of these article types are self-explanatory.&lt;/li&gt;&lt;li&gt;The &amp;quot;Category&amp;quot; filter - the category filter allows the user to filter the article list based on the type of security control that is being described.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The Search bar is located in the filter pane and acts as a filter based on the article title and article content. The applied search string shows up as a filter on top of the navigation pane, like the other filters.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000024fdb5</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Opening an Article</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Reading</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>Articles can be opened from the article list pane. The article list pane is the main TeamMentor user interface component and is located in the bottom center by default. Browsing the navigation pane on the left and using the filters in the middle of the
+ user interface changes the list that is displayed in the article list window. Once the desired article is in sight, it can be previewed by single-clicking on its title. To open the article in a new window, double-click on it in the list.</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-000000579bb9</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Editing Folders</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Editing</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;Editing content in TeamMentor is done via &amp;quot;Edit Mode&amp;quot;. &amp;quot;Edit Mode&amp;quot; is only available to Editors and Administrators. To access &amp;quot;Edit Mode&amp;quot;, login as either an Administrator or an Editor user and click the &amp;quot;Edit Mode&amp;quot; link in the top right of the main user
+ interface.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The two main ways to edit folders in TeamMentor are via the right-click context menu and via drag &amp;amp; drop operations. Right-click context menu operations allow managing the folders themselves, while drag &amp;amp; drop operations allow placing content inside of
+ folders.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The right-click content menu provides the following options: &amp;quot;Add View&amp;quot;, &amp;quot;Add Folder&amp;quot;, &amp;quot;Rename Folder&amp;quot;, &amp;quot;Delete Folder&amp;quot;, and &amp;quot;Exit Edit Mode&amp;quot;. &amp;quot;Add View&amp;quot; creates a new view in the selected folder. &amp;quot;Add Folder&amp;quot; creates a new folder inside the selected folder.
+ &amp;quot;Rename Folder&amp;quot; allows renaming the current folder. &amp;quot;Delete Folder&amp;quot; deletes the clicked folder. &amp;quot;Exit Edit Mode&amp;quot; returns the user interface to regular mode.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Drag &amp;amp; drop operations allow placing existing views inside a folder. To move a view into a folder, drag it into the destination folder. Items cannot be moved across libraries.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000060462d</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Editing Libraries</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Editing</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;Editing content in TeamMentor is done via &amp;quot;Edit Mode&amp;quot;. &amp;quot;Edit Mode&amp;quot; is only available to Editors and Administrators. To access &amp;quot;Edit Mode&amp;quot;, login as either an Administrator or an Editor user and click the &amp;quot;Edit Mode&amp;quot; link in the top right of the main user
+ interface.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The two main ways to edit libraries in TeamMentor are via the right-click context menu and via drag &amp;amp; drop operations. Right-click context menu operations allow managing the libraries themselves and creating new items, while drag &amp;amp; drop operations allow
+ organizing the items inside the libraries.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The right-click context menu provides access to the operations: &amp;quot;Add View&amp;quot;, &amp;quot;Add Folder&amp;quot;, &amp;quot;Add Guidance Item&amp;quot;, &amp;quot;Rename Library&amp;quot;, &amp;quot;Delete Library&amp;quot;, &amp;quot;New Library&amp;quot;, and &amp;quot;Exit Edit Mode&amp;quot;. &amp;quot;Add View&amp;quot; creates a new view inside the current library. &amp;quot;Add Folder&amp;quot;
+ creates a new folder inside the current library. &amp;quot;Add Guidance Item&amp;quot; creates a new article in the current library. &amp;quot;Rename Library&amp;quot; allows renaming the current library. &amp;quot;Delete Library&amp;quot; allows deleting the clicked library. &amp;quot;New Library&amp;quot; creates a new library.
+ &amp;quot;Exit Edit Mode&amp;quot; returns the main user interface to regular mode.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Drag &amp;amp; drop operations allow moving content around inside the library. A library should have a set of folders and views. Views can be moved into folders, but folders cannot be moved into other folders. The views are the important aspect of the library
+ and folders are a supporting element to help organize the views. Therefore, articles can be dragged and dropped into views, but not into folders. &amp;nbsp;The views contain links to articles. The same article can be located in multiple views, but a view can only be
+ inside one folder. Selecting a folder in the navigation pane shows all the items in the views that are contained in that folder. Items cannot be moved between libraries.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000061eb3b</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Identifying Main User Interface Elements</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>User Interface</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;
+&lt;div&gt;The main user interface window has five panes: the banner pane at the top, the navigation pane on the left, the filters pane in the middle, the preview pane on the right, and the article list pane on the bottom. The navigation, filters, and preview panes
+ can be hidden by clicking the rectangles in the middle of the respective border-lines. Each pane performs a specific function.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The banner pane provides access to application controls, such as logging in, switching to edit mode, or opening the control panel.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The navigation pane gives an overview of content organized into libraries, folders, and views. Folders and views work differently than file system objects, although there are some similarities. The similarities are mostly in the way they are navigated
+ - folders contain multiple other objects inside them. The difference is that TeamMentor folders contain views, not file system objects - the same article may appear in multiple folders and/or views.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The filters pane allows filtering content in the current library/folder/view based on applicable technology, development phase, article type, and subject matter category. Filters can be enabled or disabled by using the corresponding checkboxes.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The preview pane displays the content of the currently selected article in the list. The purpose of the preview pane is to give the user an idea of what's inside while browsing the list to help find the right article.&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The article list pane displays the list of articles in the current library/folder/view in the navigation pane. The list of articles is filtered using the currently selected filters in the filters pane. The article list is the main control of the application.
+ Selecting an article in the list updates the preview pane with the contents of the selected article. Double-clicking on an article opens it in a new window.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The TeamMentor interface is designed to be simple and intuitive. The main task of navigating the content to find specific articles should be familiar to most users, because it is similar to navigating file-system objects.&lt;/div&gt;
+&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-000000625e60</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>New Guidance Item</title>
+    <topic />
+    <technology> </technology>
+    <category> </category>
+    <phase />
+    <rule_Type />
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent />
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-000000803568</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Browsing the Folders and the Views in the Navigation Pane</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Reading</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;The simplest way to navigate TeamMentor content is via the aptly named navigation pane on the left. The navigation pane shows a tree representation of the available libraries as folders and views. This tree can be navigated in a manner similar to files
+ and folders, which are familiar to most people. The folders act like folders, and the views act like files.&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Browsing TeamMentor content via the navigation pane is similar to exploring files and folders, but there are some differences. The main difference is that TeamMentor folders contain views, not files - the same article may appear in multiple folders and/or
+ views. In that respect, views are more like files, which contain links to TeamMentor guidance article pages on the Internet.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Articles can be opened via the article list pane. Navigating the folders and views changes the list of articles presented in the article list pane. This list can be further narrowed down by using filters. Once the desired articles have been located, it
+ can be previewed in the preview pane on the right by single-clicking on the article title in the list. To open the article in a new window, double-click on the article title in the list.&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-0000008e9fb0</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Editing Views</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Editing</category>
+    <phase>Production</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;Editing content in TeamMentor is done via &amp;quot;Edit Mode&amp;quot;. &amp;quot;Edit Mode&amp;quot; is only available to Editors and Administrators. To access &amp;quot;Edit Mode&amp;quot;, login as either an Administrator or an Editor user and click the &amp;quot;Edit Mode&amp;quot; link in the top right of the main user
+ interface.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The three main ways to edit views in TeamMentor are via the right-click context menu, via drag &amp;amp; drop operations, and via the content list buttons. Right-click menu context operations allow managing the views, drag &amp;amp; drop operations allow moving articles
+ into views, and content list buttons allow removing articles from views.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;The right-click menu provides access to the following functions: &amp;quot;Add Guidance Item&amp;quot;, &amp;quot;Rename View&amp;quot;, &amp;quot;Delete View&amp;quot;, and &amp;quot;Exit Edit Mode&amp;quot;. &amp;quot;Add Guidance Item&amp;quot; creates a new article in the current view. &amp;quot;Rename View&amp;quot; allows renaming the current view. &amp;quot;Delete
+ View&amp;quot; deletes the clicked view. &amp;quot;Exit Edit Mode&amp;quot; returns the main user interface to regular mode.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Drag &amp;amp; drop operations allow moving the articles between views. Multiple articles can be selected by using the checkboxes next to the article names. The views are the important aspect of the library and folders are a supporting element to help organize
+ the views. Therefore, articles can be dragged and dropped into views, but not into folders. &amp;nbsp;The views contain links to articles. The same article can be located in multiple views, but a view can only be inside one folder. Selecting a folder in the navigation
+ pane shows all the items in the views that are contained in that folder. Items cannot be moved between libraries.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Content list buttons include &amp;quot;Select All&amp;quot;, &amp;quot;Deselect All&amp;quot;, and &amp;quot;Remove Guidance Items from View&amp;quot;. &amp;quot;Select All&amp;quot; selects all the articles currently visible in the content list pane. &amp;quot;Deselect All&amp;quot; clears the selection. &amp;quot;Remove Guidance Items from View&amp;quot; removes
+ the selected articles from the current view.&amp;nbsp;&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
     <guidanceItemId>399a0935-8990-49fb-b4ab-e04643429dbe</guidanceItemId>
     <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
     <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
@@ -17435,24 +17813,5 @@ How To: Prevent Cross-Site Scripting in ASP.NET&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="?#ruledisplay:F0E2BFFC-E6D1-4DC6-A6C2-D078F54AE10E"&gt;Guideline: Protect Session Cookies
 &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </htmlContent>
-  </GuidanceItem_V3>
-  <GuidanceItem_V3>
-    <guidanceItemId>00000000-0000-0000-0000-000000269c50</guidanceItemId>
-    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
-    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
-    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
-    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
-    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
-    <title>How to install TeamMentor</title>
-    <topic />
-    <technology>TeamMentor</technology>
-    <category> </category>
-    <phase>Install</phase>
-    <rule_Type>Documentation</rule_Type>
-    <priority />
-    <status />
-    <author />
-    <delete>false</delete>
-    <htmlContent>This is how to install TeamMentor</htmlContent>
   </GuidanceItem_V3>
 </ArrayOfGuidanceItem_V3>
