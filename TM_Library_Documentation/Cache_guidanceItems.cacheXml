@@ -17897,4 +17897,33 @@ How To: Prevent Cross-Site Scripting in ASP.NET&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;6) if you just want to run the TeamMentor locally:&lt;/font&gt;&lt;/div&gt;
 </htmlContent>
   </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000060a93a</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Git Scripts</title>
+    <topic />
+    <technology>GIT</technology>
+    <category> Version Control</category>
+    <phase>FAQ - Draft</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>&lt;font face="Arial, Verdana" size="2"&gt;Here are a number of useful Git Scripts&lt;/font&gt;
+&lt;div style="font-family:Arial,Verdana; font-size:10pt; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-size:10pt; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal"&gt;
+Update an repository with the latest changes&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;font face="Arial, Verdana" size="2"&gt;$git pull origin&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
 </ArrayOfGuidanceItem_V3>
