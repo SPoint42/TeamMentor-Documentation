@@ -6,10 +6,10 @@
 					{		
 						$("#result").html("...starting GitHub Pull");
 						var that = this;
-						var username = $("#username").value();
-						var password = $("#password").value();
-						var params = { username : username, password : password  };
-						
+						//var username = $("#username").value();
+						//var password = $("#password").value();
+						//var params = { username : username, password : password  };
+						var params = {};
 						TM.WebServices.Helper.invoke_TM_WebService('SyncWithGitHub',params, TM.ControlPanel.GitHubSync.showResult);						
 //						TM.WebServices.Helper.invoke_TM_WebService('GetTime', {} , TM.ControlPanel.GitHubSync.showResult);
 					}	

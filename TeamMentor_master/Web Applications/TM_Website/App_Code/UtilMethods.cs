@@ -22,16 +22,16 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 {
     public class UtilMethods
     {    	
-        public static string syncWithGitHub(string username, string password)
+        public static string syncWithGitHub()
 		{
-			var tmConfig = TMConfig.Current;
+/*			var tmConfig = TMConfig.Current;
 			if (password.valid())
 			{				
 				tmConfig.GitHubPassword = password;
 				tmConfig.SaveTMConfig();				
 			}
 			else
-				password = tmConfig.GitHubPassword;
+				password = tmConfig.GitHubPassword;*/
 			var gitExe = @"C:\Program Files\Git\bin\git.exe";
 			if (gitExe.fileExists().isFalse())
 				gitExe = @"C:\Program Files (x86)\Git\bin\git.exe";
