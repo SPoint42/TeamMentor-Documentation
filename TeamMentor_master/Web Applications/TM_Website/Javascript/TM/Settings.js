@@ -10,7 +10,7 @@ TM.Debug.addTimeStampToLoadedPages 			  	= true;
 TM.Debug.reuseLibraryMappingsObject 		  	= true;
 TM.Debug.load_HomePage 						  	= true;
 
-TM.Debug.showExperimentalFeatures				= false;
+TM.Debug.showExperimentalFeatures				= true;
 
 TM.Gui.editMode			   						= false;
 TM.Debug.show_DebugDiv						  	= false;	// show small box with links to open trace view

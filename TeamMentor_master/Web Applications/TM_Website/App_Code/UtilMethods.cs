@@ -40,9 +40,10 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			var gitLocalProjectFolder = AppDomain.CurrentDomain.BaseDirectory;
 			
 			
-			var gitHubFolder = "https://{0}:{1}@github.com/DinisCruz/TeamMentor-v3.0".format(username, password);
+			//var gitHubFolder = "https://{0}:{1}@github.com/DinisCruz/TeamMentor-v3.0".format(username, password);
+            //var gitHubFolder = "https://github.com/TeamMentor/TeamMentor-Documentation;
 			//var gitLocalProjectFolder = @"C:\_WorkDir\SI\_PoC\TeamMentor-v3.0";
-			var gitExeParameters = "pull {0}".format(gitHubFolder);
+			var gitExeParameters = "pull origin";
 			 
 			var cmdOutput = Processes.startAsCmdExe(gitExe, gitExeParameters, gitLocalProjectFolder) 
 									 .fixCRLF();
