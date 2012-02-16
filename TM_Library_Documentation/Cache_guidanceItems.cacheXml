@@ -299,8 +299,8 @@
     <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
     <title>New Guidance Item</title>
     <topic />
-    <technology> </technology>
-    <category> </category>
+    <technology />
+    <category />
     <phase />
     <rule_Type />
     <priority />
@@ -17812,6 +17812,89 @@ How To: Prevent Cross-Site Scripting in ASP.NET&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="?#ruledisplay:D6593992-DC9E-42C5-9E98-30E8EF075B93"&gt;Guideline: Do Not Rely on Client-Side Validation
 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="?#ruledisplay:F0E2BFFC-E6D1-4DC6-A6C2-D078F54AE10E"&gt;Guideline: Protect Session Cookies
 &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-000000431dfa</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Todo: questions to answer</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category> Customization</category>
+    <phase>FAQ - Draft</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;What do the following settings in TMConfig.config do, please?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; Libraries_Disabled.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; LibrariesZipsFolder.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; WebSite_Port.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&amp;#43; WebSite_IP.&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Can the logo be changed, please? How?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Can the style-sheet be changed, please? How?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Are we doing anything with code customization for this release, please?&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Are unit tests shipped with the 3.0 release, please?&lt;/font&gt;&lt;/div&gt;
+</htmlContent>
+  </GuidanceItem_V3>
+  <GuidanceItem_V3>
+    <guidanceItemId>00000000-0000-0000-0000-00000017c916</guidanceItemId>
+    <guidanceItemId_Original>00000000-0000-0000-0000-000000000000</guidanceItemId_Original>
+    <source_guidanceItemId>00000000-0000-0000-0000-000000000000</source_guidanceItemId>
+    <libraryId>37e411c3-4570-49e8-ad15-42435f929e2f</libraryId>
+    <guidanceType>00000000-0000-0000-0000-000000000000</guidanceType>
+    <creatorId>00000000-0000-0000-0000-000000000000</creatorId>
+    <title>Installing TeamMentor (using Git)</title>
+    <topic />
+    <technology>TeamMentor</technology>
+    <category>Git </category>
+    <phase>Install - Draft</phase>
+    <rule_Type>Guidance</rule_Type>
+    <priority />
+    <status />
+    <author />
+    <delete>false</delete>
+    <htmlContent>
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;Cloning a repository&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;In A VM maching with: windows 2003, IIS and TortoiseSVN installed&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;1) create a folder to hold your GitHub Clones. In this example we are going to use: C:\TeamMentor_From_GitHub&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;2) In the C:\TeamMentor_From_GitHub folder right-click inside it, and chose from the Context Menu the option 'Git Clone'&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;3) in a browser open the page: https://github.com/TeamMentor/TeamMentor-Documentation, click on the 'Git Read-only'button and copy the url to its right (in this case git://github.com/TeamMentor/TeamMentor-Documentation.git).
+ If you want to make commits from this version, you will need to use either th Http or SSH urls (and use an account with push privileges to this repository)&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;4) back in the Git Clone Gui, put the Git url in the 'Url' TextBox (git://github.com/TeamMentor/TeamMentor-Documentation.git) and set the 'Directory' TextBox to 'C:\TeamMentor_From_GitHub\TeamMentor-Documentation).
+ Click OK&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;5) the 'C:\TeamMentor_From_GitHub\TeamMentor-Documentation' should now be populated with a number of files and folders&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face="Arial, Verdana" size="2"&gt;6) if you just want to run the TeamMentor locally:&lt;/font&gt;&lt;/div&gt;
 </htmlContent>
   </GuidanceItem_V3>
 </ArrayOfGuidanceItem_V3>
