@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-0000001a9296" Author="" Category="Reading" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Using the Filters" Topic="" phase="Production" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-0000001a9296" Author="" Category="Reading" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Using the Filters" Topic="" phase="Production" libraryId="37e411c3-4570-49e8-ad15-42435f929e2f" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>
 &lt;div&gt;Filters allow narrowing down the presented article list to help find the most relevant articles in the currently selected library, folder, or view in the navigation pane. The filters are located in the filters pane in the center of the main user interface.
  The currently active filters are displayed on top of the navigation pane on the left. The currently active filters may be cleared by clicking the respective &amp;quot;X&amp;quot; icons.&amp;nbsp;&lt;/div&gt;
@@ -15,5 +15,10 @@
 &lt;div&gt;&lt;br&gt;
 &lt;/div&gt;
 &lt;div&gt;The Search bar is located in the filter pane and acts as a filter based on the article title and article content. The applied search string shows up as a filter on top of the navigation pane, like the other filters.&lt;/div&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
 </content>
 </guidanceItem>

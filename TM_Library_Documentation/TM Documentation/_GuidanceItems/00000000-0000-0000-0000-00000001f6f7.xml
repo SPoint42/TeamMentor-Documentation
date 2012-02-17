@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-00000001f6f7" Author="" Category="Editing" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Editing Articles" Topic="" phase="Production" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-00000001f6f7" Author="" Category="Editing" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Editing Articles" Topic="" phase="Production" libraryId="37e411c3-4570-49e8-ad15-42435f929e2f" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>
 &lt;div&gt;Editing content in TeamMentor is done via &amp;quot;Edit Mode&amp;quot;. &amp;quot;Edit Mode&amp;quot; is only available to Editors and Administrators. To access &amp;quot;Edit Mode&amp;quot;, login as either an Administrator or an Editor user and click the &amp;quot;Edit Mode&amp;quot; link in the top right of the main user
  interface.&lt;/div&gt;
@@ -11,5 +11,10 @@
 &lt;/div&gt;
 &lt;div&gt;Each article has the following meta-data: title, technology tag, phase tag, type tag, and category tag. The title is the title that is displayed in the article list. The technology tag reflects what technology the article applies to. The phase tag signifies
  which phase of the software development life-cycle the article is relevant to. The type tag describes the type of the article. The category tag describes what kind of security control the article is about.&lt;/div&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
 </content>
 </guidanceItem>

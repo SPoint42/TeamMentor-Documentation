@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-0000000693a7" Author="" Category="User Interface" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Using the Control Panel" Topic="" phase="Production" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-0000000693a7" Author="" Category="User Interface" Priority="" Rule_Type="Guidance" Status="" Technology="TeamMentor" title="Using the Control Panel" Topic="" phase="Production" libraryId="37e411c3-4570-49e8-ad15-42435f929e2f" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>
 &lt;div&gt;Administrators can manage TeamMentor users and perform various administrative operations via the Control Panel. The Control Panel can be accessed via the &amp;quot;Control Panel&amp;quot; link in the top right corner of the main user interface. The TeamMentor Control Panel
  is only available to Administrator users. The Control Panel has user management and back-end operations sections.&lt;/div&gt;
@@ -27,5 +27,13 @@
 &lt;div&gt;&lt;br&gt;
 &lt;/div&gt;
 &lt;div&gt;The TeamMentor Control Panel provides controls for managing users and performing administrative tasks. In addition to the Control Panel, some settings can be changed via the TMConfig.config file in the &amp;quot;Web Application&amp;quot; directory.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;
+&lt;hr&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;/div&gt;
 </content>
 </guidanceItem>
