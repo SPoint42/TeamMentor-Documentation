@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-000000803568" Author="" Category="Reading" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Browsing the Folders and the Views in the Navigation Pane" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-000000803568" Author="" Category="Reading" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Navigating" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>
-&lt;div&gt;The simplest way to navigate TeamMentor content is via the aptly named navigation pane on the left. The navigation pane shows a tree representation of the available libraries as folders and views. This tree can be navigated in a manner similar to files
- and folders, which are familiar to most people.&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;The simplest way to navigate TeamMentor content is via the aptly named navigation pane on the left. The navigation pane shows a tree representation of the available libraries as folders and views. This tree can be navigated in a manner similar to music
+ playlists, which are familiar to most people.&amp;nbsp;&lt;/div&gt;
 &lt;div&gt;&lt;br&gt;
 &lt;/div&gt;
-&lt;div&gt;Browsing TeamMentor content via the navigation pane is similar to exploring files and folders, but there are some differences. All the articles are located in the library, rather than in the folders or views. Views are references to sub-sets of these files,
- like playlists in music players. Folders are a way to organize the views. An article may appear in multiple views and folders, but there is still only one copy of the article - the views and folders display references to it.&lt;/div&gt;
+&lt;div&gt;TeamMentor content is organized in a manner similar to music players. All the articles are located in the library. Views are references to sub-sets of these files, like playlists in music players. Folders are a way to organize the views. An article may
+ appear in multiple views and folders, but there is still only one copy of the article - the views and folders display references to it.&lt;/div&gt;
 &lt;div&gt;&lt;br&gt;
 &lt;/div&gt;
 &lt;div&gt;Articles can be opened via the article list pane. Navigating the folders and views changes the list of articles presented in the article list pane. This list can be further narrowed down by using filters. Once the desired articles have been located, it
@@ -14,7 +14,7 @@
 &lt;br&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;Back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
 &lt;div&gt;&lt;/div&gt;
 </content>
 </guidanceItem>
