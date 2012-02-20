@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<guidanceItem id="00000000-0000-0000-0000-00000001f6f7" Author="" Category="Editing" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Editing Articles" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+  <content>
+&lt;div&gt;Editing content in TeamMentor is done via &amp;quot;Edit Mode&amp;quot;. &amp;quot;Edit Mode&amp;quot; is only available to Editors and Administrators. To access &amp;quot;Edit Mode&amp;quot;, login as either an Administrator or an Editor user and click the &amp;quot;Edit Mode&amp;quot; link in the top right of the main user
+ interface.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Double-clicking on articles in the list while in &amp;quot;Edit Mode&amp;quot; opens articles for editing in a pop-up window. The editing is done via a built-in WYSISWYG html editor. The article list pane works the same way in &amp;quot;Edit Mode&amp;quot; as in regular mode - folders and
+ views can be navigated via the navigation pane on the left; filters and search strings can be used to narrow down the list in the content list pane. The major difference is that double-clicking an article opens it for editing, rather than for viewing.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Each article has the following meta-data: title, technology tag, phase tag, type tag, and category tag. The title is the title that is displayed in the article list. The technology tag reflects what technology the article applies to. The phase tag signifies
+ which phase of the software development life-cycle the article is relevant to. The type tag describes the type of the article. The category tag describes what kind of security control the article is about. Added a new attribute type in any of these fields
+ creates a corresponding new filter and a drop-down list item in the article editor.&lt;/div&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+</content>
+</guidanceItem>

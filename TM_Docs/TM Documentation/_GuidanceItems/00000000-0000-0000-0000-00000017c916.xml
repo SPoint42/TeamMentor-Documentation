@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<guidanceItem id="00000000-0000-0000-0000-00000017c916" Author="" Category="Version Control" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Install TeamMentor from a GitHub Repository" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+  <content>
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; line-height:normal; font-weight:normal; font-size:10pt"&gt;
+&lt;span style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:small"&gt;This article will explain how to install TeamTeamor in a local computer from an GitHub Repository, in this case the TeamMentor
+ Evaluation version which contains the full TeamMentor Engine and an OWASP Top 10 Library&amp;nbsp;&lt;/span&gt;(&lt;a href="https://github.com/TeamMentor-OWASP/Master"&gt;https://github.com/TeamMentor-OWASP/Master&lt;/a&gt;&amp;nbsp;)&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; line-height:normal; font-weight:normal; font-size:10pt"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style="font-weight:normal; font-size:10pt; font-family:Arial,Verdana; font-style:normal; font-variant:normal; line-height:normal"&gt;
+&lt;font size="2"&gt;&lt;b&gt;Mode 1) Install from ZIP archive&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;1) In the target machine windows 2003, IIS and TortoiseSVN installed&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;2) create a folder to hold your GitHub Clones. In this example we are going to use: C:\TeamMentor_From_GitHub&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;3) In the C:\TeamMentor_From_GitHub folder right-click inside it, and chose from the Context Menu the option 'Git Clone'&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;4) in a browser open the page: https://github.com/TeamMentor/TeamMentor-Documentation, click on the 'Git Read-only'button and copy the url to its right (in this case git://github.com/TeamMentor/TeamMentor-Documentation.git).
+ If you want to make commits from this version, you will need to use either th Http or SSH urls (and use an account with push privileges to this repository)&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;5) back in the Git Clone Gui, put the Git url in the 'Url' TextBox (git://github.com/TeamMentor/TeamMentor-Documentation.git) and set the 'Directory' TextBox to 'C:\TeamMentor_From_GitHub\TeamMentor-Documentation). Click
+ OK&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;6) the 'C:\TeamMentor_From_GitHub\TeamMentor-Documentation' should now be populated with a number of files and folders&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;7) if you just want to run the TeamMentor locally:&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;font face="Arial, Verdana" size="2"&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;b style="font-size:small"&gt;Mode 2) Install as Git repository&lt;/b&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;b style="font-size:small"&gt;&lt;br&gt;
+&lt;/b&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;
+&lt;b style="font-size:small"&gt;&lt;br&gt;
+&lt;/b&gt;&lt;/div&gt;
+&lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; line-height:normal"&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content>
+</guidanceItem>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<guidanceItem id="00000000-0000-0000-0000-000000067e51" Author="" Category="User Interface" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="About the Navigation Pane" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+  <content>The navigation pane gives an overview of content organized into libraries, folders, and views.&amp;nbsp;This tree can be navigated in a manner similar to files and folders, which are familiar to most people.&amp;nbsp;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;Browsing TeamMentor content via the navigation pane is similar to exploring files and folders, but there are some differences. All the articles are located in the library, rather than in the folders or views. Views are references to sub-sets of these files,
+ like playlists in music players. Folders are a way to organize the views. An article may appear in multiple views and folders, but there is still only one copy of the article - the views and folders display references to it.&lt;/div&gt;
+&lt;div&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;div&gt;On top of the Navigation Pane is the &amp;quot;Applied Filters&amp;quot; control. This control shows the list of the current applied filters. These filters can be all removed at once by clicking the &amp;quot;X&amp;quot; icon next to the &amp;quot;Applied Filters&amp;quot; label. Each individual applied filter
+ can be removed by clicking the &amp;quot;X&amp;quot; icon next to it.&lt;/div&gt;
+</content>
+</guidanceItem>
