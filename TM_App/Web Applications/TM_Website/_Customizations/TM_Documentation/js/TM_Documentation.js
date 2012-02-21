@@ -18,6 +18,10 @@ TM.Documentation =
                                         {
                                             window.open("http://www.securityinnovation.com" , "_blank");
                                         }
+        ,   open_TM_Website         : function()
+                                        {
+                                            window.open("/", "_self");
+                                        }
         ,   add_LinksToMenu         : function()
                                         {
                                             var addLink = function(text,onClick)
@@ -29,16 +33,16 @@ TM.Documentation =
                                                                          .appendTo(".nav")
                                                             }
                                             addLink("Home Page"             , this.open_HomePage);
-                                            addLink("Table of Contents"     , this.open_TableOfContents);
+                                            addLink("Table of Contents"     , this.open_TableOfContents);                                            
+                                            addLink("This TeamMentor Website", this.open_TM_Website);
                                             addLink("SecurityInnovation.com", this.open_SI_Website);
-                                            
 
                                         }
         ,   buildGui                : function()
                                         {                                            
                                             TM.Documentation.add_LinksToMenu();
-                                            //TM.Documentation.open_HomePage
-                                            TM.Documentation.open_TableOfContents();
+                                            TM.Documentation.open_HomePage();
+                                            //TM.Documentation.open_TableOfContents();
 
                                          
                                         }

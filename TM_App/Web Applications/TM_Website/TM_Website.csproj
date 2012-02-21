@@ -603,7 +603,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_Customizations\TM_Documentation\css\bootstrap.min.css" />
-    <Content Include="_Customizations\TM_Documentation\index.html" />
+    <Content Include="_Customizations\TM_Documentation\index.htm" />
     <Content Include="_Customizations\TM_Documentation\js\TM_Documentation.js" />
     <Content Include="_Customizations\TM_Documentation\pages\HomePage.htm" />
     <Content Include="_Customizations\TM_Documentation\pages\TableOfContents.htm" />
