@@ -8,6 +8,7 @@
           <item>00000000-0000-0000-0000-0000005b52c6</item>
           <item>00000000-0000-0000-0000-000000825831</item>
           <item>00000000-0000-0000-0000-0000005d8802</item>
+          <item>00000000-0000-0000-0000-00000017c916</item>
         </items>
       </view>
       <view caption="2. UI Elements" id="dbd83828-15b8-453e-ba97-261cfdde3fcc" creationDate="0001-01-01T00:00:00">
@@ -36,6 +37,11 @@
           <item>00000000-0000-0000-0000-0000008e9fb0</item>
           <item>00000000-0000-0000-0000-000000579bb9</item>
           <item>00000000-0000-0000-0000-00000060462d</item>
+        </items>
+      </view>
+      <view caption="5. Customization" id="a0710515-22a4-43da-9412-ee32cdd3d397" creationDate="0001-01-01T00:00:00">
+        <items>
+          <item>00000000-0000-0000-0000-00000060a93a</item>
         </items>
       </view>
     </libraryStructure>

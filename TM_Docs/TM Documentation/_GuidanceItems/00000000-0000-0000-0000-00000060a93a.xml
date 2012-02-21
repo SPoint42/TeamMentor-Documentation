@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-00000060a93a" Author="" Category="Version Control" Priority="" Rule_Type="Documentation" Status="" Technology="GIT" title="Git Scripts" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-00000060a93a" Author="" Category="Version Control" Priority="" Rule_Type="Documentation" Status="" Technology="GIT" title="Git Scripts" Topic="" phase="Draft" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>&lt;font face="Arial, Verdana" size="2" style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:10pt"&gt;Here are a number of useful Git Scripts&lt;/font&gt;
 &lt;div style="font-family:Arial,Verdana; font-size:10pt; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal"&gt;
 &lt;br&gt;

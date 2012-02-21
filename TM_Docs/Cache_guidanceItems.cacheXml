@@ -175,7 +175,7 @@
     <topic />
     <technology>TeamMentor</technology>
     <category>Version Control</category>
-    <phase>NA</phase>
+    <phase>Draft</phase>
     <rule_Type>Documentation</rule_Type>
     <priority />
     <status />
@@ -515,7 +515,7 @@
     <topic />
     <technology>GIT</technology>
     <category>Version Control</category>
-    <phase>NA</phase>
+    <phase>Draft</phase>
     <rule_Type>Documentation</rule_Type>
     <priority />
     <status />

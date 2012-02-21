@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-00000017c916" Author="" Category="Version Control" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Install TeamMentor from a GitHub Repository" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-00000017c916" Author="" Category="Version Control" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Install TeamMentor from a GitHub Repository" Topic="" phase="Draft" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>
 &lt;div style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; line-height:normal; font-weight:normal; font-size:10pt"&gt;
 &lt;span style="font-family:Arial,Verdana; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal; font-size:small"&gt;This article will explain how to install TeamTeamor in a local computer from an GitHub Repository, in this case the TeamMentor
