@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-00000061eb3b" Author="" Category="User Interface" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Identifying Main User Interface Elements" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-00000061eb3b" Author="" Category="User Interface" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="User Interface Overview" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>
 &lt;div&gt;
 &lt;div&gt;The main user interface window has five panes: the banner pane at the top, the navigation pane on the left, the filters pane in the middle, the preview pane on the right, and the article list pane on the bottom. The navigation, filters, and preview panes
@@ -28,7 +28,7 @@
 &lt;br&gt;
 &lt;hr&gt;
 &lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;font size="2"&gt;back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;Back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
 &lt;div&gt;&lt;/div&gt;
 </content>
 </guidanceItem>

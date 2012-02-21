@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-00000087e538" Author="" Category="User Interface" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="About the Filters Pane" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
+<guidanceItem id="00000000-0000-0000-0000-00000087e538" Author="" Category="User Interface" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Filters Pane" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
   <content>The filters pane allows filtering content in the current library/folder/view based on applicable technology, development phase, article type, and subject matter category. Filters can be enabled or disabled by using the corresponding checkboxes.</content>
 </guidanceItem>
