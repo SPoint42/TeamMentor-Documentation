@@ -17,10 +17,7 @@
 &lt;div&gt;Drag &amp;amp; drop operations allow moving content around inside the library. A library should have a set of folders and views. Views can be moved into folders, but folders cannot be moved into other folders. The views are the important aspect of the library
  and folders are a supporting element to help organize the views. Therefore, articles can be dragged and dropped into views, but not into folders. &amp;nbsp;The views contain links to articles. The same article can be located in multiple views, but a view can only be
  inside one folder. Selecting a folder in the navigation pane shows all the items in the views that are contained in that folder. Items cannot be moved between libraries.&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;font size="2"&gt;Back to&amp;nbsp;&lt;a href="?#ruledisplay:00000000-0000-0000-0000-0000008c5464"&gt;Table of Contents&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font size="2"&gt;&lt;/font&gt;&lt;/div&gt;
 &lt;div&gt;&lt;/div&gt;
 </content>
 </guidanceItem>
