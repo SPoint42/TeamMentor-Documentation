@@ -2,19 +2,16 @@
 <guidanceExplorer xmlns="urn:microsoft:guidanceexplorer">
   <library name="eb39d862-f752-4d1c-ab6e-14ed697397c0" caption="TM Documentation">
     <libraryStructure>
-      <view caption="1. Administration" id="9e7ebebb-7658-4407-b215-3160b0c45931" creationDate="0001-01-01T00:00:00">
+      <view caption="Administration" id="9e7ebebb-7658-4407-b215-3160b0c45931" creationDate="0001-01-01T00:00:00">
         <items>
           <item>00000000-0000-0000-0000-0000001c8add</item>
           <item>00000000-0000-0000-0000-0000005b52c6</item>
           <item>00000000-0000-0000-0000-000000825831</item>
           <item>00000000-0000-0000-0000-0000005d8802</item>
           <item>00000000-0000-0000-0000-00000017c916</item>
-          <item>00000000-0000-0000-0000-0000000724b8</item>
-          <item>00000000-0000-0000-0000-00000056909e</item>
-          <item>00000000-0000-0000-0000-0000006647d6</item>
         </items>
       </view>
-      <view caption="2. UI Elements" id="dbd83828-15b8-453e-ba97-261cfdde3fcc" creationDate="0001-01-01T00:00:00">
+      <view caption="UI Elements" id="dbd83828-15b8-453e-ba97-261cfdde3fcc" creationDate="0001-01-01T00:00:00">
         <items>
           <item>00000000-0000-0000-0000-0000000693a7</item>
           <item>00000000-0000-0000-0000-00000061eb3b</item>
@@ -26,7 +23,7 @@
           <item>00000000-0000-0000-0000-0000006c87b2</item>
         </items>
       </view>
-      <view caption="3. Reading Content" id="a1416f12-a35b-4ddb-9498-57736b7c7839" creationDate="0001-01-01T00:00:00">
+      <view caption="Reading Content" id="a1416f12-a35b-4ddb-9498-57736b7c7839" creationDate="0001-01-01T00:00:00">
         <items>
           <item>00000000-0000-0000-0000-000000803568</item>
           <item>00000000-0000-0000-0000-00000018204d</item>
@@ -34,7 +31,7 @@
           <item>00000000-0000-0000-0000-00000024fdb5</item>
         </items>
       </view>
-      <view caption="4. Editing Content" id="dbb802e1-4051-45f9-8935-bf9e2186b752" creationDate="0001-01-01T00:00:00">
+      <view caption="Editing Content" id="dbb802e1-4051-45f9-8935-bf9e2186b752" creationDate="0001-01-01T00:00:00">
         <items>
           <item>00000000-0000-0000-0000-00000001f6f7</item>
           <item>00000000-0000-0000-0000-0000008e9fb0</item>
@@ -42,9 +39,12 @@
           <item>00000000-0000-0000-0000-00000060462d</item>
         </items>
       </view>
-      <view caption="5. Customization" id="a0710515-22a4-43da-9412-ee32cdd3d397" creationDate="0001-01-01T00:00:00">
+      <view caption="Installation" id="42d43763-f674-4929-98f4-71a3345a5ec8" creationDate="0001-01-01T00:00:00">
         <items>
-          <item>00000000-0000-0000-0000-00000060a93a</item>
+          <item>00000000-0000-0000-0000-00000017c916</item>
+          <item>00000000-0000-0000-0000-0000000724b8</item>
+          <item>00000000-0000-0000-0000-00000056909e</item>
+          <item>00000000-0000-0000-0000-0000006647d6</item>
         </items>
       </view>
     </libraryStructure>
