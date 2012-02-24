@@ -13,19 +13,19 @@ To run TeamMentor locally, there is no installation needed, once the TeamMentor 
 &lt;/span&gt;&lt;/div&gt;
 &lt;div&gt;
 &lt;ol&gt;
-&lt;li&gt;Copy TeamMentor files to local folder
+&lt;li style="font-weight:normal"&gt;Copy TeamMentor files to local folder
 &lt;ul&gt;
 &lt;li&gt;&lt;b&gt;Download&amp;nbsp;the .zip&lt;/b&gt;&amp;nbsp;file of TeamMentor and extract it&lt;/li&gt;&lt;li&gt;You can also do a&amp;nbsp;&lt;b&gt;Git Clone&lt;/b&gt;&amp;nbsp;of the desired version of TeamMentor from GitHub&lt;br&gt;
 &lt;br&gt;
 &lt;/li&gt;&lt;/ul&gt;
-&lt;/li&gt;&lt;li&gt;&lt;b&gt;The&amp;nbsp;TeamMentor root folder&amp;nbsp;&lt;/b&gt;should contain the following folders:
+&lt;/li&gt;&lt;li style="font-weight:normal"&gt;&lt;b&gt;The&amp;nbsp;TeamMentor root folder&amp;nbsp;&lt;/b&gt;should contain the following folders:
 &lt;ul&gt;
 &lt;li&gt;Library_Data - this folder contains the library files.&lt;/li&gt;&lt;li&gt;Web Application - this folder contains the application files.&lt;br&gt;
 &lt;br&gt;
 &lt;/li&gt;&lt;/ul&gt;
-&lt;/li&gt;&lt;li&gt;(Optional)&lt;b&gt; Set the local TeamMentor port&lt;/b&gt;
+&lt;/li&gt;&lt;li&gt;(Optional)&lt;b style="font-weight:normal"&gt; &lt;/b&gt;&lt;b&gt;Set the local TeamMentor port&lt;/b&gt;&lt;br&gt;
 &lt;ul style="font-family:Arial,Verdana; font-size:10pt; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal"&gt;
-&lt;li&gt;&lt;/li&gt;&lt;li&gt;Open the &amp;quot;start webserver.bat&amp;quot; file with a text editor.&lt;/li&gt;&lt;li&gt;&amp;nbsp;Edit&amp;nbsp;the &amp;quot;/port&amp;quot; argument in the following line:
+&lt;li&gt;Open the &amp;quot;start webserver.bat&amp;quot; file with a text editor.&lt;/li&gt;&lt;li&gt;&amp;nbsp;Edit&amp;nbsp;the &amp;quot;/port&amp;quot; argument in the following line:
 &lt;ul&gt;
 &lt;li&gt;start &amp;quot;WebServer&amp;quot; &amp;quot;WebServer/CassiniDev.exe&amp;quot; /port:&lt;b&gt;12345&lt;/b&gt;&amp;nbsp;/portMode:Specific /path:&amp;quot;Web Applications\TM_Website&amp;quot;&lt;/li&gt;&lt;/ul&gt;
 &lt;/li&gt;&lt;li&gt;Set same port on the next line

@@ -55,6 +55,9 @@ TM.Documentation =
 											$(".container").width("100%")
 											$("#LeftMenu").width(230);
 											$("#PageContent").absolute().left(400).top(60);
+
+											$('.fill').css('background', '#000055');
+											$('body').css('font-family','Helvetica, Arial, sans-serif');
 										}
         ,   loadData_and_BuildGuid  : function()
                                         {
