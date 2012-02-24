@@ -2,12 +2,13 @@
 
 	TM.Documentation.TableOfContents = 
 		{
-				targetDiv			: "#tableOfContents"
+				targetDiv			: "#TableOfContents"
 			,	show				: function()
-										{
+										{											
 											tableOfContents = $("<div>");
 											tableOfContents.append($("<h2>").append("Table Of Contents"));
 											var tmDocumentation = TM.WebServices.Data.library("TM Documentation")
+											
 											$.each(tmDocumentation.views, function() 
 												{ 
 													var topic = $("<p>");
@@ -36,12 +37,14 @@
 													_item = this;
 												} );
 			
-
+			
 
 											$(TM.Documentation.TableOfContents.targetDiv).html(tableOfContents);
 
-											
-											$("#tableOfContents a").css("font-size","14px")
+											//$(TM.Documentation.TableOfContents.targetDiv).open(tableOfContents);
+			
+											$(TM.Documentation.TableOfContents.targetDiv + " a").css("font-size","14px")
+											$(TM.Documentation.TableOfContents.targetDiv + " h2").relative().left(-30)
 										}
 			//,	show				: function()
 
@@ -49,22 +52,24 @@
 
 	TM.Documentation.GuidanceItems =
 		{
-				targetDiv			: TM.Documentation.TableOfContents.targetDiv
+				targetDiv			: "#PageContent"
 			,	show				: function(title, guid)
-										{
+										{										
 											getGuidanceItemHtml(guid, function(data) 
 												{
 													var guidanceItemHtml = $("<div>");
 													guidanceItemHtml.append($("<h2>").append(title));
 													guidanceItemHtml.append(data.d);
 
-													guidanceItemHtml.append($("<hr>"))
+/*													guidanceItemHtml.append($("<hr>"))
 																	.append("Back to ")
 																	.append($("<a>").attr("href","#")
 																					.click(TM.Documentation.TableOfContents.show)
 																					.append("Table of Contents"));
+*/
 
-													$(TM.Documentation.TableOfContents.targetDiv).html(guidanceItemHtml);
+													$(TM.Documentation.GuidanceItems.targetDiv).html(guidanceItemHtml);
+													
 												});
 										}
 		}
@@ -72,6 +77,5 @@
 	$(TM.Documentation.TableOfContents.show);
 </script>
 
-<div class="hero-unit">	
-	<div id="tableOfContents"></div>
-</div>
+
+<div id="TableOfContents"></div>	
