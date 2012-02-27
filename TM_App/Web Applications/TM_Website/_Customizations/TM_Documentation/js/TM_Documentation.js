@@ -22,7 +22,7 @@ TM.Documentation =
                                         }
         ,   open_TM_Website         : function()
                                         {
-                                            window.open("/", "_self");
+                                            window.open("/html_pages/Gui/TeamMentor.html", "_self");
                                         }
         ,   add_LinksToMenu         : function()
                                         {
