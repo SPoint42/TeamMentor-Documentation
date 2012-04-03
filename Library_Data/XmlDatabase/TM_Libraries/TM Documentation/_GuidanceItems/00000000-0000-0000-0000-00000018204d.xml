@@ -1,12 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-00000018204d" Author="" Category="Reading" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Using the Search Function" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
-  <content>
-&lt;div style="font-size:10pt"&gt;The search function allows the user to find articles based on whether their titles or contents include a certain text string. The Search bar is located in the filter pane and acts as a filter based on the article title and article
+<?xml version="1.0"?>
+<TeamMentor_Article Metadata_Hash="-1350149324" Content_Hash="323197783">
+  <Metadata>
+    <Id>00000000-0000-0000-0000-00000018204d</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>Using the Search Function</Title>
+    <Category>Reading</Category>
+    <Phase>NA</Phase>
+    <Technology>TeamMentor</Technology>
+    <Type>Documentation</Type>
+    <DirectLink />
+    <Tag />
+    <Security_Demand />
+    <Author />
+    <Priority />
+    <Status />
+  </Metadata>
+  <Content Sanitized="true" DataType="Html">
+    <Data><![CDATA[
+<div style="font-size:10pt">The search function allows the user to find articles based on whether their titles or contents include a certain text string. The Search bar is located in the filter pane and acts as a filter based on the article title and article
  content. The applied search string shows up as a filter on top of the navigation pane, like the other filters. The search is applied to the list of articles displayed in the article list pane in the bottom center of the main user interface based on the currently
- selected library, folder, or view in the navigation pane on the left.&lt;/div&gt;
-&lt;div style="font-size:10pt"&gt;&lt;br&gt;
-&lt;/div&gt;
-&lt;div style="font-size:10pt"&gt;Entering multiple words will search for the specific string that is entered. The search function currently does not support Boolean operations or regular expressions.&lt;/div&gt;
-&lt;div style="font-size:10pt"&gt;&lt;/div&gt;
-</content>
-</guidanceItem>
+ selected library, folder, or view in the navigation pane on the left.</div>
+<div style="font-size:10pt"><br>
+</div>
+<div style="font-size:10pt">Entering multiple words will search for the specific string that is entered. The search function currently does not support Boolean operations or regular expressions.</div>
+<div style="font-size:10pt"></div>
+]]></Data>
+  </Content>
+</TeamMentor_Article>
