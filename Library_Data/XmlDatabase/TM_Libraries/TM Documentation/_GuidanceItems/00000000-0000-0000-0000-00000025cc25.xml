@@ -29,7 +29,10 @@
   <div>
     <ul>
       <li>
-        <font size="2" face="Arial, Verdana">TeamMentor API</font>
+        <a href="Consuming TeamMentor Data">Consuming TeamMentor Data</a>
+      </li>
+      <li>
+        <a href="TeamMentor Article Schema">TeamMentor Article Schema</a>
       </li>
     </ul>
     <div>
@@ -39,10 +42,14 @@
     </div>
     <ul>
       <li>
-        <font size="2" face="Arial, Verdana">Creating the CheckMarx/CWE version</font>
+        <font size="2" face="Arial, Verdana">
+          <a href="Creating the CheckMarx Library">Creating the CheckMarx Library</a>
+        </font>
       </li>
       <li>
-        <font size="2" face="Arial, Verdana">Creating a CWE Library from the CWE XML</font>
+        <font size="2" face="Arial, Verdana">
+          <a href="Creating a CWE Library from the CWE XML">Creating a CWE Library from the CWE XML</a>
+        </font>
       </li>
     </ul>
   </div>]]></Data>

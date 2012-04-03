@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
+  <Metadata>
+    <Id>a2629e25-ebd4-4360-bede-672ac3b01d9b</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>TeamMentor Article Schema</Title>
+    <Category />
+    <Phase />
+    <Technology />
+    <Type />
+    <DirectLink>TeamMentor Article Schema</DirectLink>
+  </Metadata>
+  <Content Sanitized="false" DataType="Html">
+    <Data><![CDATA[TeamMentor's article data are stored in XML files with the following schema:<div><br /><br /><pre><div>&lt;TeamMentor_Article Metadata_Hash="1136375728" Content_Hash="-1237407265"&gt;</div><div>  &lt;Metadata&gt;</div><div>    &lt;Id&gt;00000000-0000-0000-0000-00000024fdb5&lt;/Id&gt;</div><div>    &lt;Library_Id&gt;eb39d862-f752-4d1c-ab6e-14ed697397c0&lt;/Library_Id&gt;</div><div>    &lt;Title&gt;Opening an Article&lt;/Title&gt;</div><div>    &lt;Category&gt;Reading&lt;/Category&gt;</div><div>    &lt;Phase&gt;NA&lt;/Phase&gt;</div><div>    &lt;Technology&gt;TeamMentor&lt;/Technology&gt;</div><div>    &lt;Type&gt;Documentation&lt;/Type&gt;</div><div>    &lt;DirectLink/&gt;</div><div>    &lt;Tag/&gt;</div><div>    &lt;Security_Demand/&gt;</div><div>    &lt;Author/&gt;</div><div>    &lt;Priority/&gt;</div><div>    &lt;Status/&gt;</div><div>  &lt;/Metadata&gt;</div><div>  &lt;Content Sanitized="true" DataType="Html"&gt;</div><div>    &lt;Data&gt;</div><div>      &lt;![CDATA[</div><div>         Articles can be opened from the article list pane. The article list pane is the main TeamMentor user interface component and is located in the bottom center by default. Browsing the navigation pane on the left and using the filters in the middle of the user interface changes the list that is displayed in the article list window. Once the desired article is in sight, it can be previewed by single-clicking on its title. To open the article in a new window, double-click on it in the list. Another option is to use the &amp;quot;Open in New Window&amp;quot; button to the right of the &amp;quot;Selected Guidance Item&amp;quot; text in the preview pane. &lt;br&gt; &lt;br&gt; &lt;div&gt;&lt;font size="2"&gt;&lt;/font&gt;&lt;/div&gt; &lt;div&gt;&lt;/div&gt;</div><div>       ]]&gt;</div><div>    &lt;/Data&gt;</div><div>  &lt;/Content&gt;</div><div>&lt;/TeamMentor_Article&gt;</div><div><br /></div></pre><div>You can see the current schema file by using the syntax: http://{tm site}/raw/{title}</div><div><br /></div><div>So for example, the schema shown above was taken from the <a href="/raw/Opening an Article">/raw/Opening an Article</a> page</div><div><br /></div></div>]]></Data>
+  </Content>
+</TeamMentor_Article>
