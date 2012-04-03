@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<guidanceItem id="00000000-0000-0000-0000-000000825831" Author="" Category="Administration" Priority="" Rule_Type="Documentation" Status="" Technology="TeamMentor" title="Removing Libraries" Topic="" phase="NA" libraryId="eb39d862-f752-4d1c-ab6e-14ed697397c0" xmlns="urn:microsoft:guidanceexplorer:guidanceItem">
-  <content>Libraries can be removed by deleting the corresponding library folders. Library folders can be found in the location configured in TMConfig.Config or in the &amp;quot;Library_Data\XmlDatabase\TM_Libraries&amp;quot; folder relative to the TeamMentor installation path by
- default. The setting for the library location in the TMConfig.Config file is XmlLibrariesPath.</content>
-</guidanceItem>
