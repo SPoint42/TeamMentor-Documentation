@@ -13,17 +13,9 @@
     <Priority />
     <Status />
   </Metadata>
-  <Content Sanitized="false" DataType="html">
-    <Data><![CDATA[This section contains technical details on how TeamMentor works, its architecture and how to consume/manipulate its data.
-
-===Table of Contents===
-
-* [[Consuming TeamMentor Data]]
-* [[TeamMentor Article Schema]]
-* [[KnowledgeBase Articles]]
-
-===Script Examples===
-* [[Creating the CheckMarx Library]]
-* [[Creating a CWE Library from the CWE XML]]]]></Data>
+  <Content Sanitized="false" DataType="wikitext">
+    <Data><![CDATA[<script>
+document.location = '/xsl/Table_of_Contents';
+</script>]]></Data>
   </Content>
 </TeamMentor_Article>

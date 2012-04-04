@@ -10,13 +10,13 @@
     <Type />
     <DirectLink>Consuming TeamMentor Data</DirectLink>
   </Metadata>
-  <Content Sanitized="false" DataType="Html">
+  <Content Sanitized="false" DataType="wikitext">
     <Data><![CDATA[TeamMentor was designed from the ground up to facilitate the easy access and manipulation of its data.
 
 There are number of ways do it by:
 
 * Using the Control Panel WebServices GUI
-* Accessing the Web Services directly
+* Accessing the [[Web Services API]] directly
 * Using the Javascript API (which wraps the WebServices)
 * Consuming the server side DLLs (using or nor the WebServices methods)
 * Manipulating the XML files (either at the master XML Git repository or at a local install/fork/clone)
