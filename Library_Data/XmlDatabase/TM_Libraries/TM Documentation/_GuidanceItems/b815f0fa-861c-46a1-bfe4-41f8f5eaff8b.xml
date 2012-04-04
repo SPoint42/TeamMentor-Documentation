@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
+  <Metadata>
+    <Id>b815f0fa-861c-46a1-bfe4-41f8f5eaff8b</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>Creating the CheckMarx Library</Title>
+    <Category />
+    <Phase />
+    <Technology />
+    <Type />
+    <DirectLink>Creating the CheckMarx Library</DirectLink>
+  </Metadata>
+  <Content Sanitized="false" DataType="wikitext">
+    <Data><![CDATA[This article shows an script example on how a custom CWE Library was created using TeamMentor's WebServices API
+
+===Connect to a instance of TeamMentor and and login===
+
+{{{
+var teamMentor = new API_TeamMentor_WebServices("http://localhost:3186/"); 
+teamMentor.login("admin", adminPwd);
+return teamMentor.loggedIn();
+//using SecurityInnovation.TeamMentor;
+//O2File:C:\_WorkDir\O2\O2 Install\_TeamMentor\TeamMentor-UnitTests\APIs\API_TeamMentor_WebServices.cs
+}}}]]></Data>
+  </Content>
+</TeamMentor_Article>

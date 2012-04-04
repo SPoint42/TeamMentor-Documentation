@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
+  <Metadata>
+    <Id>0c8ba335-dc29-4117-8e13-299b725e922a</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>Creating a CWE Library from the CWE XML</Title>
+  </Metadata>
+  <Content Sanitized="false" DataType="html">
+    <Data><![CDATA[This article will show how to transfer content from one TeamMentor Library into another using scripts that consume the available WebServices API]]></Data>
+  </Content>
+</TeamMentor_Article>
