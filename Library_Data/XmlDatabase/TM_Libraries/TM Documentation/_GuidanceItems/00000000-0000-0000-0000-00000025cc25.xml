@@ -4,9 +4,9 @@
     <Id>00000000-0000-0000-0000-00000025cc25</Id>
     <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
     <Title>TeamMentor Technology</Title>
-    <Category> </Category>
+    <Category />
     <Phase />
-    <Technology> </Technology>
+    <Technology />
     <Type />
     <DirectLink>TeamMentor Technology</DirectLink>
     <Author />
@@ -14,44 +14,16 @@
     <Status />
   </Metadata>
   <Content Sanitized="false" DataType="html">
-    <Data><![CDATA[<font size="2" face="Arial, Verdana">This section contains technical details on how TeamMentor works, its architecture and how to consume/manipulate its data.</font>
-  <div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; line-height: normal; font-weight: normal; ">
-    <br />
-  </div>
-  <div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; line-height: normal; ">
-    <b>Table of Contents</b>
-  </div>
-  <div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; line-height: normal; ">
-    <b>
-      <br />
-    </b>
-  </div>
-  <div>
-    <ul>
-      <li>
-        <a href="Consuming TeamMentor Data">Consuming TeamMentor Data</a>
-      </li>
-      <li>
-        <a href="TeamMentor Article Schema">TeamMentor Article Schema</a>
-      </li>
-    </ul>
-    <div>
-      <font size="2" face="Arial, Verdana">
-        <b>Script Examples</b>
-      </font>
-    </div>
-    <ul>
-      <li>
-        <font size="2" face="Arial, Verdana">
-          <a href="Creating the CheckMarx Library">Creating the CheckMarx Library</a>
-        </font>
-      </li>
-      <li>
-        <font size="2" face="Arial, Verdana">
-          <a href="Creating a CWE Library from the CWE XML">Creating a CWE Library from the CWE XML</a>
-        </font>
-      </li>
-    </ul>
-  </div>]]></Data>
+    <Data><![CDATA[This section contains technical details on how TeamMentor works, its architecture and how to consume/manipulate its data.
+
+===Table of Contents===
+
+* [[Consuming TeamMentor Data]]
+* [[TeamMentor Article Schema]]
+* [[KnowledgeBase Articles]]
+
+===Script Examples===
+* [[Creating the CheckMarx Library]]
+* [[Creating a CWE Library from the CWE XML]]]]></Data>
   </Content>
 </TeamMentor_Article>
