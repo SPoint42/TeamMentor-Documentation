@@ -42,7 +42,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 					 where guidanceItem.Metadata.Title.valid() &&
                            (guidanceItem.Metadata.Title.lower().contains(searchTextEncoded)       ||
 //					        guidanceItem.title.regEx	   				(searchText) 	 ||
-                            guidanceItem.Content.Data_Raw.lower().contains(searchTextEncoded) )
+                            guidanceItem.Content.Data.Value.lower().contains(searchTextEncoded) )
 //                       || guidanceItem.htmlContent.regEx			(searchText)           )									
 					 select guidanceItem.Metadata.Id
 					).toList(); 
@@ -269,11 +269,11 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 							//			.type;
 									};
             article.Content = new TeamMentor_Article_Content()
-                                    {
-                                        Data_Raw  = htmlContent,
-                                        DataType  = "html"//,
+                                    {     
+                                        DataType  = "html"
                                         //Sanitized = false
                                     };
+            article.Content.Data.Value  = htmlContent;
 			/*var guidanceItem  = new guidanceItem()
 									{
 										id = (guidanceItemId == Guid.Empty) 
@@ -327,10 +327,11 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			"Saving GuidanceItem {0} to {1}".info(article.Metadata.Id, guidanceXmlPath);				
 			
             //tidy the html
-            if(article.Content.DataType.lower() == "html")
-                article.Content.Data_Raw = article.Content.Data_Raw.tidyHtml();
-            
-
+            if(article.Content.DataType.lower() == "html")     
+            {
+                var cdataContent=  article.Content.Data.Value.replace("]]>", "]] >"); // xmlserialization below will break if there is a ]]>  in the text
+                article.Content.Data.Value = cdataContent.tidyHtml();
+            }            
 			article.Metadata.Library_Id = libraryId;        //ensure the LibraryID is correct
 			article.saveAs(guidanceXmlPath);			
 
@@ -370,15 +371,25 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		public static string xmlDB_guidanceItemXml(this TM_Xml_Database tmDatabase, Guid guidanceItemId)
 		{
 			var guidanceXmlPath = tmDatabase.getXmlFilePathForGuidanceId(guidanceItemId);
-			return guidanceXmlPath.fileContents().xmlFormat();
+			return guidanceXmlPath.fileContents();//.xmlFormat();
 		}
 
 
         public static Guid xmlBD_resolveDirectMapping(this TM_Xml_Database tmDatabase, string mapping)
-        {            
+        {           
+            if(mapping.inValid())
+                return Guid.Empty;
+
+
+            /*foreach(var item in TM_Xml_Database.Cached_GuidanceItems)
+                if(item.Value.Metadata.DirectLink.lower() == mapping ||item.Value.Metadata.Title.lower() == mapping)
+                    return item.Key;
+            */
+            mapping = mapping.lower();
+
             return (from item in TM_Xml_Database.Cached_GuidanceItems
-                    where item.Value.Metadata.DirectLink == mapping ||
-                          item.Value.Metadata.Title == mapping
+                    where (item.Value.Metadata.DirectLink.notNull() && item.Value.Metadata.DirectLink.lower() == mapping) ||
+                          (item.Value.Metadata.Title.notNull()      && item.Value.Metadata.Title.lower() == mapping)
                     select item.Key).first();
         }
 

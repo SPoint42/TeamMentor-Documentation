@@ -6,29 +6,21 @@
   <xsl:template match="/">
     <html>
       <head>        
-        <script src="/Javascript/jQuery/jquery-1.7.1.min.js"       type="text/javascript"></script>
-        
-        <script src="/Javascript/jscreole/creole.min.js"           type="text/javascript"></script>           
+        <script src="/Javascript/jQuery/jquery-1.7.1.min.js" type="text/javascript"></script>        
         
         <link rel="stylesheet" href="/Javascript/bootstrap/bootstrap.min.css" type="text/css"></link>        
         
-        
-        
-        <link href="/javascript/jsprettify/prettify.css" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="/javascript/jsprettify/prettify.js"></script>
-        
+        <script src="/Javascript/jscreole/creole.min.js" type="text/javascript"></script>        
         
         <style>
-            .HeaderImage  { height  : 75px }            
+            .HeaderImage  { height  : 75px }              
             .Article      { width : 75% }
         </style>
           
       </head>
-      <body >
-        
+      <body >        
         <script>
            var title = '<xsl:value-of select='//Metadata/Title'/>';
-           var dataType = '<xsl:value-of select='//Content/@DataType'/>';     
            
            var addBreadCrumb_Current = function()
                   {
@@ -61,69 +53,44 @@
                     
           var handleClick = function()
                   {                
+                  
                     var href = $(this).attr('href');                                
                 
                     if (href.split(':').length  > 1) // javascript call
                       return true;
                   
                     if (href.split('/').length  == 1) // only handle direct links
-                    {
+                    {    
                         var page = encodeURIComponent(href);
                         var target = "/html/" + page;
-                        console.log(target);  
+                                                                        
                         $("body").animate({ scrollTop: 0 }, 'fast');
-                        
                         var newTitle = $(this).html();
-                        
-                        $("#Content").load(target,function() 
-                          {
+                        $("#Content").load(target, function ()
+                          {                            
                             addBreadCrumb(newTitle);     
                             $("#Title").html(newTitle);
                         
                             if ($("#Content").html() ==="")
                             {
-                              createItText = "**TeamMentor Message: Article doesn't exist**, why don't you [[/create/"+page + "|create it]]?";
-                              $("#Content").html(createItText);                              
-                              dataType = "wikitext";
+                              createItText = "**NOTE: Article doesn't exist**, why don't you [[/create/"+page + "|create it]]?";
+                              $("#Content").html(createItText);
+                              //document.location="/create/"+
+                              //createArticle();
                             }
-                            else
-                              dataType = "html";
-                             
-                            history.pushState('', 'New URL: '+href, href);                                 
-                            handleMediaWikiText();
                             
+                            history.pushState('', 'New URL: '+href, href);   
+                        
+                            applyCreole();  
                           });
-                          
-                                                
+                        
+                        
                     }
                     else
                       window.open(href);
-                      
                     return false;
                   }
                 
-                
-          var handleMediaWikiText = function()
-            {             
-              if ($("#Content #tm_datatype_wikitext").length ===1)              
-              {
-                dataType = "wikitext";
-                $("#Content").html($("#Content #tm_datatype_wikitext").html());
-              }
-              
-              if (dataType.toLowerCase() === "wikitext")
-              {                
-                var wikiText = $("#Content").html();
-                var targetDiv = document.createElement('div');        
-                new creole().parse(targetDiv,wikiText )   
-                var html = targetDiv.innerHTML ;
-              
-                $("#Content").html(html);      
-             }
-             $("pre").addClass("prettyprint");
-             prettyPrint();
-            };
-            
           var hookContentLinks = function()
             {                
               $("a").live("click",handleClick);
@@ -131,21 +98,38 @@
             
           var editArticle = function()
           {            
-            document.location = "/notepad/" + title;
-            //window.open ("/edit/" + title);
+            //window.open ("/notepad/" + title);            
+            var url = "/notepad/" + title;
+            window.open (url,"_blank","menubar=1,resizable=1,width=850,height=450");
           }
-                    
+          
+          var createArticle = function()
+          {                        
+            var url = "/create/" + title;
+            window.open (url,"_blank","menubar=1,resizable=1,width=850,height=450");
+          }
+          
+          var applyCreole = function()
+          {
+            $("#CreoleContent").html("");
+            var sourceText = $("#Content").html();
+            var targetDiv = document.getElementById("CreoleContent");            
+            new creole().parse(targetDiv,sourceText)           
+            
+                        
+          }
+          
           $(function()
             {              
-                addBreadCrumb_Current();
-                hookContentLinks();                     
-                handleMediaWikiText();
-                                
+                $("#Content").hide();
+                addBreadCrumb_Current();       
+                hookContentLinks();    
+                applyCreole();
             });
         </script>
         <div >
           <div class="Header">
-            <a href="/xsl/Table_of_Contents">
+            <a href="Table_of_Contents">
               <img src="/Images/HeaderImage.jpg" class="HeaderImage"/>
             </a>          
           </div>          
@@ -170,7 +154,8 @@
 
   <xsl:template match="Content">
     <div id="ContentArea">
-         
+
+      <div id="CreoleContent"> </div>
       <div id="Content">
         <xsl:value-of select="Data" disable-output-escaping="yes"/>
       </div>

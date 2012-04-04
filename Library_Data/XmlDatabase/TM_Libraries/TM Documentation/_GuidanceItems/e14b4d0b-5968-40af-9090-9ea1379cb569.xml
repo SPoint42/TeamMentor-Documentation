@@ -10,27 +10,16 @@
     <Type />
     <DirectLink>Consuming TeamMentor Data</DirectLink>
   </Metadata>
-  <Content Sanitized="false" DataType="Html">
-    <Data><![CDATA[<p>
-TeamMentor was designed from the ground up to facilitate the easy access and manipulation of its data.
-</p>
-  <p>
+  <Content Sanitized="false" DataType="wikitext">
+    <Data><![CDATA[TeamMentor was designed from the ground up to facilitate the easy access and manipulation of its data.
+
 There are number of ways do it by:
-</p>
-  <ul>
-    <li>
-      <a href="http://127.0.0.1:12115/edit/Using%20the%20webapp%20Control%20Panel%20WebServices%20GUI">Using the Control Panel WebServices GUI</a>
-    </li>
-    <li>
-      <a href="Accessing the Webservices directly">Accessing the Web Services directly</a>
-    </li>
-    <li>
-      <a href="Using the webapp Javascript API">Using the Javascript API</a> (which wraps the WebServices)</li>
-    <li>
-      <a href="Directly consuming the server side DLLs">Consuming the server side DLLs</a> (using or nor the WebServices methods)</li>
-    <li>
-      <a href="Directly manipulating the XML files">Manipulating the XML files</a> (either at the master XML Git repository or at a local install/fork/clone)</li>
-    <li>Using the O2 Platform and its multiple TeamMentor data manipulation and viewing GUIs</li>
-  </ul>]]></Data>
+
+* Using the Control Panel WebServices GUI
+* Accessing the [[Web Services API]] directly
+* Using the Javascript API (which wraps the WebServices)
+* Consuming the server side DLLs (using or nor the WebServices methods)
+* Manipulating the XML files (either at the master XML Git repository or at a local install/fork/clone)
+* Using the O2 Platform and its multiple TeamMentor data manipulation and viewing GUIs]]></Data>
   </Content>
 </TeamMentor_Article>

@@ -63,6 +63,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                         return handleAction_Html(data);
                     case "xsl":
                         return handleAction_Xsl(data,"TeamMentor_Article.xslt");
+                    case "creole":
+                        return handleAction_Xsl(data,"JsCreole_Article.xslt");          
                     case "notepad":
                         return handleAction_Xsl(data, "Notepad_Edit.xslt");                        
                     case "viewer":
@@ -78,7 +80,9 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                     case "login":
                         return transfer_Login();   
                     case "logout":
-                        return redirectTo_Logout();                        
+                        return redirectTo_Logout();
+                    case "reloadcache":
+                        return reloadCache_and_RedirectToHomePage();
                     //case "images":                        
                     case "image":
                         return handleAction_Image(data);
@@ -139,28 +143,31 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                 var guid = tmWebServices.getGuidForMapping(data);
                 if (guid != Guid.Empty)
                 {
-                    var xmlContent = tmWebServices.XmlDatabase_GetGuidanceItemXml(guid)
-                                                  .add_Xslt(xsltToUse);
+                    var xmlContent = tmWebServices.XmlDatabase_GetGuidanceItemXml(guid);
+                                                  //.add_Xslt(xsltToUse);
+                    if (xmlContent.valid())
+                    {
+                        var xslTransform = new System.Xml.Xsl.XslTransform();
+                        xslTransform.Load(xstlFile);
 
-                    var xslTransform = new System.Xml.Xsl.XslTransform();
-                    xslTransform.Load(xstlFile);
+                        var xmlReader = new System.Xml.XmlTextReader(new StringReader(xmlContent));
+                        var xpathNavigator = new System.Xml.XPath.XPathDocument(xmlReader);
+                        var stringWriter = new StringWriter();
 
-                    var xmlReader = new System.Xml.XmlTextReader(new StringReader(xmlContent));
-                    var xpathNavigator = new System.Xml.XPath.XPathDocument(xmlReader);
-                    var stringWriter = new StringWriter();
+                        xslTransform.Transform(xpathNavigator, new System.Xml.Xsl.XsltArgumentList(), stringWriter);
 
-                    xslTransform.Transform(xpathNavigator, new System.Xml.Xsl.XsltArgumentList(), stringWriter);
+                        context.Response.ContentType = "text/html";
+                        context.Response.Write(stringWriter.str());
 
-                    context.Response.ContentType = "text/html";
-                    context.Response.Write(stringWriter.str());
+                        //context.Response.ContentType = "application/xml";
 
-                    //context.Response.ContentType = "application/xml";
+                        //context.Response.Write(xmlContent);
 
-                    //context.Response.Write(xmlContent);
-
-                    return true;
+                        return true;
+                    }
+                    return false;
                 }
-                else return transfer_ArticleViewer();
+                return transfer_ArticleViewer();
                     
             }
             return false;
@@ -196,8 +203,10 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             if (guid != Guid.Empty)
             {
                 context.Response.ContentType = "text/html";
-                var article = tmWebServices.GetGuidanceItemById(guid.str());
-                context.Response.Write(article.Content.Data.Value);
+                var content = tmWebServices.GetGuidanceItemHtml(guid);
+                context.Response.Write(content);
+                //var article = tmWebServices.GetGuidanceItemById(guid.str());
+                //context.Response.Write(article.Content.Data.Value);
             }
             return true;
         }
@@ -207,6 +216,13 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
         { 
             context.Response.Flush();
             context.Response.End();
+        }
+
+
+        private bool reloadCache_and_RedirectToHomePage()
+        {
+            tmWebServices.XmlDatabase_ReloadData();
+            return redirectTo_HomePage();
         }
 
 		public bool transfer_ArticleViewer()
@@ -230,6 +246,12 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
         public bool transfer_Login()
 		{			            
 			context.Server.Transfer("/Html_Pages/Gui/Pages/login.html");            
+            return false; 
+		}
+
+        public bool redirectTo_HomePage()
+		{	            
+		    context.Response.Redirect("/");                        	
             return false; 
 		}
 
