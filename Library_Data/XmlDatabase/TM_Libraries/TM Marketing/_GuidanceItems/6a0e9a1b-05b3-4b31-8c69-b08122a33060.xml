@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
   <Metadata>
-    <Id>7e92f253-192a-40fd-80dc-c7a6dfc289c3</Id>
-    <Library_Id>fcd4cd02-bfd3-4755-8943-7ff25f3ed00a</Library_Id>
-    <Title>Customer Landing Page</Title>
+    <Id>6a0e9a1b-05b3-4b31-8c69-b08122a33060</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>Test Landing Page</Title>
   </Metadata>
   <Content Sanitized="false" DataType="xml">
     <Data><![CDATA[<?xml-stylesheet type="text/xsl" href="/xml/xslt_LandingPage"?>
 <TeamMentor_LandingPage>
 
 	<!-- Splash Content-->
-	<SplashPanel_Data	title			= "**Thanks for Buying TeamMentor"
+	<SplashPanel_Data	title			= "TeamMentor (TEST page)"
 					image		= "TM_Images/TM_GUI.jpg" 
 					
 					button_1_text	= "Download Now"

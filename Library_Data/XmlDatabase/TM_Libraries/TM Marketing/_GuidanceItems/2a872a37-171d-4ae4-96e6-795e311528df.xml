@@ -20,7 +20,8 @@
 	<xsl:apply-templates select="*"/>
   </xsl:template>
 
-<xsl:template match="TeamMentor_LandingPage">
+ 
+  <xsl:template match="TeamMentor_LandingPage">
     <html>
 	<head>
 		<base href="http://customer.teammentor.net"/>
@@ -50,12 +51,18 @@
 			</div>	
 			<div class="splash">
 				<div class="splash-content">
-					<h1><xsl:value-of select="Title"/></h1>
-					<p><xsl:value-of select="IntroText" disable-output-escaping="yes"/></p>
-					<span class="call-to-action-1"><a><xsl:attribute name="href"><xsl:value-of select="Link_Download/@href" /></xsl:attribute>Download Now</a></span>
-					<span class="call-to-action-2"><a target="_blank"><xsl:attribute name="href"><xsl:value-of select="Link_AskForHelp/@href" /></xsl:attribute>Ask for Help</a></span>
+					<h1><xsl:value-of select="SplashPanel_Data/@title"/></h1>
+					<p><xsl:apply-templates select="SplashPanel_Text"/></p>
+					<span class="call-to-action-1">
+						<a><xsl:attribute name="href"><xsl:value-of select="SplashPanel_Data/@button_1_link" /></xsl:attribute><xsl:value-of select="SplashPanel_Data/@button_1_text" /></a>
+					</span>
+					<span class="call-to-action-2">
+						<a target="_blank"><xsl:attribute name="href"><xsl:value-of select="SplashPanel_Data/@button_1_link" /></xsl:attribute><xsl:value-of select="SplashPanel_Data/@button_2_text" /></a>
+					</span>
 				</div>	
-				<span class="splash-screenshot"><img width="435" height="274" class="screenshot" alt="example"><xsl:attribute name="src"><xsl:value-of select="Image_Splash/@href" /></xsl:attribute></img></span>
+				<span class="splash-screenshot">
+					<img width="435" height="274" class="screenshot" alt="example"><xsl:attribute name="src"><xsl:value-of select="SplashPanel_Data/@image" /></xsl:attribute></img>
+				</span>
 				<span class="clouds"></span>
 			</div>
 
@@ -98,95 +105,69 @@
 
 				<div class="gallery">
 					<ul class="gallery-list">
-
 						<li><a rel="gallery-set[1]"><xsl:attribute name="href"><xsl:value-of select="Gallery/@image_1_href" /></xsl:attribute>
-								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_1_href" /></xsl:attribute></img>
-							</a>
-						</li>
+						    		<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_1_href" /></xsl:attribute></img></a></li>
 
 						<li><a rel="gallery-set[1]"><xsl:attribute name="href"><xsl:value-of select="Gallery/@image_2_href" /></xsl:attribute>
-								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_2_href" /></xsl:attribute></img>
-							</a>
-						</li>
+								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_2_href" /></xsl:attribute></img></a></li>
 
 						<li><a rel="gallery-set[1]"><xsl:attribute name="href"><xsl:value-of select="Gallery/@image_3_href" /></xsl:attribute>
-								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_3_href" /></xsl:attribute></img>
-							</a>
-						</li>
+								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_3_href" /></xsl:attribute></img></a></li>
 
 						<li><a rel="gallery-set[1]"><xsl:attribute name="href"><xsl:value-of select="Gallery/@image_4_href" /></xsl:attribute>
-								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_4_href" /></xsl:attribute></img>
-							</a>
-						</li>
+								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_4_href" /></xsl:attribute></img></a></li>
 
 						<li><a rel="gallery-set[1]"><xsl:attribute name="href"><xsl:value-of select="Gallery/@image_5_href" /></xsl:attribute>
-								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_5_href" /></xsl:attribute></img>
-							</a>
-						</li>
+								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_5_href" /></xsl:attribute></img></a></li>
 
 						<li><a rel="gallery-set[1]"><xsl:attribute name="href"><xsl:value-of select="Gallery/@image_6_href" /></xsl:attribute>
-								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_6_href" /></xsl:attribute></img>
-							</a>
-						</li>
+								<img width="128" height="93" ><xsl:attribute name="src"><xsl:value-of select="Gallery/@image_6_href" /></xsl:attribute></img></a></li>
 					</ul>
 				</div>
 
 
 		<!-- Testimonials -->
 
-				<div class="testimonials">
-
-					<h2>See what others are saying</h2>
+				<div class="testimonials">Testimonials 	
+					<h2><xsl:value-of select="Testimonials/@title" /></h2>
 
 					<span class="testimonials-top"></span>
-
 					<ul>
+						<li><p><xsl:value-of select="Testimonials/@slot_1_text" /></p>
+							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
 
-						<li>
-							<p>We're deploying TeamMentor to our worldwide team of developers.</p>
-							<p class="testimonial-user">Mr Corporate - Company Y</p>
-						</li>
+						<li><p><xsl:value-of select="Testimonials/@slot_2_text" /></p>
+							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
 
-						<li>
-							<p>We were able to add a great Knowledge base to our product.</p>
-							<p class="testimonial-user">Joe Inventor - Tool X</p>
-						</li>
+						<li><p><xsl:value-of select="Testimonials/@slot_3_text" /></p>
+							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
 
-						<li>
-							<p>I think TeamMentor is great, I use it for every thing, specially my cooking recipes.</p>
-							<p class="testimonial-user">Ed's Mum</p>
-						</li>
-
-						<li>
-							<p>Yeah, TeamMentor, it's that thing we use to Mentor Teams, right?</p>
-							<p class="testimonial-user">Adam's Friend - Somewhere in Boston</p>
-						</li>
-
+						<li><p><xsl:value-of select="Testimonials/@slot_4_text" /></p>
+							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
 					</ul>
-
 					<span class="testimonials-bottom"></span>
-
 				</div>
 			<div class="clear"></div>
 		   </div>
 		</div>
+
 	<!-- Footer -->
-
 		<div class="footer">
-
 			<div class="footer-content">
 				<p>  <xsl:value-of select="FooterText"/></p>
 				<div class="copyright">
-					<p class="left copyright-text">Copyright 2012 Security Innovation.</p>
+					<p class="left copyright-text"><xsl:value-of select="FooterTextCopyright"/></p>
 				</div>
 				<div class="clear"></div>
 			</div>
 		</div>
-
        	</body>
     </html>
   </xsl:template>
 
+  <xsl:template match="br">
+  <br/>
+  </xsl:template>
 </xsl:stylesheet>]]></Data>
   </Content>
 </TeamMentor_Article>
