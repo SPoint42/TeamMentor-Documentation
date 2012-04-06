@@ -13,14 +13,19 @@
   <Content Sanitized="false" DataType="wikitext">
     <Data><![CDATA[This section contains technical details on how TeamMentor works, its architecture and how to consume/manipulate its data.
 
-===Table of Contents===
+===Features===
 
 * [[Consuming TeamMentor Data]]
 * [[TeamMentor Article Schema]]
 * [[TeamMentor REST API]]
+* [[WikiText Support]]
 
 ===Script Examples===
+* [[Creating Library, Folder, Views and Articles]]
 * [[Creating the CheckMarx Library]]
-* [[Creating a CWE Library from the CWE XML]]]]></Data>
+* [[Creating a CWE Library from the CWE XML]]
+
+
+This site is powered by a TeamMentor website, which can be [[/html_pages/Gui/TeamMentor.html | accessed here]]]]></Data>
   </Content>
 </TeamMentor_Article>

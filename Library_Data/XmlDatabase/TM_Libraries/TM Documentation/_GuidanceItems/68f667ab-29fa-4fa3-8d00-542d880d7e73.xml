@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
+  <Metadata>
+    <Id>68f667ab-29fa-4fa3-8d00-542d880d7e73</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>Creating Library, Folder, Views and Articles</Title>
+  </Metadata>
+  <Content Sanitized="false" DataType="wikitext">
+    <Data><![CDATA[The TeamMentor client API provides a simple way to create Libraries, Folders, Views and Artices]]></Data>
+  </Content>
+</TeamMentor_Article>
