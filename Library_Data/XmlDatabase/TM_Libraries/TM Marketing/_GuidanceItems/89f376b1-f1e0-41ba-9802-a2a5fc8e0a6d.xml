@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
 <TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
   <Metadata>
-    <Id>2a872a37-171d-4ae4-96e6-795e311528df</Id>
-    <Library_Id>fcd4cd02-bfd3-4755-8943-7ff25f3ed00a</Library_Id>
-    <Title>xslt LandingPage</Title>
-    <Category />
-    <Phase />
-    <Technology />
-    <Type />
-    <DirectLink>xslt LandingPage</DirectLink>
+    <Id>89f376b1-f1e0-41ba-9802-a2a5fc8e0a6d</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>xslt LandingPage Variation 1</Title>
   </Metadata>
   <Content Sanitized="false" DataType="xml">
     <Data><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -129,24 +124,22 @@
 
 		<!-- Testimonials -->
 
-				<div class="testimonials">Testimonials 	
+				<div class="testimonials">
+
 					<h2><xsl:value-of select="Testimonials/@title" /></h2>
+					<br/>
+					<p><i><xsl:value-of select="Testimonials/@slot_1_text" /></i></p>
+					<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p>
+					<br/>
+					<p><i><xsl:value-of select="Testimonials/@slot_2_text" /></i></p>
+					<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_2_company" /></p>
+					<br/>
+					<p><i><xsl:value-of select="Testimonials/@slot_3_text" /></i></p>
+					<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_3_company" /></p>
+					<br/>
+					<p><i><xsl:value-of select="Testimonials/@slot_4_text" /></i></p>
+					<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_4_company" /></p>
 
-					<span class="testimonials-top"></span>
-					<ul>
-						<li><p><xsl:value-of select="Testimonials/@slot_1_text" /></p>
-							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
-
-						<li><p><xsl:value-of select="Testimonials/@slot_2_text" /></p>
-							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
-
-						<li><p><xsl:value-of select="Testimonials/@slot_3_text" /></p>
-							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
-
-						<li><p><xsl:value-of select="Testimonials/@slot_4_text" /></p>
-							<p class="testimonial-user"><xsl:value-of select="Testimonials/@slot_1_company" /></p></li>
-					</ul>
-					<span class="testimonials-bottom"></span>
 				</div>
 			<div class="clear"></div>
 		   </div>
