@@ -24,6 +24,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 {	
 	public partial class TM_Xml_Database 
 	{
+        public static int FORCED_MILLISEC_DELAY_ON_LOGIN_ACTION = 500;
+
 		public static void loadTmUserObjects(string xmlDatabasePath)
 		{
 			if(xmlDatabasePath.dirExists().isFalse())
@@ -244,18 +246,20 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
     	
     	public static Guid login(this TM_Xml_Database tmDb, string username, string passwordHash)
     	{			
-    	//	if(TM_Xml_Database.TMUsersPasswordHashes.hasKey(username))
-			if (TM_Xml_Database.TMUsersPasswordHashes[username] == passwordHash)
-				return tmDb.registerUserSession(tmDb.tmUser(username), Guid.NewGuid());
+            tmDb.sleep(TM_Xml_Database.FORCED_MILLISEC_DELAY_ON_LOGIN_ACTION);      // to slow down brute force attacks
+    	    if(username.valid() && passwordHash.valid())
+			    if (TM_Xml_Database.TMUsersPasswordHashes[username] == passwordHash)
+				    return tmDb.registerUserSession(tmDb.tmUser(username), Guid.NewGuid());
     		return Guid.Empty;    			
     	}
     	
 		
     	public static Guid login_PwdInClearText(this TM_Xml_Database tmDb, string username, string password)
-    	{			
-    		//if(TM_Xml_Database.TMUsersPasswordHashes.hasKey(username))
-			if (TM_Xml_Database.TMUsersPasswordHashes[username] == username.createPasswordHash(password))
-				return tmDb.registerUserSession(tmDb.tmUser(username), Guid.NewGuid());				
+    	{	
+		    tmDb.sleep(TM_Xml_Database.FORCED_MILLISEC_DELAY_ON_LOGIN_ACTION);  // to slow down brute force attacks
+    		if(username.valid() && password.valid())
+			    if (TM_Xml_Database.TMUsersPasswordHashes[username] == username.createPasswordHash(password))
+				    return tmDb.registerUserSession(tmDb.tmUser(username), Guid.NewGuid());				
     		return Guid.Empty;    			
     	}    	
 		
@@ -365,14 +369,26 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 	}	
 	
 	public static class TM_Xml_Database_ExtensionMethods_ActiveSessions
-	{	
+	{
 		public static Guid registerUserSession(this string userName, Guid userGuid)
 		{
-			var tmUser = userName.tmUser();
-			if (tmUser.notNull())
+			var tmUser = userName.tmUser();			
+			return tmUser.registerUserSession(userGuid);
+		}
+
+		public static Guid registerUserSession(this TMUser tmUser, Guid userGuid)
+		{
+			try
 			{
-				TM_Xml_Database.ActiveSessions.add(userGuid, tmUser);
-				return userGuid;
+				if (tmUser.notNull())
+				{
+					TM_Xml_Database.ActiveSessions.add(userGuid, tmUser);
+					return userGuid;
+				}
+			}
+			catch (Exception ex)
+			{
+				ex.log();
 			}
 			return Guid.Empty;
 		}

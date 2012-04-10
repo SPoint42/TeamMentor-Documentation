@@ -15,11 +15,11 @@
 
 There are number of ways do it by:
 
-* Using the Control Panel WebServices GUI
+* Using the [[Control Panel WebServices GUI]]
 * Accessing the [[Web Services API]] directly
-* Using the Javascript API (which wraps the WebServices)
+* Using the [[Javascript API]] (which wraps the WebServices)
+* [[Manipulating the XML files]] (either at the master XML Git repository or at a local install/fork/clone)
 * Consuming the server side DLLs (using or nor the WebServices methods)
-* Manipulating the XML files (either at the master XML Git repository or at a local install/fork/clone)
 * Using the O2 Platform and its multiple TeamMentor data manipulation and viewing GUIs]]></Data>
   </Content>
 </TeamMentor_Article>
