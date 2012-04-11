@@ -53,13 +53,13 @@
 						<a><xsl:attribute name="href"><xsl:value-of select="SplashPanel_Data/@button_1_link" /></xsl:attribute><xsl:value-of select="SplashPanel_Data/@button_1_text" /></a>
 					</span>
 					<span class="call-to-action-2">
-						<a target="_blank"><xsl:attribute name="href"><xsl:value-of select="SplashPanel_Data/@button_1_link" /></xsl:attribute><xsl:value-of select="SplashPanel_Data/@button_2_text" /></a>
+						<a target="_blank"><xsl:attribute name="href"><xsl:value-of select="SplashPanel_Data/@button_2_link" /></xsl:attribute><xsl:value-of select="SplashPanel_Data/@button_2_text" /></a>
 					</span>
 				</div>	
 				<span class="splash-screenshot">
-					<img width="435" height="274" class="screenshot" alt="example"><xsl:attribute name="src"><xsl:value-of select="SplashPanel_Data/@image" /></xsl:attribute></img>
+					<img width="320" height="320" style="position:relative ; left:120" class="screenshot" alt="example"><xsl:attribute name="src"><xsl:value-of select="SplashPanel_Data/@image" /></xsl:attribute></img>
 				</span>
-				<span class="clouds"></span>
+<!--				<span class="clouds"></span>-->
 			</div>
 
  			<!-- Features-->
