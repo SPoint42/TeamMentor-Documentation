@@ -98,10 +98,11 @@
 			<!-- TM Videos-->
 
 				<div>
-					<h2>TeamMentor Interface</h2>
+					<h2><xsl:value-of select="TM_Animation/@title" /></h2>
+					<h2></h2>
 					<br/>
 					<iframe src="http://securityinnovation.com/tmgraphic/animation.html" frameborder="0" scrolling="no" height="440" width="700"></iframe>			
-					<h2>TeamMentor Videos</h2>
+					<h2><xsl:value-of select="Videos/@title" /></h2>
 					<br/>
 					<p align="center">
 
