@@ -11,8 +11,11 @@
     <DirectLink>Table of Contents</DirectLink>
   </Metadata>
   <Content Sanitized="false" DataType="wikitext">
-    <Data><![CDATA[This section contains technical details on how TeamMentor works, its architecture and how to consume/manipulate its data.
+    <Data><![CDATA[=TeamMentor Technology=
 
+This section contains technical details on how TeamMentor works, its architecture and how to consume/manipulate its data.
+
+Note: We are currently updating this content for the forthcoming TeamMentor 3.1 release. If you see something wrong please contact [[mailto:dcruz@securityinnovation.com | Dinis Cruz]]
 ===Features===
 
 * [[Consuming TeamMentor Data]]
@@ -22,15 +25,20 @@
 * [[WikiText Support]]
 * [[Active Directory Support]]
 
-===Concepts===
-* [[TeamMentor Artifacts]]
-
 ===Script Examples===
 * [[Creating Library, Folder, Views and Articles]]
 * [[Case Study - Creating a CWE Library from CheckMarx data]]
-* [[Case Study - Creating a CWE Library from CWE raw XML]]
+* Case Study - Creating a CWE Library from CWE raw XML
+* [[Case Study - Creating a PCI Library from other Libraries]]
 * [[Case Study - Direct XML File Manipulation to Fix Double Encoding Issue]]
+* [[Case Study - Fix Duplicate Article GUIDs created by Library split]]
+* [[How to - Upload Files or Images]]
+* [[How to - Control TeamMentor via IE Automation]]
 
+
+===TeamMentor Testing/QA===
+* [[User Scenario Matrix]]
+* [[QA Action Plan]]
 
 This site is powered by a TeamMentor website, which can be [[/html_pages/Gui/TeamMentor.html | accessed here]]]]></Data>
   </Content>

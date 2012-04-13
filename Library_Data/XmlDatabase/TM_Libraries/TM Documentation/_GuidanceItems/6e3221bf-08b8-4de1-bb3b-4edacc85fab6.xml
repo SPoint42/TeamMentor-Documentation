@@ -48,9 +48,17 @@ By default WindowsAuthentication is set to false, so you will need to set the En
 	</TMConfig>
 }}}
 
+
+== Troubleshoot ==
+
+
+**Q: You get a 401 error when connecting to the IIS server from a remote computer, but it works locally**
+
+**A: ** See this Microsoft KB for a workaround [[http://support.microsoft.com/kb/871179]]
+
+
 ==References==
 * on why need to set validateIntegratedModeConfiguration=false
-** [[http://forums.iis.net/t/1187993.aspx]]
-]]></Data>
+** [[http://forums.iis.net/t/1187993.aspx]]]]></Data>
   </Content>
 </TeamMentor_Article>

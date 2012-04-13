@@ -3,12 +3,12 @@
   <Metadata>
     <Id>0c8ba335-dc29-4117-8e13-299b725e922a</Id>
     <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
-    <Title>Case Study - Creating a CWE Library from CWE raw XML</Title>
+    <Title>Case Study - Creating a PCI Library from other Libraries</Title>
     <Category />
     <Phase />
     <Technology />
     <Type />
-    <DirectLink>Case Study - Creating a CWE Library from CWE raw XML</DirectLink>
+    <DirectLink>Case Study - Creating a PCI Library from other Libraries</DirectLink>
   </Metadata>
   <Content Sanitized="false" DataType="wikitext">
     <Data><![CDATA[This article will show how to transfer content from one TeamMentor Library into another using scripts that consume the available WebServices API
@@ -38,7 +38,7 @@ foreach(var library in tm_Source.libraries())
 	{	
 		"creating folder: {0}".info(folder.Name);
 		var pciAny_View = pciAny_folder.view(folder.Name);
-		var filteredArticles = new Dictionary< string, Article_WS>();
+		var filteredArticles = new Dictionary&lt; string, Article_WS&gt;();
 		foreach(var article in folder.articles())
 		if (article.Technology == " Any")
 			filteredArticles.add(article.Name, article);
