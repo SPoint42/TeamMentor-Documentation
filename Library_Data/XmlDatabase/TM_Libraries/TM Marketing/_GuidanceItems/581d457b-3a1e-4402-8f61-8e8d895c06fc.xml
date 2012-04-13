@@ -15,7 +15,7 @@
 <TeamMentor_LandingPage>
 
 	<!-- Splash Content-->
-	<SplashPanel_Data	title			= "You are now a TeamMentor customer." a= "Thanks for Buying TeamMentor"
+	<SplashPanel_Data	title			= "Thanks for purchasing TeamMentor!" a= "Thanks for Buying TeamMentor"
 					image		= "http://securityinnovation.com/_img/page-art/FINAL%20Full%20eLearning%20Lifecycle.png" 
 					
 					button_1_text	= "Download Now"
@@ -48,6 +48,9 @@
 				button_text = "View Documentation"
 				button_href = "http://docs.teammentor.net"/> 	 
 
+        <TM_Animation title 		 = "Sort TeamMentor content how you want to consume it. "/>
+        <Videos		title 		 = "View two TeamMentor use cases: reducing vulnerabilities and meeting compliance requirements. "/>
+
 	<Gallery		image_1_href = "http://docs.teammentor.net/Image/Edit%20mode%20-%20context%20menu%20item.jpg"
 				image_2_href = "http://docs.teammentor.net/Image/GuidanceItem%20Editor%20-%20In%20browser.jpg"
 				image_3_href = "http://docs.teammentor.net/Image/Link%20to%20Guidance%20Items%20Editor.jpg"
@@ -55,7 +58,7 @@
 				image_5_href = "http://docs.teammentor.net/Image/Edit%20Mode%20Buttons.jpg"
 				image_6_href = "http://docs.teammentor.net/Image/Edit%20link%20(top%20right).jpg"   />
 
-	<Testimonials 	title 		 	 = "See what the analysts are saying"
+	<Testimonials 	title 		 	 = "See what industry analysts are saying"
 				slot_1_text 	 = "As attacks have shifted to the application layer in the enterprise, the demand has grown for an intelligent, integrated approach to managing security. Application security encompasses vulnerability detection and vulnerability remediation. Application security professionals should be trained in vulnerabilities detection technologies and processes, while application developers should be trained in interpreting application security testing results, and in techniques of fixing detected vulnerabilities."
 				slot_1_company = "--Joseph Feiman, vice president and Gartner Fellow, Gartner, Inc"
 				slot_2_text 	 = ""

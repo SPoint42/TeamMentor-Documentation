@@ -20,11 +20,16 @@
 * [[TeamMentor Article Schema]]
 * [[TeamMentor REST API]]
 * [[WikiText Support]]
+* [[Active Directory Support]]
+
+===Concepts===
+* [[TeamMentor Artifacts]]
 
 ===Script Examples===
 * [[Creating Library, Folder, Views and Articles]]
-* [[Creating the CheckMarx Library]]
-* [[Creating a CWE Library from the CWE XML]]
+* [[Case Study - Creating a CWE Library from CheckMarx data]]
+* [[Case Study - Creating a CWE Library from CWE raw XML]]
+* [[Case Study - Direct XML File Manipulation to Fix Double Encoding Issue]]
 
 
 This site is powered by a TeamMentor website, which can be [[/html_pages/Gui/TeamMentor.html | accessed here]]]]></Data>
