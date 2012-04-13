@@ -54,7 +54,7 @@
 		{
 				targetDiv			: "#PageContent"
 			,	show				: function(title, guid)
-										{										
+										{		                                            								
 											getGuidanceItemHtml(guid, function(data) 
 												{
 													var guidanceItemHtml = $("<div>");
@@ -70,6 +70,7 @@
 
 													$(TM.Documentation.GuidanceItems.targetDiv).html(guidanceItemHtml);
 													
+                                                    my_Gauge.track("Documentation",title);   
 												});
 										}
 		}
