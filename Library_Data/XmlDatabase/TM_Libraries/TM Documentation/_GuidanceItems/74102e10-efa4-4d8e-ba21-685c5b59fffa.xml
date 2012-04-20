@@ -28,10 +28,11 @@ Note: We are currently updating this content for the forthcoming TeamMentor 3.1 
 ===Script Examples===
 * [[Creating Library, Folder, Views and Articles]]
 * [[Case Study - Creating a CWE Library from CheckMarx data]]
-* Case Study - Creating a CWE Library from CWE raw XML
+* [[Case Study - Creating a CWE Library from CWE raw XML]]
 * [[Case Study - Creating a PCI Library from other Libraries]]
 * [[Case Study - Direct XML File Manipulation to Fix Double Encoding Issue]]
 * [[Case Study - Fix Duplicate Article GUIDs created by Library split]]
+* [[Case Study - Fix Intra-Article Broken Links]]
 * [[How to - Upload Files or Images]]
 * [[How to - Control TeamMentor via IE Automation]]
 
@@ -39,6 +40,11 @@ Note: We are currently updating this content for the forthcoming TeamMentor 3.1 
 ===TeamMentor Testing/QA===
 * [[User Scenario Matrix]]
 * [[QA Action Plan]]
+* [[Security Testing]]
+
+===TeamMentor Development===
+* [[Research Areas]]
+* [[TM SourceCode]]
 
 This site is powered by a TeamMentor website, which can be [[/html_pages/Gui/TeamMentor.html | accessed here]]]]></Data>
   </Content>

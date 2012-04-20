@@ -19,7 +19,7 @@
 					image		= "http://securityinnovation.com/_img/page-art/FINAL%20Full%20eLearning%20Lifecycle.png" 
 					
 					button_1_text	= "Download Now"
-					button_1_link	= "https://github.com/TeamMentor/Master/zipball/master"
+					button_1_link	= "https://github.com/TeamMentor-OWASP/Master"
 					button_2_text 	= "Ask for Help"
 					button_2_link	= "http://www.securityinnovation.com/products/secure-development-knowledgebase/request-a-tm-demo.html" />
 

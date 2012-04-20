@@ -22,12 +22,22 @@
 ** Editors can edit views
 ** Editors can edit libraries
 ** Editors can delete items
-* **UI/Article View	** 
+
+* **Article View** 
 ** Users can view articles in a new tab/window
+
+* **Article Edit** 
 ** Editors can edit articles on-line
 ** Editors can make links between articles
 ** Editors can view a history of changes
 ** Editors can delete articles from the article view
+** Edit capabilities:
+*** Change Title
+*** Change Metadata
+*** Add Image
+*** Format Html Content (via WYSIWYG)
+*** Format Html Content (via HTML editing)
+
 * **UI/Control Panel (Dashboard)**
 ** Users can see version information
 ** Admin can open a control panel/dashboard
@@ -39,9 +49,11 @@
 ** Admin can open a page for creating multiple accounts
 ** Admin can paste information from csv into a page for creating multiple accounts
 ** Admin can delete user accounts
+
 * **UI/Advanced Search**
 ** Search for Articles by Title
 ** Searching the Body of the Articles
+
 * **Authentication**
 ** Users can login as normal users
 ** Users can login as editor users
@@ -50,10 +62,12 @@
 ** Users have to be authenticated to make changes to content
 ** Users can authenticate using LDAP/AD
 ** Users can log out
+
 * **Authorization	**
 ** Users can view articles
 ** Only editors can edit items
 ** Only admins can edit items and system settings
+
 * **TM Deployment**
 ** The customer can roll out libraries as XML files
 ** The customer can roll out user credential stores as XML files
@@ -61,6 +75,11 @@
 ** The customer can update application code without disturbing the libraries, the settings, and the credential store
 ** Editors can edit articles in the XML files
 ** Administrators can run a tool to update content that automatically resolves collisions
-** GitHub Users can trigger Syncs from web]]></Data>
+** GitHub Users can trigger Syncs from web
+
+* **Past Issues/Bugs**
+** Check for double encoding text
+
+]]></Data>
   </Content>
 </TeamMentor_Article>

@@ -56,6 +56,10 @@ By default WindowsAuthentication is set to false, so you will need to set the En
 
 **A: ** See this Microsoft KB for a workaround [[http://support.microsoft.com/kb/871179]]
 
+**Q: You get this error when running TeamMentor on a fresh IIS installation: //"Handler'"WebServiceHandlerFactory-Integrated' has a bad module 'ManagedPipelineHandler' in its module list."//**
+
+**A: ** Try running //aspnet_regiis.exe -i// from the .Net 4.0 folder. See this post for more details: http://forums.iis.net/p/1149449/1869918.aspx
+
 
 ==References==
 * on why need to set validateIntegratedModeConfiguration=false
