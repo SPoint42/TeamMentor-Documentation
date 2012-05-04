@@ -18,33 +18,32 @@
 	<SplashPanel_Data	title			= "Try TeamMentor Today! Our Evaluation Version is Available for Free!" a= "Thanks for Buying TeamMentor"
 					image		= "http://securityinnovation.com/_img/page-art/FINAL%20Full%20eLearning%20Lifecycle.png" 
 					
-					button_1_text	= "Download Now"
-					button_1_link	= "https://github.com/TeamMentor-OWASP/Master"
-					button_2_text 	= "Ask for Help"
-					button_2_link	= "http://www.securityinnovation.com/products/secure-development-knowledgebase/request-a-tm-demo.html" />
+					button_1_text	= "Try Now"
+					button_1_link	= "http://owasp.teammentor.net/"
+					button_2_text 	= "Download Now"
+					button_2_link	= "https://github.com/downloads/TeamMentor/Master/TeamMentor%203.1%20with%20OWASP%20Library.zip" />
 
 	<SplashPanel_Text>
-				      	Did you know ... that TeamMentor shows you how exactly to remediate vulnerable code?<br/> Is fully customizable? <br/>
-					Can accept your internal security policies? <br/>Can help you meet compliance requirements?<br/> And complements training?
+				      	TeamMentor shows you how exactly to remediate vulnerable code.<br/> Is flexible and fully customizable. <br/>
+					Accepts your internal security policies. <br/>Helps you meet compliance requirements.<br/> Complements training.
 	</SplashPanel_Text>	
 
 
-	<Feature_1  	title 		= "Unzip" 
-			  	image 	= "/tm_images/UnZip_TM.jpg"
-			  	text 		= "The TeamMentor download is a password-protected zip file that contains all files needed to run or install TeamMentor (Your Sales Rep should have provided this. If not, hit the above Help button.)"/>
+	<Feature_1  	title 		= "Try Now" 
+			  	image 	= "http://securityinnovation.com/_img/page-art/TM_mainpage_clean.jpg"
+			  	text 		= "Try the Web-based version of TeamMentor here."/>
 
-	<Feature_2	title	 	= "Run Locally" 
-			  	image	= "/tm_images/Run_Locally.jpg"
-			  	text		= "(You'll need a Windows machine with .NET 4.0 installed) To run TeamMentor from your computer,
-						    just click on the 'Start TeamMentor.bat' file to launch a version of TeamMentor hosted by a local WebServer (included in the TeamMentor download)."/>
+	<Feature_2	title	 	= "Download Now" 
+			  	image	= "/tm_images/UnZip_TM.jpg"
+			  	text		= "This download contains all the files necessary to run TeamMentor locally on a hosted Web Server or IIS. Just unzip the files to run from your computer."/>
 
-	<Feature_3  	title 		= "Run on IIS"
-				image 	= "/tm_images/IIS.jpg"
-				text		= "(You'll need a Windows machine with .NET 4.0 installed) To run TeamMentor on IIS usually you only need to create an IIS website and point it to your /Web Applications/ TM_Website folder." />
+	<Feature_3  	title 		= "Install It"
+				image 	= "/tm_images/Run_Locally.jpg"
+				text		= "Click on the 'Start TeamMentor.bat' file to launch your local version of TeamMentor. To run on IIS, create an IIS web site and point it to your /Web Applications/ TM_Website folder." />
 
 
-	<BigYellowBox 	title 		  = "Looking for a TeamMentor Manual?"
-			 	body_text 	  = "Click here to view our page featuring comprehensive product documentation. "
+	<BigYellowBox 	title 		  = "Looking for TeamMentor Documentation?"
+			 	body_text 	  = "Click here to view our page featuring comprehensive product documentation, training videos and how-to articles. "
 				button_text = "View Documentation"
 				button_href = "http://docs.teammentor.net"/> 	 
 
@@ -59,10 +58,10 @@
 				image_6_href = "http://docs.teammentor.net/Image/Edit%20link%20(top%20right).jpg"   />
 
 	<Testimonials 	title 		 	 = "See what industry analysts are saying"
-				slot_1_text 	 = "As attacks have shifted to the application layer in the enterprise, the demand has grown for an intelligent, integrated approach to managing security. Application security encompasses vulnerability detection and vulnerability remediation. Application security professionals should be trained in vulnerabilities detection technologies and processes, while application developers should be trained in interpreting application security testing results, and in techniques of fixing detected vulnerabilities."
-				slot_1_company = "--Joseph Feiman, vice president and Gartner Fellow, Gartner, Inc"
-				slot_2_text 	 = ""
-				slot_2_company = ""
+				slot_1_text 	 = "Application security is such a broad field that if you try to deliver all that knowledge in 'push' form, all at once, you're going to make everyone unhappy.  Using a just-in-time 'pull' model, where people can look up the information they need right when they need it, is less overwhelming and makes for better collaboration."
+				slot_1_company = "--Wendy Nather, Research Director, Enterprise Security Practice, 451 Research"
+				slot_2_text 	 = "As attacks have shifted to the application layer in the enterprise, the demand has grown for an intelligent, integrated approach to managing security. Application security encompasses vulnerability detection and vulnerability remediation. Application security professionals should be trained in vulnerabilities detection technologies and processes, while application developers should be trained in interpreting application security testing results, and in techniques of fixing detected vulnerabilities."
+				slot_2_company = "--Joseph Feiman, vice president and Gartner Fellow, Gartner, Inc"
 				slot_3_text 	 = ""
 				slot_3_company = ""
 				slot_4_text 	 = ""
