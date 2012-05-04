@@ -23,7 +23,12 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             tmWebServices.tmAuthentication.disable_CSRF_Check = true;
 			tmWebServices.tmAuthentication.mapUserRoles();
         }
-        
+
+        public void routeRequestUrl_for404()
+        {
+            var fixedPath = context.Request.Url.AbsolutePath.replace("/html_pages/Gui/","/article/");
+            handleUrlRewrite(fixedPath);
+        }
         public void routeRequestUrl()
         {
             handleUrlRewrite(context.Request.Url.AbsolutePath);
@@ -54,6 +59,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             {
                 action = Encoder.HtmlEncode(action);
                 data = Encoder.HtmlEncode(data).replace("%20"," ");
+                if (action.isGuid() & data.inValid())                
+                    return redirectTo_Article(action);                                    
                 switch (action.lower())
                 {
                     case "raw":                        
@@ -79,7 +86,9 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                     case "admin":
                         return redirectTo_ControlPanel(false);
                     case "admin_extra":
-                        return redirectTo_ControlPanel(true);                        
+                        return redirectTo_ControlPanel(true);
+                    case "reload_config":
+                        return reload_Config();
                     case "login":
                         return transfer_Login();   
                     case "logout":
@@ -105,6 +114,12 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             }                                    
             return false;			
 		}
+
+        private bool reload_Config()
+        {
+            TMConfig.loadConfig();
+            return redirectTo_HomePage();
+        }
 
         private bool handleAction_JsonP(string data)
         {            
@@ -298,6 +313,13 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		}
                
         
+
+
+        public bool redirectTo_Article(string article)
+		{			
+			context.Response.Redirect("/article/{0}".format(article));
+            return false;    
+		}
 
 
 	}

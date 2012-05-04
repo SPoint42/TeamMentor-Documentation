@@ -3,19 +3,13 @@ _/Library_Data/XmlDatabase
 o2.config
 
 # Visual Studio files # 
-bin
+*.pdb
+release
+Web Applications/TeamMentor.CoreLib/bin/Debug/*.xml
 obj
 *.suo
+o2.config
 *.nupkg
 Web Applications/TM_Website/bin/*.xml
 /Web Applications/packages
-
-
-
-
-
-
-
-
-
-/Library_Data/XmlDatabase/TM_Libraries/Cache_guidanceItems.cacheXml
+Web Applications/TeamMentor.CoreLib/bin/Debug/TeamMentor.CoreLib.dll
