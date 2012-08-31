@@ -12,6 +12,7 @@ using O2.DotNetWrappers.Windows;
 using urn.microsoft.guidanceexplorer;
 using urn.microsoft.guidanceexplorer.guidanceItem;
 using Microsoft.Security.Application;
+using SecurityInnovation.TeamMentor.Authentication.WebServices.AuthorizationRules;
 //O2File:TM_Xml_Database.cs
 //O2File:../O2_Scripts_APIs/_O2_Scripts_Files.cs
 
@@ -79,28 +80,31 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		
 		public static TM_Xml_Database xmlDB_Load_GuidanceItems(this TM_Xml_Database tmDatabase)
 		{						
-			var pathXmlLibraries = TM_Xml_Database.Path_XmlLibraries;			
-			if (pathXmlLibraries.getCacheLocation().fileExists().isFalse())
-			{
-				"[TM_Xml_Database] in xmlDB_Load_GuidanceItems, cache file didn't exist, so creating it".debug();
-				var o2Timer = new O2Timer("loaded GuidanceItems from disk").start();
-				//Load GuidanceItem from the disk				
-				foreach(var guidanceExplorer in tmDatabase.xmlDB_GuidanceExplorers())
-				{					
-					var libraryId = guidanceExplorer.library.name.guid();
-					var pathToLibraryGuidanceItems = pathXmlLibraries.pathCombine(guidanceExplorer.library.caption);
-					"libraryId: {0} : {1}".info(libraryId,pathToLibraryGuidanceItems);
-					var filesToLoad = pathToLibraryGuidanceItems.files(true,"*.xml");		
-					tmDatabase.xmlDB_Load_GuidanceItemsV3(libraryId, filesToLoad );				
-				}								
-				
-				//save it to the local cache file (reduces load time from 8s to 0.5s)
-				tmDatabase.save_GuidanceItemsCache();    
-				o2Timer.stop();
-			
-				tmDatabase.ensureFoldersAndViewsIdsAreUnique();
-				tmDatabase.removeMissingGuidanceItemsIdsFromViews();
-			}
+			var pathXmlLibraries = TM_Xml_Database.Path_XmlLibraries;
+            lock (pathXmlLibraries)
+            {
+                if (pathXmlLibraries.getCacheLocation().fileExists().isFalse())
+                {
+                    "[TM_Xml_Database] in xmlDB_Load_GuidanceItems, cache file didn't exist, so creating it".debug();
+                    var o2Timer = new O2Timer("loaded GuidanceItems from disk").start();
+                    //Load GuidanceItem from the disk				
+                    foreach (var guidanceExplorer in tmDatabase.xmlDB_GuidanceExplorers())
+                    {
+                        var libraryId = guidanceExplorer.library.name.guid();
+                        var pathToLibraryGuidanceItems = pathXmlLibraries.pathCombine(guidanceExplorer.library.caption);
+                        "libraryId: {0} : {1}".info(libraryId, pathToLibraryGuidanceItems);
+                        var filesToLoad = pathToLibraryGuidanceItems.files(true, "*.xml");
+                        tmDatabase.xmlDB_Load_GuidanceItemsV3(libraryId, filesToLoad);
+                    }
+
+                    //save it to the local cache file (reduces load time from 8s to 0.5s)
+                    tmDatabase.save_GuidanceItemsCache();
+                    o2Timer.stop();
+
+                    tmDatabase.ensureFoldersAndViewsIdsAreUnique();
+                    tmDatabase.removeMissingGuidanceItemsIdsFromViews();
+                }
+            }
 			return tmDatabase;
 		}
 		
@@ -296,8 +300,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 							//			.type;
 									};
              */ 
-			article.xmlDB_Save_Article(libraryId, tmDatabase);			
-			return article.htmlEncode();
+			article.xmlDB_Save_Article(libraryId, tmDatabase);
+            return article.htmlEncode();  //this was causing double encoding problems with some properties (like the Title)
 		}
 
         public static Guid xmlDB_Create_Article(this TM_Xml_Database tmDatabase, TeamMentor_Article article)
@@ -331,14 +335,18 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             {
                 var cdataContent=  article.Content.Data.Value.replace("]]>", "]] >"); // xmlserialization below will break if there is a ]]>  in the text
                 //cdataContent = cdataContent.fixXmlDoubleEncodingIssue();
-                article.Content.Data.Value = cdataContent.tidyHtml();
+                var tidiedHtml = cdataContent.tidyHtml();
+                
+                article.Content.Data.Value = tidiedHtml;
+                if (article.serialize(false).inValid())        //see if the tidied content can be serialized  and if not use the original data              
+                    article.Content.Data.Value = cdataContent;
             }            
 			article.Metadata.Library_Id = libraryId;        //ensure the LibraryID is correct
 
             if (article.serialize(false).valid())           // make sure the article can be serilialized  correctly
             {
                 article.saveAs(guidanceXmlPath);
-                //add it to in Memory cache
+                //add it to in Memory cache                
                 article.update_Cache_GuidanceItems(tmDatabase);
                 return guidanceXmlPath.fileExists();			
             }
@@ -381,10 +389,18 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			return guidanceXmlPath.fileContents();//.xmlFormat();
 		}
 
+        [Admin(SecurityAction.Demand)]	
+        public static string xmlDB_guidanceItemPath(this TM_Xml_Database tmDatabase, Guid guidanceItemId)
+        {
+            if (TM_Xml_Database.GuidanceItems_FileMappings.hasKey(guidanceItemId))                            
+                return TM_Xml_Database.GuidanceItems_FileMappings[guidanceItemId];            
+            return null;
+        }
+
 
         public static Guid xmlBD_resolveDirectMapping(this TM_Xml_Database tmDatabase, string mapping)
-        {           
-            if(mapping.inValid())
+        {
+            if (mapping.inValid())
                 return Guid.Empty;
 
 
@@ -393,13 +409,81 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                     return item.Key;
             */
             mapping = mapping.lower();
-            var mapping_extra = mapping.Replace(" ", "_");
 
-            return (from item in TM_Xml_Database.Cached_GuidanceItems
-                    where (item.Value.Metadata.DirectLink.notNull() && item.Value.Metadata.DirectLink.lower() == mapping) ||
-                          (item.Value.Metadata.Title.notNull()      && item.Value.Metadata.Title.lower() == mapping) ||
-                          (item.Value.Metadata.Title.notNull()      && item.Value.Metadata.Title.lower() == mapping_extra)                          
-                    select item.Key).first();
+            //first resolve by direct link
+            var directLinkResult = (from item in TM_Xml_Database.Cached_GuidanceItems
+                                    where (item.Value.Metadata.DirectLink.notNull() && item.Value.Metadata.DirectLink.lower() == mapping)
+                                    select item.Key).first();
+            if (directLinkResult != Guid.Empty)
+                return directLinkResult;
+
+            var mapping_Segments = mapping.split("^");
+
+            //if there are no ^ on the title: resolve by title
+            if (mapping_Segments.size() == 1)
+            {
+                var mapping_extra = mapping.Replace(" ", "_");
+                var titleResult = (from item in TM_Xml_Database.Cached_GuidanceItems
+                                   where titleMatch(item.Value, mapping, mapping_extra)
+                                   select item.Key).first();
+                if (titleResult != Guid.Empty)
+                    return titleResult;
+            }
+            //if there are ^ on the title: resolve by title^library^technology^phase^type^category
+            else
+            {
+                var title       = mapping_Segments.value(0);
+                var title_extra = title.valid() ? title.Replace(" ", "_") : title;
+                var library     = mapping_Segments.value(1);
+                var technology  = mapping_Segments.value(2);
+                var phase       = mapping_Segments.value(3);
+                var type        = mapping_Segments.value(4);
+                var category    = mapping_Segments.value(5);
+                
+                //var libraryNames = tmDatabase.tmLibraries().names().lower();//pre calculate this to make it faster
+                    
+                foreach (var item in TM_Xml_Database.Cached_GuidanceItems)
+                {
+                    if (titleMatch(item.Value, title, title_extra))             // check Title
+                    {
+                        if (library.inValid())
+                            return item.Key;                        
+                        if (tmDatabase.tmLibrary(item.Value.Metadata.Library_Id).Caption.lower() == library)                     // check Library
+                        {
+                            if (technology.inValid())
+                                return item.Key;
+                            if (item.Value.Metadata.Technology.lower() == technology)   // check Technology  
+                            {
+                                if (phase.inValid())
+                                    return item.Key;
+                                if (item.Value.Metadata.Phase.lower() == phase)         // check Phase
+                                {
+                                    if (type.inValid())
+                                        return item.Key;
+                                    if (item.Value.Metadata.Type.lower() == type)      // check type
+                                    {
+                                        if (category.inValid())
+                                            return item.Key;
+                                        if (item.Value.Metadata.Category.lower() == category) // check category                                                                                 
+                                            return item.Key;                                        
+                                    }
+                                }
+                            }
+                        }                        
+                    }                    
+                }   
+            }
+            return Guid.Empty;
+        }
+
+        public static bool titleMatch(TeamMentor_Article article, string title1, string title2)
+        {
+            var match = (article.Metadata.Title.notNull() && (article.Metadata.Title.lower() == title1) ||
+                                                              article.Metadata.Title.lower() == title2);
+            if (match)
+            { 
+            }
+            return match;
         }
 
         public static Guid xmlBD_resolveMappingToArticleGuid(this TM_Xml_Database tmDatabase, string mapping)
@@ -407,7 +491,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             if (mapping.isGuid())
                 return mapping.guid();            
 
-            mapping = mapping.urlDecode().replaceAllWith(" ", new [] {"_", "+"});
+            mapping = mapping.urlDecode().replaceAllWith(" ", new [] {"_", "+"})
+                             .htmlEncode();
             var directMapping = tmDatabase.xmlBD_resolveDirectMapping(mapping);
             if (directMapping != Guid.Empty)
                 return directMapping;            

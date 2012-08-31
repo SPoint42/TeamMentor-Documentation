@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>	
 	<head>			
-		<link  href="/aspx_Pages/scriptCombiner.ashx?s=HomePage_CSS&ct=css" 				type="text/css" rel="stylesheet" /> 					
-		<script src="/aspx_Pages/scriptCombiner.ashx?s=WebServices_JS"						type="text/javascript"></script>	
-        		
+		<link  href="/aspx_Pages/scriptCombiner.ashx?s=HomePage_CSS&ct=css" 				type="text/css" rel="stylesheet" /> 
+		<link  href="/Css/ArticleEditor.css" type="text/css" rel="stylesheet" />		
+		<script src="/aspx_Pages/scriptCombiner.ashx?s=WebServices_JS"						type="text/javascript"></script>	        		
 	</head>
 	<body>	
 		<script>		
@@ -181,13 +181,11 @@
 								$(".ItemDetailHeader button").top(0)
 						}
 					}
-					
-					$("#topButtons").css({ 'padding'  : '2px'});
-					$("#topButtons button").css({ 'font-size':'13px'})					
+								
 					$(".ui-autocomplete").css('font-size','11px')
-					$("input").css('font-size', '13px')
+					$("input").css('font-size', '12px')
 							  .css('padding','2px')
-							  .css('font-family','Calibri, Arial, Helvetica, sans-serif');
+							  .css('font-family','Segoe UI, Arial, Helvetica, sans-serif');
 					
 					$("#Title").addClass('ui-widget-content ui-corner-left ui-corner-rigth')
 										
@@ -248,8 +246,8 @@
 						
             var getGuidFromUrl = function()
 				{
-                    var id = document.URL.split('/').pop().split("#").shift();
-					var mapping = "{ mapping : '" + id + "' }";                        
+                    var id = document.URL.split('/').pop().split("#").shift();					     
+                    var mapping =    { mapping : id }    ;                    
 					TM.WebServices.Helper.invoke_TM_WebService("getGuidForMapping",mapping, function(data)
 						{
 							guidanceId = data;
@@ -268,17 +266,18 @@
 				loadedGuidanceItem = data.d;
 				if(isUndefined(loadedGuidanceItem) || loadedGuidanceItem === null)
 				{
-					TM.Gui.Dialog.alertUser("Error: There was a problem loading selected Guidance Item data");
+					TM.Gui.Dialog.alertUser("Error loading article.");
 					return;
 				}
 				
-				$("#Title")                 .val(loadedGuidanceItem.Metadata.Title);
+				$("#Title")                 .val(htmlUnEscape(loadedGuidanceItem.Metadata.Title));
 				$("#TechnologyValue_input") .val(loadedGuidanceItem.Metadata.Technology);
 				$("#PhaseValue_input")      .val(loadedGuidanceItem.Metadata.Phase);
 				$("#TypeValue_input")       .val(loadedGuidanceItem.Metadata.Type);
 				$("#CategoryValue_input")   .val(loadedGuidanceItem.Metadata.Category);
 
-				TM.Gui.GuidanceItemEditor.showGuidanceItemHtml(loadedGuidanceItem.Content.Data_Json);
+
+				TM.Gui.GuidanceItemEditor.showGuidanceItemHtml(loadedGuidanceItem.Content.Data_Json, loadedGuidanceItem.Content.DataType);
                 
 			}						  		
 
@@ -299,12 +298,13 @@
 			{
 				if(data.d == true)
                                 {
-                                  	showMessage("GuidanceItem Saved Ok");
+                                  	showMessage("Article saved.");
 									updateCacheWithSavedGuidanceItem();
+                                    setTimeout(openGuidanceItemViewer, 1000);
                                 }
 
                          	else
-                                  	TM.Gui.Dialog.alertUser('Error: problems saving data');
+                                  	TM.Gui.Dialog.alertUser('Error saving article.');
 			}
 
 		var updateCacheWithSavedGuidanceItem = function()
@@ -422,7 +422,7 @@
         var loadEditor = function()
 		{									
 			$("#guidanceItemEditor").load(TM.Gui.GuidanceItemEditor_Page, setGuidanceIdfromUrlHash);
-            $("#topButtons").show();
+			$(".EditButtons").show();
             $("button").show();	
             $(".ItemDetailTable").show();                      
 						
@@ -447,10 +447,10 @@
 					
 				    if(opener != null)
 				    {					
-					    technologies =[];  opener.$("#pivotPanel_Technology input").each(function() { technologies.push($.trim($(this).parent().text()) ) } ); 					
-					    phases =[];  opener.$("#pivotPanel_Phase input").each(function()			{ phases.push($.trim($(this).parent().text()) ) } ); 
-					    types =[];  opener.$("#pivotPanel_Type input").each(function() 				{ types.push($.trim($(this).parent().text()) ) } ); 
-					    categories =[];  opener.$("#pivotPanel_Category input").each(function() 	{ categories.push($.trim($(this).parent().text()) ) } ); 
+					    technologies =[];  opener.$("#pivotPanel_Technology input").each(function() { technologies.push($(this).parent().find("label").html())  } ); 
+					    phases =[];  opener.$("#pivotPanel_Phase input").each(function()			{ phases.push($(this).parent().find("label").html())  } ); 
+					    types =[];  opener.$("#pivotPanel_Type input").each(function() 				{ types.push($(this).parent().find("label").html())  } ); 
+					    categories =[];  opener.$("#pivotPanel_Category input").each(function() 	{ categories.push($(this).parent().find("label").html())  } ); 
 					
 					    /*$("#TechnologyLabel"	).autocomplete( { source: technologies });					
 					    $("#PhaseLabel"			).autocomplete( { source: phases	   	});			
@@ -487,7 +487,7 @@
 										{											
 											$("button").hide();
 											"ItemDetailTable".$().hide();
-											showMessage("You don't have privileges to edit this item");											
+											showMessage("Editing access denied.");											
                                             $("#guidanceItemEditor").show().html("<h2>Access denied.</h2><br/><p>Please close this window or <a href='javascript:TM.Gui.Dialog.loginPage()'>login</a></p>");
 											//"guidanceItemEditor".$().html("<h1>Access denied.</h1><h2>please close this window</h2>");
 										}													
@@ -504,10 +504,19 @@
                         .replace(/>/g, '&gt;');
             };	
 		
+        var htmlUnEscape = function(str) 
+            {
+                return String(str)
+                        .replace(/&amp;/g, '&')
+                        .replace(/&quot;/g, '"')
+                        .replace(/&#39;/g, '\'')
+                        .replace(/&lt;/g, '<')
+                        .replace(/&gt;/g, '>');
+            };
 		$(function()
 			{												                
                 $(".ItemDetailTable").hide();
-                $("#topButtons").hide();
+                $(".EditButtons").hide();
                 
 				loadGuidanceItemEditor();
 				mapAutoCompleteValues();
@@ -551,14 +560,16 @@
 				
 		
         </script>	
-	
-		<div id="ScriptLoader"> </div>
-		<div id="guiWithPanels"></div>	
 
-		<div id="topButtons">
-			<button id="backToViewer">Back to Guidance Item View Mode</button>            
-			<button id="saveChanges">Save Changes</button>  
-		</div>
+	<a href="/"><img src="/Images/HeaderImage.jpg" alt="TeamMentor Enterprise Edition" class="HeaderImage"/></a>	
+
+	<div id="ScriptLoader"> </div>
+	<div id="guiWithPanels"></div>	
+
+	<div class="EditButtons">
+		<span id="backToViewer" class="IEButton">View Article</span>
+		<span id="saveChanges" class="IEButton">Save Changes</span>
+	</div>
 	<span id="linksToEditors"></span>
         <br/>	
 		<!-- GuidanceItem properties-->

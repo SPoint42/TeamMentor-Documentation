@@ -1,5 +1,5 @@
 #TM specific
-_/Library_Data/XmlDatabase
+/Library_Data/XmlDatabase
 o2.config
 TmUsers.xml
 
@@ -14,6 +14,4 @@ o2.config
 Web Applications/TM_Website/bin/*.xml
 /Web Applications/packages
 Web Applications/TeamMentor.CoreLib/bin/Debug/TeamMentor.CoreLib.dll
-
-/Library_Data/XmlDatabase/TmUsers.xml
-/Library_Data/XmlDatabase/TmUsers_Passwords.xml
+_/Web Applications/TM_Library_Data

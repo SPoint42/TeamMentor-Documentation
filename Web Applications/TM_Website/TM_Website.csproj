@@ -27,6 +27,7 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
     <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -78,6 +80,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Aspx_Pages\Debug.aspx" />
     <Content Include="Aspx_Pages\images\back_disabled.jpg" />
     <Content Include="Aspx_Pages\images\back_enabled.jpg" />
     <Content Include="Aspx_Pages\images\forward_disabled.jpg" />
@@ -107,6 +110,8 @@
     <Content Include="Aspx_Pages\images\ui-icons_f5e175_256x240.png" />
     <Content Include="Aspx_Pages\images\ui-icons_f7a50d_256x240.png" />
     <Content Include="Aspx_Pages\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Css\ArticleEditor.css" />
+    <Content Include="Css\ArticleViewer.css" />
     <Content Include="Css\default.css" />
     <Content Include="Css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Css\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -135,6 +140,7 @@
     <Content Include="Css\jquery.ui.slider.css" />
     <Content Include="Css\jquery.ui.tabs.css" />
     <Content Include="Css\jquery.ui.theme.css" />
+    <Content Include="Css\NotepadEditor.css" />
     <Content Include="Css\ThemeForest_ReadyMade\css\buttons.css" />
     <Content Include="Css\ThemeForest_ReadyMade\css\forms.css" />
     <Content Include="Css\ThemeForest_ReadyMade\css\login.css" />
@@ -145,6 +151,7 @@
     <Content Include="default.htm" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Html_Pages\article_wikiText.html" />
     <Content Include="Html_Pages\ControlPanel\Views\Set_Library_Path.html" />
     <Content Include="Html_Pages\ControlPanel\WebServices\Invoke_Javascript.html" />
     <Content Include="Html_Pages\ControlPanel\WebServices\Invoke_WebServices.html" />
@@ -209,6 +216,8 @@
     <Content Include="Html_Pages\ControlPanel\WebEditor\O2_WebEditor.html" />
     <Content Include="Html_Pages\ControlPanel\WebEditor\O2_WebEditor.js" />
     <Content Include="Html_Pages\ControlPanel\WebEditor\test.html" />
+    <Content Include="Html_Pages\article_Html.html" />
+    <Content Include="Html_Pages\errorPage.html" />
     <Content Include="Html_Pages\emptyPage.html" />
     <Content Include="Html_Pages\GuidanceItemEditor\cleditor\GuidanceItemEditor_CLEditor.html" />
     <Content Include="Html_Pages\GuidanceItemEditor\Elrte\GuidanceItemEditor_Elrte.html" />
@@ -222,8 +231,15 @@
     <Content Include="Html_Pages\Gui\Pages\login.html" />
     <Content Include="Html_Pages\Gui\Panels\About_TeamMentor.html" />
     <Content Include="Html_Pages\Gui\Panels\AD_Non_Authorized_User.html" />
+    <Content Include="Html_Pages\_UnitTest_Helpers\DataGrids\DataGrid_withLoginPage.htm" />
     <Content Include="Html_Pages\_UnitTest_Helpers\Tests_For_BrowserBugs\Chrome_CPU_Spike_on_Password_Field_in_JQueryUI_Dialog.htm" />
     <Content Include="Html_Pages\_UnitTest_Helpers\_Javascript_Loaders\FirebugLite_with_TM_WebServices.html" />
+    <Content Include="Html_Pages\_UnitTest_Helpers\_Javascript_Loaders\jQuery.html" />
+    <Content Include="Images\AppliedFiltersHeader.jpg" />
+    <Content Include="Images\JiTGuidance.PNG" />
+    <Content Include="Images\open_in_new_window.png" />
+    <Content Include="Images\PivotHeader.jpg" />
+    <Content Include="Images\RemoveAllButton.jpg" />
     <Content Include="Javascript\bootstrap\bootstrap.min.css" />
     <Content Include="Javascript\bootstrap\bootstrap.min.js" />
     <Content Include="Javascript\bootstrap\glyphicons-halflings-white.png" />
@@ -246,7 +262,6 @@
     <Content Include="Html_Pages\Gui\Panels\Top_ShowFilters.html" />
     <Content Include="Html_Pages\Gui\Panels\User_Not_Logged.html" />
     <Content Include="Html_Pages\Gui\TeamMentor.html" />
-    <Content Include="Html_Pages\Gui\Tests\_jQueryUI_Tests.html" />
     <Content Include="Html_Pages\Gui\TM_3_with_Panels.html" />
     <Content Include="Html_Pages\ManageContent\ManageGuidanceItems.html" />
     <Content Include="Html_Pages\_UnitTest_Helpers\AppliedFilters\AppliedFilters_View_All_GuidanceItems - shows IE load prob.html" />
@@ -449,7 +464,6 @@
     <Content Include="Javascript\jQuery.jsTree\jquery.cookie.js" />
     <Content Include="Javascript\jQuery.jsTree\jquery.hotkeys.js" />
     <Content Include="Javascript\jQuery.jsTree\jquery.jstree.js" />
-    <Content Include="Javascript\jQuery.jsTree\jsTree.ExtraMethods.js" />
     <Content Include="Javascript\jQuery.jsTree\themes\default\d.gif" />
     <Content Include="Javascript\jQuery.jsTree\themes\default\d.png" />
     <Content Include="Javascript\jQuery.jsTree\themes\default\style.css" />
@@ -495,10 +509,6 @@
     <Content Include="Javascript\jQuery\jquery.jeditable.mini.js" />
     <Content Include="Javascript\jQuery\jquery.rule-1.0.2.js" />
     <Content Include="Javascript\jQuery\jquery.validate.min.js" />
-    <Content Include="Javascript\jQuery\themes\default\d.gif" />
-    <Content Include="Javascript\jQuery\themes\default\d.png" />
-    <Content Include="Javascript\jQuery\themes\default\style.css" />
-    <Content Include="Javascript\jQuery\themes\default\throbber.gif" />
     <Content Include="Javascript\json\json2.js" />
     <Content Include="Javascript\jsPrettify\beautify.js" />
     <Content Include="Javascript\jsPrettify\prettify.css" />
@@ -589,10 +599,10 @@
     <Content Include="Images\Up.png" />
     <Content Include="Images\ViewIcon.png" />
     <Content Include="Images\HeaderImage.jpg" />
-    <None Include="Aspx_Pages\File_Upload.ashx" />
+    <Content Include="Aspx_Pages\File_Upload.ashx" />
     <Content Include="Aspx_Pages\UrlRewriter.ashx" />
-    <None Include="Aspx_Pages\ScriptCombiner.ashx" />
-    <None Include="Aspx_Pages\TM_WebServices.asmx" />
+    <Content Include="Aspx_Pages\ScriptCombiner.ashx" />
+    <Content Include="Aspx_Pages\TM_WebServices.asmx" />
     <None Include="Html_Pages\ControlPanel\WebEditor\codeMirror\baboon_vector.svg" />
     <Content Include="Html_Pages\ControlPanel\WebEditor\WebEditorService.ashx" />
     <None Include="Html_Pages\_UnitTest_Helpers\TM_qUnit_Tests\js\TM_Gui\TM.Gui.LibraryTree - with JSON data" />
