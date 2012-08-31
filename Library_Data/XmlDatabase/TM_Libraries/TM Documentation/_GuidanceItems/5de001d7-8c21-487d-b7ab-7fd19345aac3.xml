@@ -27,6 +27,6 @@ If you want to fork TeamMentor and manage your own libraries, the best one to us
 Note that it is this version that the other TeamMentor Forks use. New versions will always be pushed here, and then pulled into the other repositories (like the TeamMentor+SI_Library , TeamMentor+OWASP or TeamMentor+Documentation)
 
 ==Bug tracking==
-The current list of Bugs/Issues is at [[https://github.com/DinisCruz/TeamMentor-v3.0/issues]] (this is a legacy location and will be moved shortly)]]></Data>
+The current list of Bugs/Issues is at  [[https://github.com/TeamMentor/Master/issues]] (note that there is a large number of issues still need to be moved from the legacy repository: [[https://github.com/DinisCruz/TeamMentor-v3.0/issues]])]]></Data>
   </Content>
 </TeamMentor_Article>
