@@ -40,6 +40,7 @@
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -238,6 +239,8 @@
     <Content Include="Images\AppliedFiltersHeader.jpg" />
     <Content Include="Images\JiTGuidance.PNG" />
     <Content Include="Images\open_in_new_window.png" />
+    <Content Include="Images\unPinned.png" />
+    <Content Include="Images\Pinned.png" />
     <Content Include="Images\PivotHeader.jpg" />
     <Content Include="Images\RemoveAllButton.jpg" />
     <Content Include="Javascript\bootstrap\bootstrap.min.css" />
@@ -614,7 +617,6 @@
     <None Include="_Customizations\homepage.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
     <Folder Include="_Customizations\reports\" />
   </ItemGroup>
   <ItemGroup>
