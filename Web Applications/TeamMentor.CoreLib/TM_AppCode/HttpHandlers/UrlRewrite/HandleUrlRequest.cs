@@ -31,7 +31,20 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
         }
         public void routeRequestUrl()
         {
-            handleUrlRewrite(context.Request.Url);
+            if (redirectedToSLL().isFalse())
+                handleUrlRewrite(context.Request.Url);
+        }
+
+        private bool redirectedToSLL()
+        {
+            //to add to TM Master
+            if (TMConfig.Current.SSL_RedirectHttpToHttps && !context.Request.IsLocal && !context.Request.IsSecureConnection)
+            {
+                string redirectUrl = context.Request.Url.ToString().Replace("http:", "https:");
+                context.Response.Redirect(redirectUrl);
+                return true;
+            }
+            return false;
         }
         
         public void handleUrlRewrite(Uri uri)
@@ -77,13 +90,6 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                 case ".ashx":
                 case ".aspx":
                     return true;
-                case ".png":
-                case ".gif":
-                case ".jpg":
-                case ".jpeg":
-                case ".ico":
-                    //context.Response.ContentType = "image/png";                    // this was supposed to fix the warning we get when using cassini, but it is not working
-                    return true;
                 default:
                     return false;
 
@@ -91,8 +97,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             //var path = uri.AbsolutePath;
             //var extension = path.subString_After()
             //if (path.contains(".htm", ".asmx", ".ashx", ".aspx")) // don't process if these values are in path            
-            //    return false;            
-            //if (path.endsWith(".htm", ".asmx", ".ashx", ".aspx")) // don't process if these values are in path)
+            //    return false;                        
             return true;
         }
 
