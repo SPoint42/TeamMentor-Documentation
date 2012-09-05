@@ -31,7 +31,20 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
         }
         public void routeRequestUrl()
         {
-            handleUrlRewrite(context.Request.Url);
+            if (redirectedToSLL().isFalse())
+                handleUrlRewrite(context.Request.Url);
+        }
+
+        private bool redirectedToSLL()
+        {
+            //to add to TM Master
+            if (TMConfig.Current.SSL_RedirectHttpToHttps && !context.Request.IsLocal && !context.Request.IsSecureConnection)
+            {
+                string redirectUrl = context.Request.Url.ToString().Replace("http:", "https:");
+                context.Response.Redirect(redirectUrl);
+                return true;
+            }
+            return false;
         }
         
         public void handleUrlRewrite(Uri uri)
@@ -45,7 +58,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             }
             catch (Exception ex)
             {
-                ex.log("[in handleUrlRewrite]");
+                if (ex.Message != "Thread was being aborted.")
+                    ex.log("[in handleUrlRewrite]");
             }
         }
 
@@ -81,11 +95,6 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                     return false;
 
             }
-            //var path = uri.AbsolutePath;
-            //var extension = path.subString_After()
-            //if (path.contains(".htm", ".asmx", ".ashx", ".aspx")) // don't process if these values are in path            
-            //    return false;                        
-            return true;
         }
 
         
@@ -99,6 +108,9 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                     return redirectTo_Article(action);                                    
                 switch (action.lower())
                 {
+                    case "gui":
+                    case "teammentor":
+                        return transfer_TeamMentorGui();
                     case "raw":                        
                         return handleAction_Raw(data);                                                      
                     case "html":
@@ -142,16 +154,22 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                         return handleAction_JsonP(data);
                     case "debug":
                         return redirectTo_DebugPage();
+                    case "library":
+                        return redirectTo_SetLibrary(data);
                     default:                        
                         return false;                                          
                 }                                           
             }                
-            catch (Exception exception)
+            catch (Exception ex)
             {
-                if (exception is SecurityException)
+                if (ex is SecurityException)
                     return transfer_Login();
               //      return redirectTo_Login();
-                //context.Response.Write("<h2>Error: {0} </h2>".format(ex.Message));
+                if (ex.Message != "Thread was being aborted.")
+                {
+                    ex.log();
+                    //context.Response.Write("<h2>Error: {0} </h2>".format(ex.Message));
+                }
             }                                    
             return false;			
 		}
@@ -309,6 +327,11 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             return redirectTo_HomePage();
         }
 
+        public bool transfer_TeamMentorGui()
+        {
+            context.Server.Transfer("/html_pages/Gui/TeamMentor.html");            
+            return false;
+        }
 		public bool transfer_ArticleViewer()
 		{
 			context.Server.Transfer("/html_pages/GuidanceItemViewer/GuidanceItemViewer.html");						
@@ -383,6 +406,12 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			context.Response.Redirect("/Aspx_Pages/Debug.aspx");
             return false;    
 		}   
+
+        public bool redirectTo_SetLibrary(string libraryIdOrName)
+		{			
+			context.Response.Redirect("/aspx_pages/SetLibrary.aspx?Library={0}".format(libraryIdOrName));
+            return false;    
+		}           
         
 	}
 
