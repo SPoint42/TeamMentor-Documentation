@@ -42,10 +42,15 @@
       </view>
       <view caption="Editing Content" id="dbb802e1-4051-45f9-8935-bf9e2186b752" creationDate="0001-01-01T00:00:00">
         <items>
-          <item>00000000-0000-0000-0000-00000001f6f7</item>
           <item>00000000-0000-0000-0000-0000008e9fb0</item>
           <item>00000000-0000-0000-0000-000000579bb9</item>
           <item>00000000-0000-0000-0000-00000060462d</item>
+          <item>00000000-0000-0000-0000-000000481b9d</item>
+          <item>00000000-0000-0000-0000-00000079da36</item>
+          <item>00000000-0000-0000-0000-0000003ea057</item>
+          <item>00000000-0000-0000-0000-0000002df883</item>
+          <item>00000000-0000-0000-0000-000000982619</item>
+          <item>00000000-0000-0000-0000-0000002b8175</item>
         </items>
       </view>
       <view caption="Consuming TM Data" id="4c266663-9b37-4ba9-81af-9a205b26079d" creationDate="0001-01-01T00:00:00">
@@ -55,6 +60,11 @@
           <item>00000000-0000-0000-0000-0000004541f9</item>
           <item>00000000-0000-0000-0000-000000919e51</item>
           <item>00000000-0000-0000-0000-00000025cc25</item>
+        </items>
+      </view>
+      <view caption="Visual Studio Plugin" id="dd217eed-8165-40ad-8059-6ea59a3c3f6a" creationDate="0001-01-01T00:00:00">
+        <items>
+          <item>00000000-0000-0000-0000-0000004866a5</item>
         </items>
       </view>
     </libraryStructure>
