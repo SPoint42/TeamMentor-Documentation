@@ -19,7 +19,7 @@ namespace SecurityInnovation.TeamMentor.WebClient
 		public bool 		ShowContentToAnonymousUsers { get; set; }
         public bool         SSL_RedirectHttpToHttps     { get; set; }
         public bool 		SanitizeHtmlContent         { get; set; }	        		
-        public bool 		SSL_RedirectHttpToHttps     { get; set; }
+        
         public WindowsAuthentication_Config WindowsAuthentication			{ get; set; }
 
 		public class WindowsAuthentication_Config

@@ -18,7 +18,8 @@
 													$.each(this.guidanceItems, function(index,value)
 														{							
 															var guidanceItem= $.data[value];
-															if(guidanceItem.phase != "Draft")
+                                                            
+															if(isDefined(guidanceItem) && guidanceItem.phase != "Draft")
 															{
 																var item = $("<li>");
 																_gi = guidanceItem;
@@ -59,7 +60,7 @@
 												{
 													var guidanceItemHtml = $("<div>");
 													guidanceItemHtml.append($("<h2>").append(title));
-													guidanceItemHtml.append(data.d);
+													guidanceItemHtml.append($("<div id='selectedGuidanceItem' class='ItemContent'>").html(data.d));                                                    
 
 /*													guidanceItemHtml.append($("<hr>"))
 																	.append("Back to ")
@@ -69,10 +70,30 @@
 */
 
 													$(TM.Documentation.GuidanceItems.targetDiv).html(guidanceItemHtml);
-													
+													TM.Documentation.GuidanceItems.handleMediaWikiText();
+                                                    $(".ItemContent pre").addClass("prettyprint") ; 
+                                                    prettyPrint();      
+
                                                     my_Gauge.track("Documentation",title);   
 												});
 										}
+            ,   handleMediaWikiText         : function()
+                                                {                                                            
+                                                    var wikiTextDiv = $("#selectedGuidanceItem #tm_datatype_wikitext")
+                                                    
+                                                    if (wikiTextDiv.length ===1)              
+                                                      {
+                                                            var wikiText = wikiTextDiv.html();
+                                                            wikiText = wikiText.replace(/&lt;/, "<")
+                                                                               .replace(/&gt;/, ">")
+                                                                               .replace(/&amp;/, "&");  // deal with double encoding WikiText issue
+                                                            var targetDiv = document.createElement('div');        
+                                                            new creole().parse(targetDiv,wikiText )   
+                                                            var html = targetDiv.innerHTML ;
+              
+                                                        wikiTextDiv.html(html);      
+                                                     }
+                                                }
 		}
 
 	$(TM.Documentation.TableOfContents.show);
