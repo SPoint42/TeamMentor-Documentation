@@ -4,15 +4,20 @@ TM.Gui.AppliedFiltersList.removeFilters = function()
 	{		        
 		TM.Gui.AppliedFilters.currentFilters = [];
 		TM.Gui.AppliedFilters.currentPivotPanelFilters = new Array(); 
-		TM.Gui.AppliedFiltersList.populateAppliedFiltersTable() ;	
-        TM.Events.onInvalidateSearchText();
-		TM.Events.onFiltersRemoved();
+		TM.Events.onInvalidateSearchText();
+		if (window.location.hash.length > 1)
+			window.location.hash = "";
+		else
+		{
+			TM.Gui.AppliedFiltersList.populateAppliedFiltersTable() ;				
+			TM.Events.onFiltersRemoved();
+		}
 	}
 
 TM.Gui.AppliedFiltersList.removeCriteraFromCriteriaCollection = function(text,title, column, state)
-	{
-
-		setPivotPanelFilter(text, title, column, false);
+	{		
+		setPivotPanelFilter(text, title, column, false, false, true);			
+		TM.Events.onTextSearch()
 	}
 	
 TM.Gui.AppliedFiltersList.clear_FiltersGui = function()
@@ -73,8 +78,7 @@ TM.Gui.AppliedFiltersList.handle_PinChange = function(text, title, pinnedImg)
         var newHash = "#";
         newHash += (pinnedImg.pinned) ?  hashCommand : "";        
         $.each(document.location.hash.substring(1).split("&"), function(index,value)
-            {
-                console.log("value: " + value);
+            {                
                 if (value != hashCommand && value !="")
                     newHash += ((newHash === "#") ? "" : "&") + value;
             });                
