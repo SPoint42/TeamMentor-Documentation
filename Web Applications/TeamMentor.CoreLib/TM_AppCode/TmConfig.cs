@@ -18,15 +18,10 @@ namespace SecurityInnovation.TeamMentor.WebClient
 		public string 		LibrariesUploadedFiles	    { get; set; }	
 		public bool 		ShowContentToAnonymousUsers { get; set; }
         public bool         SSL_RedirectHttpToHttps     { get; set; }
-<<<<<<< HEAD
-        public bool 		SanitizeHtmlContent         { get; set; }	        		
-        
-=======
         public bool 		SanitizeHtmlContent         { get; set; }
         public bool         SingleSignOn_Enabled        { get; set; }
 
->>>>>>> e0eb4077b17f77d1ab613092265e79060af7bbc6
-        public WindowsAuthentication_Config WindowsAuthentication			{ get; set; }
+		public WindowsAuthentication_Config WindowsAuthentication			{ get; set; }
 
 		public class WindowsAuthentication_Config
 		{				
