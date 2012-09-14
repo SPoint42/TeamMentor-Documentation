@@ -73,6 +73,9 @@
 													TM.Documentation.GuidanceItems.handleMediaWikiText();
                                                     $(".ItemContent pre").addClass("prettyprint") ; 
                                                     prettyPrint();      
+													//fix CSS
+													$(".ItemContent h1").css('font-size',18)
+													$(".ItemContent h2").css('font-size',14)
 
                                                     my_Gauge.track("Documentation",title);   
 												});

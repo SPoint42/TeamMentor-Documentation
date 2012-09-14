@@ -2,6 +2,7 @@
 TM.Events = 
 	{
 			trace				: true        
+		,	aSyncMode			: true
 		,	_target				: 'body'
 		, 	_eventCount			: 0
 		,	_registerEvents		: function(eventNames)
@@ -22,11 +23,32 @@ TM.Events =
 																{                                                                     
 																	 TM.Events._raise(name) 
 																} ;
-                                        TM.Events[name].enabled = true;	
+                                        TM.Events[name].enabled		= true;	
+										TM.Events[name].aSyncMode	= true;
+										TM.Events[name].invokeOnce_OnlyExecuteFirst = false;
+										TM.Events[name].invokeOnce_Events	= [];
 
 										TM.Events[name].add = function(_callback)
 																{
 																	$(TM.Events._target).bind(name, _callback);
+																}
+										//TM.Events[name].add_RemoveOnRaise = function(_callback)
+										TM.Events[name].add_InvokeOnce = function(_callback)
+																{
+																	if(typeof(_callback) === "function")
+																	{
+																		TM.Events[name].invokeOnce_Events.push(_callback);
+																	}
+																	else if (_callback instanceof Array)
+																		$.each(_callback , function() { TM.Events[name].add_InvokeOnce(this)});
+																	
+																	return this;
+																	//TM.Events[name]
+																	/*TM.Events[name].add(function()
+																		{
+																			TM.Events[name].remove();
+																			_callback();
+																		});*/
 																}
 										TM.Events[name].remove = function()
 																{	
@@ -44,24 +66,61 @@ TM.Events =
 									}
 		, 	_raise				: function(name)
 									{
-                                        if (TM.Events[name].enabled === false)
+										var currentEvent = TM.Events[name];
+                                        if (currentEvent.enabled === false)
                                         {
                                             console.log("Event {0} disabled".format(name));
                                             return; 
                                         }
 										TM.Events._eventCount++;
 										if (TM.Debug.logEventsRaised)
-											console.log("event #{0} : {1}".format(TM.Events._eventCount, name));
-										setTimeout(function()
-											{
-												//$(TM.Events._target).trigger(name); // this throws error in IE for events across popup windows
-												if (TM.Events[name].events() != null)
-													$.each(TM.Events[name].events(),  function()         
-														{          
-															this.handler();
+										{
+											console.log("event #{0} : {1} ({2})".format(TM.Events._eventCount, name , currentEvent.invokeOnce_Events.length));
+											if (TM.Debug.logEventsRaised_CallTrace)
+												console.trace()
+										}
+										var raiseEvents = function()
+											{																								
+												//start with the invokeOnce callbacks
+												while (currentEvent.invokeOnce_Events.length > 0) 
+												{
+													try
+													{
+														currentEvent.invokeOnce_Events.shift().call()		//using shift instead of pop so that the events execute in sequence
+														if (currentEvent.invokeOnce_OnlyExecuteFirst)
+															break;
+													}
+													catch (e)
+													{
+														TM.Gui.Dialog.alertUser(e.message,"Error executing (invoke once for) event: " + name);
+													}
+												};						
+
+													// then invoke the registed callbacks
+												if (currentEvent.events() != null)
+												{
+													$.each(currentEvent.events(),  function()         
+														{        
+															if (isDefined(this.handler) === false)
+															{
+																TM.Gui.Dialog.alertUser("Event handler not set for: " + name, "Event invocation");
+																return;
+															}
+															try 
+															{
+																this.handler();    
+															} 
+															catch (e) 
+															{
+																TM.Gui.Dialog.alertUser(e.message,"Error executing event: " + name);
+															} 
 														});
-											} , 
-											20);											
+												}
+											};
+										if (TM.Events.aSyncMode && TM.Events[name].aSyncMode)																		
+											setTimeout(raiseEvents, 20);
+										else
+											raiseEvents();
 									}
 		, 	_allEvents			: function()
 									{
@@ -152,6 +211,7 @@ TM.Events._eventsFor_ControlPanel =
 			,	'onControlPanelGuiLoaded'
 			,	'onControlPanelViewLoaded'
 			,	'onCreateUsers'
+			,	'onUserDeleted'
 			,	'onFileUploaded'
 		]	
 		
@@ -217,9 +277,13 @@ TM.Events.onRenamedView				= function() 			{} // called when there was a view wa
 
 
 //Other globally called functions
-TM.Gui.Dialog.showUserMessage		= function(message) 	{ console.log("TM USER MESSAGE:" + message); }  // to be overriten by a GUI class
-TM.Gui.showUserMode					= function()			{}					// used to render UserMode
-TM.Gui.showEditMode					= function()			{}					// used to render EditMode
-TM.Gui.Dialog.isThereAnDialogOpen   = function()			{ return false; }	
+
+// to be overriten by a GUI class
+
+TM.Gui.Dialog.showUserMessage		= function(message) 		{ console.log("TM USER MESSAGE: " + message); }  
+TM.Gui.Dialog.alertUser				= function(message, title)	{ console.log("TM USER MESSAGE: " + title + " : " + message); }
+TM.Gui.showUserMode					= function()				{}					// used to render UserMode
+TM.Gui.showEditMode					= function()				{}					// used to render EditMode
+TM.Gui.Dialog.isThereAnDialogOpen   = function()				{ return false; }	
 
 ;
