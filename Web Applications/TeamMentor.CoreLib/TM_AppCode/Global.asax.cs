@@ -30,12 +30,6 @@ namespace SecurityInnovation.TeamMentor.Website
 
 		protected void Application_BeginRequest			(object sender, EventArgs e)		
         {   
-            //to add to TM Master
-            if (!Request.IsLocal && !Request.IsSecureConnection)
-		    {
-		        string redirectUrl = Request.Url.ToString().Replace("http:", "https:");
-		        Response.Redirect(redirectUrl);
-		    }
             new HandleUrlRequest().routeRequestUrl();                                  
         }
         protected void Application_AcquireRequestState  (object sender, EventArgs e) // this doesn't work for non aspx requests
