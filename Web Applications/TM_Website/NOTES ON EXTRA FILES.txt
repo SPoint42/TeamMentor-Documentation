@@ -1,2 +1,0 @@
-there are a number of extra files in this version  (moved from the local qa.teammentor.net version)
-which are needed for the the Eval and Customer pages
