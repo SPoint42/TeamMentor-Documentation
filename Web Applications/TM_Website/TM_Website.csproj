@@ -99,8 +99,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Library_Data\XmlDatabase\TmUsers.xml" />
-    <Content Include="App_Data\Library_Data\XmlDatabase\TmUsers_Passwords.xml" />
     <Content Include="App_Data\Library_Data\XmlDatabase\TM_Libraries\TM Documentation\TM Documentation.xml" />
     <Content Include="App_Data\Library_Data\XmlDatabase\TM_Libraries\TM Documentation\_GuidanceItems\00000000-0000-0000-0000-00000001f6f7.xml" />
     <Content Include="App_Data\Library_Data\XmlDatabase\TM_Libraries\TM Documentation\_GuidanceItems\00000000-0000-0000-0000-000000067e51.xml" />
@@ -534,7 +532,6 @@
   <ItemGroup>
     <Content Include="Aspx_Pages\ScriptCombiner.ashx" />
     <Content Include="Aspx_Pages\TM_WebServices.asmx" />
-    <None Include="App_Data\Library_Data\XmlDatabase\TM_Libraries\Cache_guidanceItems.cacheXml" />
     <None Include="App_Data\Library_Data\XmlDatabase\TM_Libraries\TM Documentation\_Images\Thumbs.db" />
     <None Include="Javascript\FireBug\skin\xp\roundCorner.svg" />
     <Content Include="TmConfig.config">
