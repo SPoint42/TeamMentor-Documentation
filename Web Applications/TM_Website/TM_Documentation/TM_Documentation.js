@@ -5,12 +5,12 @@ TM.Documentation =
 		,	leftMenuDiv				: "#LeftMenu"
         ,   open_HomePage           : function() 
                                         {
-                                            TM.Documentation.open_in_ContentDiv("Pages/HomePage.htm");
+                                            TM.Documentation.open_in_ContentDiv("HomePage.htm");
                                         }
         ,   open_TableOfContents    : function() 
                                         {
                                             TM.Documentation
-											$(TM.Documentation.leftMenuDiv).load("Pages/TableOfContents.htm".add_TimeToUrl());
+											$(TM.Documentation.leftMenuDiv).load("TableOfContents.htm".add_TimeToUrl());
                                         }
         ,   open_in_ContentDiv      : function(page)
                                         {   
@@ -19,11 +19,7 @@ TM.Documentation =
         ,   open_SI_Website         : function()
                                         {
                                             window.open("http://www.securityinnovation.com" , "_blank");
-                                        }
-        ,   open_TM_Website         : function()
-                                        {
-                                            window.open("/html_pages/Gui/TeamMentor.html", "_self");
-                                        }
+                                        }        
         ,   add_LinksToMenu         : function()
                                         {
                                             var addLink = function(text,onClick)
@@ -35,8 +31,7 @@ TM.Documentation =
                                                                          .appendTo(".nav")
                                                             }
                                             addLink("Home Page"             , this.open_HomePage);
-                                            //addLink("Table of Contents"     , this.open_TableOfContents);                                            
-                                            addLink("This TeamMentor Website", this.open_TM_Website);
+                                            //addLink("Table of Contents"     , this.open_TableOfContents);                                                                                        
                                             addLink("SecurityInnovation.com", this.open_SI_Website);
 
                                         }
