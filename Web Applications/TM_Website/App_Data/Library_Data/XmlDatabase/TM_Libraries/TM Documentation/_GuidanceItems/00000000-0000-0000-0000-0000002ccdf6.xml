@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<TeamMentor_Article Metadata_Hash="0" Content_Hash="0">
+  <Metadata>
+    <Id>00000000-0000-0000-0000-0000002ccdf6</Id>
+    <Library_Id>eb39d862-f752-4d1c-ab6e-14ed697397c0</Library_Id>
+    <Title>Release Notes</Title>
+    <Category>Administration</Category>
+    <Phase>NA</Phase>
+    <Technology>TeamMentor</Technology>
+    <Type>Documentation</Type>
+    <DirectLink>Release Notes</DirectLink>
+    <Author />
+    <Priority />
+    <Status />
+  </Metadata>
+  <Content Sanitized="false" DataType="html">
+    <Data><![CDATA[<h2>
+    <span style="font-size: 10pt; ">3.1 RELEASE</span>
+  </h2>
+  <p style="font-size: 10pt; ">
+    <span style="font-size: 10pt; ">The TeamMentor 3.1 release includes both new content and new application code. Major stability and usability improvements have been made to the application. A new content library has been added and numerous content fixes have been made based on feedback by a new editor - the TM content is periodically reviewed by different information security professionals.</span>
+  </p>
+  <p style="font-size: 10pt; ">
+    <b>APPLICATION CHANGES</b>
+    <br />The TM3.1 release includes the following changes:</p>
+  <p style="font-size: 10pt; ">
+  </p>
+  <ul style="font-size: 10pt; ">
+    <li>New article schema (with more metadata and better content formatting).</li>
+    <li>Active Directory support.</li>
+    <li>New Link structure.</li>
+    <li>Xml and XSLT support (client and server side).</li>
+    <li>REST API to access articles in multiple formats (raw, xml, jsonp) with ability to find article by GUID or title.</li>
+    <li>New C# WebServices API.</li>
+    <li>TM Technology pages providing technical details on TM APIs.</li>
+    <li>New WebServices Methods that simplify the creation of TM Content.</li>
+    <li>Multiple GUI and performance fixes.</li>
+    <li>Gaug.es support.</li>
+    <li>Upgrade to .NET 4.0.</li>
+  </ul>
+  <b style="font-size: 10pt; ">CONTENT CHANGES</b>
+  <br />
+  <font size="2">
+The 2012Q1 TM content release has the following updates:</font>
+  <br />
+  <ul style="font-size: 10pt; ">
+    <li>The new "CWE" library. A new library based on the CWE Top 25 Vulnerabilities list has been added. The articles are based heavily on the original CWE text. A few minor changes have been made to the original text by a team of reviewers. Additional material has been added in places where the original CWE content was too short. The CWE library is a stand-alone library and has 110 articles.</li>
+    <li>The updated "PCI DSS Compliance" library. The PCI DSS library has been edited to be clearer and to improve the browsing experience. New articles have been added to have a one-to-one correspondence of Guideline and Checklist items. The content has been reviewed by one more editor and numerous minor fixes have been made. The meta-data tags have been edited to simplify navigation. The new PCI DSS library is a stand-alone library and includes 331 articles.</li>
+  </ul>
+  <b style="font-size: 10pt; ">REQUIREMENTS</b>
+  <br />
+  <ul style="font-size: 10pt; ">
+    <li>Windows</li>
+    <li>NET Framework 4.0</li>
+  </ul>
+  <b style="font-size: 10pt; ">DEFAULT ACCOUNTS</b>
+  <br />
+  <ul style="font-size: 10pt; ">
+    <li>admin  : !!tmadmin</li>
+    <li>editor : !!tmeditor</li>
+    <li>reader : !!tmreader</li>
+  </ul>
+  <b style="font-size: 10pt; ">SUPPORT INFORMATION</b>
+  <br />
+  <font size="2">For more information about TeamMentor, please see "TeamMentor Documentation" at </font>
+  <a href="http://docs.teammentor.net" style="font-size: 10pt; ">http://docs.teammentor.net</a>
+  <p style="font-size: 10pt; " />]]></Data>
+  </Content>
+</TeamMentor_Article>
