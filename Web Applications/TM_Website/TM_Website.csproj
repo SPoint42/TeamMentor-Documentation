@@ -51,6 +51,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_FluentSharp_CoreLib">
+      <HintPath>..\packages\FluentSharp.CoreLib.4.4.0.0\lib\net35\O2_FluentSharp_CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_Misc_Microsoft_MPL_Libs">
+      <HintPath>..\packages\O2.Platform.Misc_Microsoft_MPL_Libs.4.1.0.0\lib\net35\O2_Misc_Microsoft_MPL_Libs.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.DirectoryServices.AccountManagement">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -79,6 +94,9 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="TeamMentor.CoreLib">
+      <HintPath>..\packages\TeamMentor.CoreLib.3.2.1\lib\net40\TeamMentor.CoreLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Aspx_Pages\SetLibrary.aspx" />
@@ -623,12 +641,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="_Customizations\reports\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TeamMentor.CoreLib\TeamMentor.CoreLib.csproj">
-      <Project>{87BACB04-640F-44ED-8F01-45224D52A883}</Project>
-      <Name>TeamMentor.CoreLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
