@@ -146,8 +146,9 @@ var getColumnFromArray = function(arrayData, columnIndex)
 	*/	
 	var editGuidanceItemInNewWindow = function(guidanceId)
 		{			
-			var url = '/html_pages/GuidanceItemEditor/GuidanceItemEditor.html?#id:' + guidanceId;
-			openUrl(url, "GuidanceItem Editor",800 , 600);
+			//var url = '/html_pages/GuidanceItemEditor/GuidanceItemEditor.html?#id:' + guidanceId;
+			var url = '/editor/' + guidanceId;
+			openUrl(url, "GuidanceItem Editor",850 , 600);
 			/*
 			poppedWindow = window.open('/html_pages/GuidanceItemEditor/GuidanceItemEditor.html?#id:' + guidanceId				
 										  ,'_blank'

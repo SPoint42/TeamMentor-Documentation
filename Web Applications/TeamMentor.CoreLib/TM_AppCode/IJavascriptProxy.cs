@@ -57,6 +57,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		List<TeamMentor_Article> GetGuidanceItemsInView(Guid viewId);
 		List<TeamMentor_Article> GetGuidanceItemsInViews(List<Guid> viewIds);			
 		string GetGuidanceItemHtml(Guid GuidanceItemId);
+		List<string> GetGuidanceItemsHtml(List<Guid> GuidanceItemsIds);
 		List<TeamMentor_Article> GetAllGuidanceItems();
 		List<TeamMentor_Article> GetGuidanceItemsInLibrary(Guid libraryId);
 		
@@ -116,9 +117,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		List<TeamMentor_Article> GetGuidanceItemsInLibrary_XmlDB(Guid libraryId);	
 		List<TeamMentor_Article> GetGuidanceItemsInFolder_XmlDB(Guid folderId);	
 		List<TeamMentor_Article> GetAllGuidanceItemsInViews_XmlDB();
-
-
-        Guid resolveMappingToArticleGuid(string mapping);
+        
     }    
 	
 	//move this so a separate file

@@ -20,8 +20,8 @@ using urn.microsoft.guidanceexplorer.guidanceItem;
 namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 {	
 	public partial class TM_Xml_Database 
-	{	
-		public static bool setLibraryPath(string libraryPath)
+	{
+		public static bool setLibraryPath_and_LoadDataIntoMemory(string libraryPath)
 		{			
 			//"in setLibraryPath: {0}".info(libraryPath);
 			if (libraryPath.dirExists().isFalse())						
@@ -122,7 +122,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             if (articleContent.inValid())
                 return "";
 
-            switch(article.Content.DataType.lower())
+            switch(article.Content.DataType.lower()) 
             {
                 case "raw":
                     return articleContent;
@@ -142,7 +142,19 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                 default:
                     return articleContent;
             }			
-		}				
+		}
+
+		[PrincipalPermission(SecurityAction.Demand, Role = "ReadArticles")]
+		public List<string> getGuidanceItemsHtml(List<Guid> guidanceItemsIds)
+		{
+			var data = new List<string>();
+			if (guidanceItemsIds.notNull())
+				foreach (var guidanceItemId in guidanceItemsIds)
+				{
+					data.add(getGuidanceItemHtml(guidanceItemId));
+				}
+			return data;
+		}
 	}
 
 
@@ -448,11 +460,21 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		
 		[PrincipalPermission(SecurityAction.Demand, Role = "ReadArticles")] 
 		//[PrincipalPermission(SecurityAction.Demand, Role = "ReadArticlesTitles")] 	
-		public static TeamMentor_Article tmGuidanceItem(this TM_Xml_Database tmDatabase, Guid guidanceItemId)
-		{			
-			return (from guidanceItem in tmDatabase.tmGuidanceItems()
+		public static TeamMentor_Article tmGuidanceItem(this TM_Xml_Database tmDatabase, Guid id)
+		{
+			if (TM_Xml_Database.Cached_GuidanceItems.hasKey(id))
+			{
+				var article = TM_Xml_Database.Cached_GuidanceItems[id];
+				return article;
+			}
+			var externalArticle = tmDatabase.getExternalTeamMentorArticle_if_MappingExists(id);
+			if (externalArticle.notNull())
+				return externalArticle;
+
+			return null;
+			/*return (from guidanceItem in tmDatabase.tmGuidanceItems()
 					where guidanceItem.Metadata.Id == guidanceItemId
-					select guidanceItem).first();				
+					select guidanceItem).first();				*/
 		}
 		
 		public static List<TeamMentor_Article> tmGuidanceItems(this TM_Xml_Database tmDatabase, TM_Library tmLibrary)

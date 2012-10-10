@@ -30,14 +30,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AntiXssLibrary, Version=4.2.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL" />
-    <Reference Include="HtmlSanitizationLibrary">
+    <Reference Include="AntiXssLibrary, Version=4.2.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.2.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="O2_FluentSharp_CoreLib">
-      <HintPath>..\packages\FluentSharp.CoreLib.4.0.0.1\lib\net40\O2_FluentSharp_CoreLib.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="O2_Misc_Microsoft_MPL_Libs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="O2_FluentSharp_CoreLib, Version=4.3.2.0, Culture=neutral, PublicKeyToken=55a0f9bf4256d533, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentSharp.CoreLib.4.3.2.0\lib\net35\O2_FluentSharp_CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="O2_Misc_Microsoft_MPL_Libs, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\O2.Platform.Misc_Microsoft_MPL_Libs.4.1.0.0\lib\net35\O2_Misc_Microsoft_MPL_Libs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices.AccountManagement">
@@ -51,9 +60,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TM_AppCode\Authentication\ExtensionMethods\RoleBaseSecurity_ExtensionMethods.cs" />
@@ -112,6 +118,7 @@
     <Compile Include="TM_AppCode\WebServices\TM_WebServices.GuiHelpers.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TM_AppCode\XmlDatabase\TM_Xml_Database.Virtual_Articles.cs" />
     <Compile Include="TM_AppCode\XmlDatabase\TM_Xml_Database.Library.Files.cs" />
     <Compile Include="TM_AppCode\XmlDatabase\TM_Xml_Database.cs" />
     <Compile Include="TM_AppCode\XmlDatabase\TM_Xml_Database.Library.cs" />
@@ -123,9 +130,6 @@
     <Compile Include="TM_AppCode\XmlDatabase\TM_Xml_Database_JavaScriptProxy.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="TeamMentor.CoreLib.nuspec">
-      <SubType>Designer</SubType>
-    </None>
     <Compile Include="TM_AppCode\O2_Scripts_APIs\_Extra_methods_Xml_Linq.cs" />
     <None Include="TM_AppCode\O2_Scripts_APIs\_Extra_methods_Misc.cs.txt" />
     <Compile Include="TM_AppCode\O2_Scripts_APIs\_Extra_methods_HtmlAgilityPack_ExtensionMethods.cs" />
@@ -134,16 +138,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="_ExternalDlls\AntiXssLibrary.dll" />
-    <Content Include="_ExternalDlls\HtmlSanitizationLibrary.dll" />
-    <Content Include="_ExternalDlls\ICSharpCode.SharpZipLib.dll" />
-    <Content Include="_ExternalDlls\O2_FluentSharp_CoreLib.dll" />
-    <Content Include="_ExternalDlls\O2_Misc_Microsoft_MPL_Libs.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

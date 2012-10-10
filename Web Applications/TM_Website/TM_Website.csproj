@@ -568,7 +568,9 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Xslt\Article_Edit.xslt" />
+    <Content Include="Xslt\Article_Edit.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Xslt\JsCreole_Article.xslt" />
     <Content Include="Xslt\SimpleView.xslt" />
     <Content Include="Xslt\Notepad_Edit.xslt">
@@ -628,6 +630,9 @@
       <Name>TeamMentor.CoreLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -645,8 +650,9 @@
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>3187</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:3187/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:3187/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

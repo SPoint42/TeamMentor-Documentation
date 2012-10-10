@@ -1,7 +1,8 @@
 #TM specific
 
 o2.config
-
+TmUsers.xml
+webEditorSecretData.config
 # Visual Studio files # 
 *.pdb
 release
@@ -10,7 +11,8 @@ obj
 *.suo
 *.nupkg
 Web Applications/TM_Website/bin/*.xml
-/Web Applications/packages
+
 Web Applications/TeamMentor.CoreLib/bin/Debug/TeamMentor.CoreLib.dll
+
+/Library_Data/XmlDatabase/TM_Libraries
 /Web Applications/TM_Website/App_Data
-/Library_Data/XmlDatabase/TmUsers_Passwords.xml

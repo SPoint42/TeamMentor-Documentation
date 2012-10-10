@@ -29,7 +29,7 @@
                                   	guidanceId = splitCommand[1];
 									//alert("set guidanceitem to: " + splitCommand[1]);
 									loadGuidanceItem();
-										return false;
+									return false;
 								}
                           	return true;   // to continue links
                 	}
@@ -37,14 +37,16 @@
 				var setGuidanceIdfromUrlHash =  function()
                     {						
 						if (window.location.hash != "")
-                          	handleCommand(window.location.hash.slice(1).split("&")[0]);
-						else
-							getGuidFromUrl();					
+                          	if(handleCommand(window.location.hash.slice(1).split("&")[0]) ===false)
+								return;						
+						getGuidFromUrl();					
                     }
 						
                 var getGuidFromUrl = function()
 					{
-                        mappingText = document.URL.split('/').pop();						
+                        mappingText = document.URL.split('/').pop()     //get last segment
+												  .split("#").shift()   // remove hash
+												 ;						
                         mapping =    { mapping : mappingText }    ;                           
 						TM.WebServices.Helper.invoke_TM_WebService("getGuidForMapping",mapping, function(data)
 							{
@@ -104,8 +106,9 @@
 					else
 					{
                         "ItemContent".$().hide();
-						"#Title".$().html("Sorry, we couldn't find the requested article. ")
-                                    .append("Why don't you <a href='/create/" + mappingText +"'>create it</a>");
+						"#Title".$().html("").append("<h4>Sorry, we couldn't find the requested article.</h4>" + 
+											         //"<h4>Why don't you <a href='/create/" + mappingText +"'>create it</a></h4>"
+													 "");
 						"CategoriesLabel".$().html("");
 						"PhaseLabel".$().html("");
 						"TechnologyLabel".$().html("");
@@ -210,7 +213,8 @@
 				var openGuidanceItemEditor = function()
 				{
 					//document.location = "EditGuidanceItem.aspx?#id:" + guidanceId;
-					document.location = "/html_pages/GuidanceItemEditor/GuidanceItemEditor.html?#id:" + guidanceId;
+					//document.location = "/html_pages/GuidanceItemEditor/GuidanceItemEditor.html?#id:" + guidanceId;
+					document.location = "/editor/" + guidanceId;
 				}
 				
 				var openGuidanceItemNotepad = function()
@@ -338,16 +342,16 @@
 			    </tr>
 			    <tr>
 				    <td class="ItemDetailValue">					
-					    <div ID="TechnologyLabel"> </div>
+					    <div id="TechnologyLabel"> </div>
 				    </td>		
 				    <td class="ItemDetailValue">
-					    <div ID="CategoriesLabel"> </div>
+					    <div id="CategoriesLabel"> </div>
 				    </td>				
 				    <td class="ItemDetailValue">
-					    <div ID="PhaseLabel"> </div>
+					    <div id="PhaseLabel"> </div>
 				    </td>				
 				    <td class="ItemDetailValue">					
-					    <div ID="GuidanceTypeLabel"> </div>
+					    <div id="GuidanceTypeLabel"> </div>
 				    </td>		
 			    </tr>
 		    </table>

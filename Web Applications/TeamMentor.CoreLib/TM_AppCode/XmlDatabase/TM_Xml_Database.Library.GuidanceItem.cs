@@ -203,7 +203,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		{			
 			var newGuid = Guid.NewGuid();
 			var newPath = fullPath.replace(original_Guid.str(), newGuid.str());
-			Files.MoveFile(fullPath, newPath);
+			Files.moveFile(fullPath, newPath);
 			"[xmlDB_GuidanceItem] resolved GuidanceItem ID conflict for  Id '{0}' was already mapped. \nExisting path: \t{1} \nNew path:  \t{2}".error(original_Guid, fullPath , newPath);
 			var guidanceItemV3 = tmDatabase.xmlDB_GuidanceItem(newGuid, newPath);			
 			return guidanceItemV3;
@@ -436,8 +436,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			//TM_Xml_Database.mapGuidanceItemsViews();
 			return true;
 		}
-		
-		
+				
         [PrincipalPermission(SecurityAction.Demand, Role = "ReadArticles")]
 		public static string xmlDB_guidanceItemXml(this TM_Xml_Database tmDatabase, Guid guidanceItemId)
 		{
@@ -452,7 +451,6 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                 return TM_Xml_Database.GuidanceItems_FileMappings[guidanceItemId];            
             return null;
         }
-
 
         public static Guid xmlBD_resolveDirectMapping(this TM_Xml_Database tmDatabase, string mapping)
         {
@@ -531,7 +529,6 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             }
             return Guid.Empty;
         }
-
         public static bool titleMatch(TeamMentor_Article article, string title1, string title2)
         {
             var match = (article.Metadata.Title.notNull() && (article.Metadata.Title.lower() == title1) ||
@@ -541,11 +538,12 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
             }
             return match;
         }
-
         public static Guid xmlBD_resolveMappingToArticleGuid(this TM_Xml_Database tmDatabase, string mapping)
 		{
-            if (mapping.isGuid())
-                return mapping.guid();            
+			if (mapping.isGuid())
+			{
+				return tmDatabase.getVirtualGuid_if_MappingExists(mapping.guid());
+			}
 
             mapping = mapping.urlDecode().replaceAllWith(" ", new [] {"_", "+"})
                              .htmlEncode();

@@ -53,7 +53,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			//newGuidanceExplorer.library.libraryStructure.view = new List<urn.microsoft.guidanceexplorer.View>();  
 			newGuidanceExplorer.library.name = libraryId.str();
 			newGuidanceExplorer.library.caption = caption; 
-			"xmlLibraryPath: {0}".info(TM_Xml_Database.Path_XmlLibraries);
+			//"xmlLibraryPath: {0}".info(TM_Xml_Database.Path_XmlLibraries);
 			//var newLibraryPath = TM_Xml_Database.Path_XmlLibraries.pathCombine("{0}.xml".format(caption));
 			
 			newGuidanceExplorer.xmlDB_Save_GuidanceExplorer(tmDatabase);
@@ -150,7 +150,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		
 		public static guidanceExplorer xmlDB_UpdateGuidanceExplorer(this TM_Xml_Database tmDatabase, Guid libraryId, string caption, bool deleteLibrary)
 		{
-			"[xmlDB_UpdateGuidanceExplorer]".info();
+			//"[xmlDB_UpdateGuidanceExplorer]".info();
 			if (TM_Xml_Database.GuidanceExplorers_XmlFormat.hasKey(libraryId).isFalse())
 			{
 				"[TM_Xml_Database] in xmlDB_UpdateGuidanceExplorer, could not find library to update with id: {0}".error(libraryId);
@@ -179,7 +179,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 				"[TM_Xml_Database][xmlDB_RenameGuidanceExplorer] provided caption didn't pass validation regex".error();
 				throw new Exception("Provided Library name didn't pass validation regex"); 				
 			}
-			"[xmlDB_RenameGuidanceExplorer]".info();
+			//"[xmlDB_RenameGuidanceExplorer]".info();
 			if(guidanceExplorer.notNull())
 			{	
 				var existingCaption = guidanceExplorer.library.caption;
@@ -197,8 +197,8 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 						var pathToGuidanceItems_Existing = tmDatabase.xmlDB_LibraryPath_GuidanceItems(existingCaption);
 						var pathToGuidanceItems_New = tmDatabase.xmlDB_LibraryPath_GuidanceItems(newCaption);
 						
-						"pathToGuidanceItems_Existing: {0}".error(pathToGuidanceItems_Existing);
-						"pathToGuidanceItems_New: {0}".error(pathToGuidanceItems_New);
+						//"pathToGuidanceItems_Existing: {0}".error(pathToGuidanceItems_Existing);
+						//"pathToGuidanceItems_New: {0}".error(pathToGuidanceItems_New);
 						if(pathToGuidanceItems_Existing.dirExists())	
 						{
 							"RENAMING {0}-> {1}".error(pathToGuidanceItems_Existing, pathToGuidanceItems_New);
@@ -252,7 +252,12 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 		{
 			var libraryPath = tmDatabase.xmlDB_LibraryPath(caption);
 			if (libraryPath.notNull())
-				return libraryPath.directoryName().pathCombine("{0}".format(caption));
+			{
+				var parentFolder = libraryPath.parentFolder();							//check if the xml file is in a folder with the same name as the library name
+				if (parentFolder.folderName() == caption)			
+					return parentFolder;
+				return libraryPath.directoryName().pathCombine("{0}".format(caption));  // if it is not , return the parent folder
+			}
 			return null;
 		}
 		
@@ -292,7 +297,7 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
 			return null;
 		}
 		
-		public static bool xmlDB_Libraries_ImportFromZip(this TM_Xml_Database tmDatabase, string zipFileToImport)
+		public static bool xmlDB_Libraries_ImportFromZip(this TM_Xml_Database tmDatabase, string zipFileToImport, string unzipPassword)
 		{
             try
             {
@@ -308,22 +313,78 @@ namespace SecurityInnovation.TeamMentor.WebClient.WebServices
                 else
                 {
                     var currentLibraryPath = TM_Xml_Database.Path_XmlLibraries;
-                    var libraryName = Path.GetFileNameWithoutExtension(zipFileToImport);
-                    var libraryFilePath = tmDatabase.xmlDB_LibraryPath(libraryName);
-                    var guidanceItemsPath = tmDatabase.xmlDB_LibraryPath_GuidanceItems(libraryName);
+					// handle the zips we get from GitHub
 
+					var tempDir = "_unzip".tempDir();
+					var fastZip = new ICSharpCode.SharpZipLib.Zip.FastZip();
+					fastZip.Password = unzipPassword ?? unzipPassword;
+					fastZip.ExtractZip(zipFileToImport, tempDir, "");
 
+					var gitZipFolderName = tempDir.folders().first().folderName();				// the first folder should be the one created by gitHub's zip
+					var xmlFile_location1 = tempDir.pathCombine(gitZipFolderName + ".xml");
+					var xmlFile_location2 = tempDir.pathCombine(gitZipFolderName).pathCombine(gitZipFolderName + ".xml");
+					if (xmlFile_location1.fileExists() || xmlFile_location2.fileExists())		// if these exists here, just copy the unziped files directly
+					{ 
+						Files.copyFolder(tempDir,currentLibraryPath,true,true,".git");
+						if (xmlFile_location1.fileExists())
+							Files.copy(xmlFile_location1, currentLibraryPath.pathCombine(gitZipFolderName));
+						return true;
+					}
+					//if (zipFileToImport.extension() == ".master")
+					else
+					{
+						
+						var gitZipDir = tempDir.pathCombine(gitZipFolderName);
+						foreach (var libraryFolder in gitZipDir.folders())
+						{
+							var libraryName = libraryFolder.folderName();
+							var targetFolder = currentLibraryPath.pathCombine(libraryName);
+							
+							//default behaviour is to override the existing libraries
+							/*if (targetFolder.dirExists())
+							{
+								"[xmlDB_Libraries_ImportFromZip] [from Git zip] could not import library with name {0} since there was already one with that name".error(libraryFolder.folderName());
+								return false;
+							}*/
+							Files.copyFolder(libraryFolder, currentLibraryPath);
 
-                    if (libraryFilePath.fileExists().isFalse() && guidanceItemsPath.dirExists().isFalse())
-                    {
-                        new ICSharpCode.SharpZipLib.Zip.FastZip().ExtractZip(zipFileToImport, currentLibraryPath, "");
+							//handle the case where the xml file is located outside the library folder
+							var libraryXmlFile = gitZipDir.pathCombine("{0}.xml".format(libraryName));
+							if (libraryXmlFile.fileExists())
+								Files.copy(libraryXmlFile, targetFolder);			// put it in the Library folder which is where it really should be															
+						}
+						var virtualMappings = gitZipDir.pathCombine("Virtual_Articles.xml");
+						if (virtualMappings.fileExists())
+						{
+							Files.copy(virtualMappings, currentLibraryPath);			// copy virtual mappings if it exists
+							tmDatabase.mapVirtualArticles();
+						}
+						return true;
+					}
+					/*else
+					{
+						//if it is a normal zip, the expectation is that the zip is the library name
+						var libraryName = Path.GetFileNameWithoutExtension(zipFileToImport);
+						var libraryFilePath = tmDatabase.xmlDB_LibraryPath(libraryName);
+						var guidanceItemsPath = tmDatabase.xmlDB_LibraryPath_GuidanceItems(libraryName);
 
-                        //zipFileToImport.unzip_File(currentLibraryPath); 				                        
-                        return true;
-                    }
-                    else
-                        "[xmlDB_Libraries_ImportFromZip] could not import library with name {0} since there was already one with that name".error(libraryName);
-                }
+						//default behaviour is to override the existing libraries
+
+						//if (libraryFilePath.fileExists() && libraryFilePath.fileInfo().size() == 0 ||
+						//	libraryFilePath.fileExists().isFalse() && guidanceItemsPath.dirExists().isFalse())
+						//{
+							var fastZip = new ICSharpCode.SharpZipLib.Zip.FastZip();
+							fastZip.Password = unzipPassword ?? unzipPassword;
+							fastZip.ExtractZip(zipFileToImport, currentLibraryPath, "");
+
+							//zipFileToImport.unzip_File(currentLibraryPath); 				                        
+							return true;
+						//}
+						//else
+						//	"[xmlDB_Libraries_ImportFromZip] could not import library with name {0} since there was already one with that name".error(libraryName);
+					 
+					} */
+				}
             }
             catch (Exception ex)
             { 
