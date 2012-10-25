@@ -21,14 +21,14 @@
 					button_1_text	= "Try Now"
 					button_1_link	= "http://owasp.teammentor.net/"
 					button_2_text 	= "Download Now"
-					button_2_link	= "https://github.com/downloads/TeamMentor/Master/TeamMentor%203.1%20with%20OWASP%20Library.zip" />
+					button_2_link	= "https://github.com/downloads/TeamMentor/Master/TeamMentor%203.2%20with%20OWASP%20Library.zip" />
 
 	<SplashPanel_Text>
 				      	TeamMentor shows you how exactly to remediate vulnerable code.<br/>
 					Integrates with Static Analysis tools and IDE’s. <br/>
 					Accepts your internal security policies and is fully customizable. <br/>
 					Helps meet compliance requirements.<br/>
-					Complements training.<br/><br/>
+					Complements training.<br/>
 	</SplashPanel_Text>	
 
 
