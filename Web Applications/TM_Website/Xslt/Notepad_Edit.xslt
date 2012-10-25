@@ -149,7 +149,8 @@
 	<span class="NEDataTypeLabel">Data Type:</span>
     <select id="DataType" class="NEDataType">
       <option value ="html">Html</option>
-      <option value ="wikitext">WikiText</option>      
+      <option value ="wikitext">WikiText</option>
+			<option value ="xml">Xml</option>
      </select>
     <span id="WikiTextHelp">WikiText uses <a href="http://docs.teammentor.net/article/Team Mentor Wiki Markup" target="_blank"> WikiCreole</a> </span>
 	

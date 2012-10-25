@@ -160,6 +160,7 @@
     <Content Include="Css\jquery.ui.slider.css" />
     <Content Include="Css\jquery.ui.tabs.css" />
     <Content Include="Css\jquery.ui.theme.css" />
+    <Content Include="Css\layout.css" />
     <Content Include="Css\NotepadEditor.css" />
     <Content Include="Css\ThemeForest_ReadyMade\css\buttons.css" />
     <Content Include="Css\ThemeForest_ReadyMade\css\forms.css" />
